@@ -69,13 +69,16 @@ const TILES = [
 function Home() {
   useReveal();
   // Porsche-style smooth background color transition driven by scroll.
-  useScrollBg([
-    [5, 5, 5],      // near-black (hero)
-    [40, 38, 35],   // warm charcoal
-    [255, 255, 255], // pure white (mid-scroll highlight)
-    [40, 38, 35],   // warm charcoal
-    [5, 5, 6],      // back to near-black (CTA)
-  ]);
+  useScrollBg(
+    [
+      [5, 5, 5], // near-black (hero)
+      [40, 38, 35], // warm charcoal
+      [255, 255, 255], // pure white (mid-scroll highlight)
+      [40, 38, 35], // warm charcoal
+      [5, 5, 6], // back to near-black (CTA)
+    ],
+    2.5,
+  );
   const [paused, setPaused] = useState(false);
 
   return (
