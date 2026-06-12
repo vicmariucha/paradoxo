@@ -148,7 +148,8 @@ function Home() {
       </section>
 
       {/* SHOWCASE — "Sua jornada começa agora" (Porsche model grid style) */}
-      <section className="bg-background py-24 lg:py-32">
+      <section className="py-24 lg:py-32">
+
         <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
           <h2 className="reveal text-center font-display text-4xl leading-tight lg:text-5xl">
             Sua jornada com a PARADOXO começa agora.
