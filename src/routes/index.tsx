@@ -213,7 +213,7 @@ function Home() {
       </section>
 
       {/* SQUARE TILES */}
-      <section className="bg-background py-24 lg:py-32">
+      <section className="py-24 lg:py-32">
         <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
           <div className="grid gap-6 md:grid-cols-3">
             {TILES.map((t, i) => (
