@@ -184,7 +184,7 @@ function Home() {
       </section>
 
       {/* FINDER CTA — search-style band */}
-      <section className="border-y border-border/60 bg-card/40 py-24 lg:py-32">
+      <section className="border-y border-border/60 bg-card/30 py-24 lg:py-32">
         <div className="mx-auto grid max-w-[1600px] items-center gap-12 px-6 lg:grid-cols-2 lg:px-12">
           <div className="reveal">
             <h2 className="font-display text-4xl leading-tight lg:text-5xl">
