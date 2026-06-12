@@ -125,7 +125,7 @@ function Home() {
       </section>
 
       {/* HIGHLIGHT CARDS — horizontal row */}
-      <section className="bg-background py-6">
+      <section className="py-6">
         <div className="mx-auto grid max-w-[1600px] gap-4 px-6 md:grid-cols-3 lg:px-12">
           {HIGHLIGHTS.map((h, i) => (
             <Link
