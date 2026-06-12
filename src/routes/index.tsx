@@ -3,6 +3,7 @@ import { ArrowRight, ArrowDown, Pause, Play, Search } from "lucide-react";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site-layout";
 import { useReveal } from "@/hooks/use-reveal";
+import { useScrollBg } from "@/hooks/use-scroll-bg";
 
 import heroImg from "@/assets/hero.jpg";
 import manifestoImg from "@/assets/manifesto.jpg";
@@ -67,10 +68,24 @@ const TILES = [
 
 function Home() {
   useReveal();
+  // Porsche-style smooth background color transition driven by scroll.
+  useScrollBg([
+    [5, 5, 5], // near-black (hero)
+    [18, 16, 13], // warm graphite
+    [10, 10, 11], // deep slate
+    [21, 18, 14], // champagne-tinted dark
+    [5, 5, 6], // back to near-black (CTA)
+  ]);
   const [paused, setPaused] = useState(false);
 
   return (
     <SiteLayout>
+      <div
+        className="pointer-events-none fixed inset-0 -z-10 transition-colors duration-700 ease-out"
+        style={{ backgroundColor: "var(--scroll-bg, var(--background))" }}
+        aria-hidden
+      />
+
       {/* HERO — fullscreen, headline bottom-left (Porsche style) */}
       <section className="relative h-screen w-full overflow-hidden">
         <img
@@ -110,7 +125,7 @@ function Home() {
       </section>
 
       {/* HIGHLIGHT CARDS — horizontal row */}
-      <section className="bg-background py-6">
+      <section className="py-6">
         <div className="mx-auto grid max-w-[1600px] gap-4 px-6 md:grid-cols-3 lg:px-12">
           {HIGHLIGHTS.map((h, i) => (
             <Link
@@ -133,7 +148,8 @@ function Home() {
       </section>
 
       {/* SHOWCASE — "Sua jornada começa agora" (Porsche model grid style) */}
-      <section className="bg-background py-24 lg:py-32">
+      <section className="py-24 lg:py-32">
+
         <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
           <h2 className="reveal text-center font-display text-4xl leading-tight lg:text-5xl">
             Sua jornada com a PARADOXO começa agora.
@@ -168,7 +184,7 @@ function Home() {
       </section>
 
       {/* FINDER CTA — search-style band */}
-      <section className="border-y border-border/60 bg-card/40 py-24 lg:py-32">
+      <section className="border-y border-border/60 bg-card/30 py-24 lg:py-32">
         <div className="mx-auto grid max-w-[1600px] items-center gap-12 px-6 lg:grid-cols-2 lg:px-12">
           <div className="reveal">
             <h2 className="font-display text-4xl leading-tight lg:text-5xl">
@@ -197,7 +213,7 @@ function Home() {
       </section>
 
       {/* SQUARE TILES */}
-      <section className="bg-background py-24 lg:py-32">
+      <section className="py-24 lg:py-32">
         <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
           <div className="grid gap-6 md:grid-cols-3">
             {TILES.map((t, i) => (
