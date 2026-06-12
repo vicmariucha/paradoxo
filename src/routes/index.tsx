@@ -70,11 +70,11 @@ function Home() {
   useReveal();
   // Porsche-style smooth background color transition driven by scroll.
   useScrollBg([
-    [5, 5, 5], // near-black (hero)
-    [18, 16, 13], // warm graphite
-    [10, 10, 11], // deep slate
-    [21, 18, 14], // champagne-tinted dark
-    [5, 5, 6], // back to near-black (CTA)
+    [5, 5, 5],      // near-black (hero)
+    [40, 38, 35],   // warm charcoal
+    [255, 255, 255], // pure white (mid-scroll highlight)
+    [40, 38, 35],   // warm charcoal
+    [5, 5, 6],      // back to near-black (CTA)
   ]);
   const [paused, setPaused] = useState(false);
 
