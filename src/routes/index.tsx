@@ -204,19 +204,19 @@ function Home() {
               Ficou mais fácil iniciar um projeto de alto padrão. Conte o que você
               precisa e nossa curadoria desenha a proposta ideal para você.
             </p>
-            <div className="mt-10 flex max-w-md items-center gap-3 border border-border bg-background px-5 py-4">
+            <div className="mt-10 flex max-w-md items-center gap-3 rounded-full border border-border bg-background px-5 py-4">
               <Search size={18} className="text-gold" />
               <span className="text-sm text-muted-foreground">Descreva o seu projeto…</span>
             </div>
             <Link
               to="/contato"
-              className="mt-8 inline-flex items-center gap-3 bg-gold px-9 py-4 text-[0.78rem] uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
+              className="mt-8 inline-flex items-center gap-3 rounded-full bg-gold px-9 py-4 text-[0.78rem] uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
             >
               Solicitar projeto
               <ArrowRight size={16} />
             </Link>
           </div>
-          <div className="reveal aspect-[4/3] overflow-hidden" data-delay="120">
+          <div className="reveal aspect-[4/3] overflow-hidden rounded-2xl" data-delay="120">
             <img src={portKits} alt="Projeto premium PARADOXO" loading="lazy" className="h-full w-full object-cover" />
           </div>
         </div>
