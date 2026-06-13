@@ -78,6 +78,7 @@ function Home() {
       [5, 5, 6], // back to near-black (CTA)
     ],
     2.5,
+    "#jornada",
   );
   const [paused, setPaused] = useState(false);
 
@@ -151,7 +152,8 @@ function Home() {
       </section>
 
       {/* SHOWCASE — "Sua jornada começa agora" (Porsche model grid style) */}
-      <section className="py-24 lg:py-32">
+      <section id="jornada" className="py-24 lg:py-32">
+
 
         <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
           <h2 className="reveal text-center font-display text-4xl leading-tight lg:text-5xl">
