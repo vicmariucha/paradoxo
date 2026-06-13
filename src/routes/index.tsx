@@ -264,7 +264,7 @@ function Home() {
           <Link
             to="/contato"
             data-delay="160"
-            className="reveal group mt-12 inline-flex items-center gap-3 bg-gold px-10 py-5 text-[0.75rem] uppercase tracking-[0.24em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
+            className="reveal group mt-12 inline-flex items-center gap-3 rounded-full bg-gold px-10 py-5 text-[0.75rem] uppercase tracking-[0.24em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
           >
             Solicitar orçamento
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
