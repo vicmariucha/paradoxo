@@ -109,7 +109,7 @@ function Home() {
           </h1>
           <Link
             to="/servicos"
-            className="mt-10 inline-flex items-center gap-3 bg-foreground/95 px-9 py-4 text-[0.78rem] uppercase tracking-[0.18em] text-background transition-all duration-300 hover:bg-gold hover:text-primary-foreground"
+            className="mt-10 inline-flex items-center gap-3 rounded-full bg-foreground/95 px-9 py-4 text-[0.78rem] uppercase tracking-[0.18em] text-background transition-all duration-300 hover:bg-gold hover:text-primary-foreground"
           >
             Saiba mais
           </Link>
@@ -136,7 +136,7 @@ function Home() {
               key={h.title}
               to="/portfolio"
               data-delay={i * 90}
-              className="reveal group relative aspect-[4/3] overflow-hidden"
+              className="reveal group relative aspect-[4/3] overflow-hidden rounded-2xl"
             >
               <img
                 src={h.image}
@@ -160,29 +160,34 @@ function Home() {
             Sua jornada com a PARADOXO começa agora.
           </h2>
 
-          <div className="mt-16 grid gap-x-6 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SHOWCASE.map((s, i) => (
-              <div key={s.signature} data-delay={i * 100} className="reveal group flex flex-col">
-                <p className="font-display text-4xl tracking-[0.15em] text-foreground">{s.signature}</p>
-                <div className="mt-6 aspect-[5/4] overflow-hidden">
-                  <img
-                    src={s.image}
-                    alt={s.signature}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
-                  />
+              <Link
+                key={s.signature}
+                to={s.to}
+                hash={s.hash}
+                data-delay={i * 100}
+                className="reveal group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl"
+              >
+                <img
+                  src={s.image}
+                  alt={s.signature}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
+                />
+                {/* Black gradient at the bottom for text legibility */}
+                <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black via-black/70 to-transparent" />
+
+                <div className="relative p-7">
+                  <p className="font-display text-3xl tracking-[0.12em] text-white">{s.signature}</p>
+                  <p className="mt-3 text-[0.7rem] uppercase tracking-[0.25em] text-gold">{s.tag}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-white/80">{s.desc}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-white transition-colors group-hover:text-gold">
+                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                    Explorar
+                  </span>
                 </div>
-                <p className="mt-6 text-[0.7rem] uppercase tracking-[0.25em] text-gold">{s.tag}</p>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-                <Link
-                  to={s.to}
-                  hash={s.hash}
-                  className="mt-6 inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-foreground transition-colors group-hover:text-gold"
-                >
-                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                  Explorar
-                </Link>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -199,19 +204,19 @@ function Home() {
               Ficou mais fácil iniciar um projeto de alto padrão. Conte o que você
               precisa e nossa curadoria desenha a proposta ideal para você.
             </p>
-            <div className="mt-10 flex max-w-md items-center gap-3 border border-border bg-background px-5 py-4">
+            <div className="mt-10 flex max-w-md items-center gap-3 rounded-full border border-border bg-background px-5 py-4">
               <Search size={18} className="text-gold" />
               <span className="text-sm text-muted-foreground">Descreva o seu projeto…</span>
             </div>
             <Link
               to="/contato"
-              className="mt-8 inline-flex items-center gap-3 bg-gold px-9 py-4 text-[0.78rem] uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
+              className="mt-8 inline-flex items-center gap-3 rounded-full bg-gold px-9 py-4 text-[0.78rem] uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
             >
               Solicitar projeto
               <ArrowRight size={16} />
             </Link>
           </div>
-          <div className="reveal aspect-[4/3] overflow-hidden" data-delay="120">
+          <div className="reveal aspect-[4/3] overflow-hidden rounded-2xl" data-delay="120">
             <img src={portKits} alt="Projeto premium PARADOXO" loading="lazy" className="h-full w-full object-cover" />
           </div>
         </div>
@@ -226,7 +231,7 @@ function Home() {
                 key={t.title}
                 to="/portfolio"
                 data-delay={i * 90}
-                className="reveal group relative aspect-square overflow-hidden"
+                className="reveal group relative aspect-square overflow-hidden rounded-2xl"
               >
                 <img
                   src={t.image}
@@ -259,7 +264,7 @@ function Home() {
           <Link
             to="/contato"
             data-delay="160"
-            className="reveal group mt-12 inline-flex items-center gap-3 bg-gold px-10 py-5 text-[0.75rem] uppercase tracking-[0.24em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
+            className="reveal group mt-12 inline-flex items-center gap-3 rounded-full bg-gold px-10 py-5 text-[0.75rem] uppercase tracking-[0.24em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
           >
             Solicitar orçamento
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
