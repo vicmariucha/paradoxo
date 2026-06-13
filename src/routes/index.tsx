@@ -128,33 +128,8 @@ function Home() {
         </button>
       </section>
 
-      {/* HIGHLIGHT CARDS — horizontal row */}
-      <section className="py-6">
-        <div className="mx-auto grid max-w-[1600px] gap-4 px-6 md:grid-cols-3 lg:px-12">
-          {HIGHLIGHTS.map((h, i) => (
-            <Link
-              key={h.title}
-              to="/portfolio"
-              data-delay={i * 90}
-              className="reveal group relative aspect-[4/3] overflow-hidden rounded-2xl"
-            >
-              <img
-                src={h.image}
-                alt={h.title}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-              <h3 className="absolute bottom-6 left-6 font-display text-2xl text-foreground">{h.title}</h3>
-            </Link>
-          ))}
-        </div>
-      </section>
-
       {/* SHOWCASE — "Sua jornada começa agora" (Porsche model grid style) */}
       <section id="jornada" className="py-24 lg:py-32">
-
-
         <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
           <h2 className="reveal text-center font-display text-4xl leading-tight lg:text-5xl">
             Sua jornada com a PARADOXO começa agora.
@@ -190,6 +165,29 @@ function Home() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* PORTFOLIO GRID — 2 cards per row */}
+      <section className="py-6">
+        <div className="mx-auto grid max-w-[1600px] gap-4 px-6 md:grid-cols-2 lg:px-12">
+          {[...HIGHLIGHTS, ...TILES].map((item, i) => (
+            <Link
+              key={item.title}
+              to="/portfolio"
+              data-delay={i * 90}
+              className="reveal group relative aspect-[4/3] overflow-hidden rounded-2xl"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+              <h3 className="absolute bottom-6 left-6 font-display text-2xl text-foreground">{item.title}</h3>
+            </Link>
+          ))}
         </div>
       </section>
 
