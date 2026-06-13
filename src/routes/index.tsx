@@ -220,35 +220,6 @@ function Home() {
         </div>
       </section>
 
-      {/* SQUARE TILES */}
-      <section className="py-24 lg:py-32">
-        <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
-          <div className="grid gap-6 md:grid-cols-3">
-            {TILES.map((t, i) => (
-              <Link
-                key={t.title}
-                to="/portfolio"
-                data-delay={i * 90}
-                className="reveal group relative aspect-square overflow-hidden rounded-2xl"
-              >
-                <img
-                  src={t.image}
-                  alt={t.title}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6">
-                  <h3 className="font-display text-2xl text-foreground">{t.title}</h3>
-                  <span className="mt-2 inline-flex items-center gap-2 text-[0.7rem] uppercase tracking-[0.2em] text-gold opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    Descubra <ArrowRight size={14} />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="relative overflow-hidden border-t border-border/60 py-28 lg:py-40">
