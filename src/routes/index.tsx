@@ -136,7 +136,7 @@ function Home() {
               key={h.title}
               to="/portfolio"
               data-delay={i * 90}
-              className="reveal group relative aspect-[4/3] overflow-hidden"
+              className="reveal group relative aspect-[4/3] overflow-hidden rounded-2xl"
             >
               <img
                 src={h.image}
