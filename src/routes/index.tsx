@@ -78,6 +78,7 @@ function Home() {
       [5, 5, 6], // back to near-black (CTA)
     ],
     2.5,
+    "#jornada",
   );
   const [paused, setPaused] = useState(false);
 
