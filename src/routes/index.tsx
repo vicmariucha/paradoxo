@@ -160,29 +160,34 @@ function Home() {
             Sua jornada com a PARADOXO começa agora.
           </h2>
 
-          <div className="mt-16 grid gap-x-6 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SHOWCASE.map((s, i) => (
-              <div key={s.signature} data-delay={i * 100} className="reveal group flex flex-col">
-                <p className="font-display text-4xl tracking-[0.15em] text-foreground">{s.signature}</p>
-                <div className="mt-6 aspect-[5/4] overflow-hidden">
-                  <img
-                    src={s.image}
-                    alt={s.signature}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
-                  />
+              <Link
+                key={s.signature}
+                to={s.to}
+                hash={s.hash}
+                data-delay={i * 100}
+                className="reveal group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl"
+              >
+                <img
+                  src={s.image}
+                  alt={s.signature}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
+                />
+                {/* Black gradient at the bottom for text legibility */}
+                <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black via-black/70 to-transparent" />
+
+                <div className="relative p-7">
+                  <p className="font-display text-3xl tracking-[0.12em] text-white">{s.signature}</p>
+                  <p className="mt-3 text-[0.7rem] uppercase tracking-[0.25em] text-gold">{s.tag}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-white/80">{s.desc}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-white transition-colors group-hover:text-gold">
+                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                    Explorar
+                  </span>
                 </div>
-                <p className="mt-6 text-[0.7rem] uppercase tracking-[0.25em] text-gold">{s.tag}</p>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-                <Link
-                  to={s.to}
-                  hash={s.hash}
-                  className="mt-6 inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-foreground transition-colors group-hover:text-gold"
-                >
-                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                  Explorar
-                </Link>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
