@@ -109,7 +109,7 @@ function Home() {
           </h1>
           <Link
             to="/servicos"
-            className="mt-10 inline-flex items-center gap-3 bg-foreground/95 px-9 py-4 text-[0.78rem] uppercase tracking-[0.18em] text-background transition-all duration-300 hover:bg-gold hover:text-primary-foreground"
+            className="mt-10 inline-flex items-center gap-3 rounded-full bg-foreground/95 px-9 py-4 text-[0.78rem] uppercase tracking-[0.18em] text-background transition-all duration-300 hover:bg-gold hover:text-primary-foreground"
           >
             Saiba mais
           </Link>
