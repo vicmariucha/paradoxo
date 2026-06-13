@@ -63,5 +63,5 @@ export function useScrollBg(stops: RGB[], speed = 1, startSelector?: string) {
       document.documentElement.style.removeProperty("--scroll-bg");
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [speed]);
+  }, [speed, startSelector]);
 }
