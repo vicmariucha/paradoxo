@@ -128,14 +128,10 @@ function Home() {
         </button>
       </section>
 
-      {/* SHOWCASE — "Sua jornada começa agora" (Porsche model grid style) */}
+      {/* SHOWCASE — services grid (Porsche model grid style) */}
       <section id="jornada" className="py-24 lg:py-32">
         <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
-          <h2 className="reveal text-center font-display text-4xl leading-tight lg:text-5xl">
-            Sua jornada com a PARADOXO começa agora.
-          </h2>
-
-          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SHOWCASE.map((s, i) => (
               <Link
                 key={s.signature}
