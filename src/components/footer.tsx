@@ -3,7 +3,7 @@ import { Instagram, Linkedin, Mail, Phone } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/60 bg-card/40 rounded-t-2xl">
+    <footer className="border-t border-border/60 bg-card/40">
       <div className="mx-auto max-w-[1400px] px-6 py-20 lg:px-10">
         <div className="grid gap-14 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
@@ -20,7 +20,7 @@ export function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="grid h-10 w-10 place-items-center border border-border text-muted-foreground transition-colors hover:border-gold hover:text-gold"
+                  className="grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-gold hover:text-gold"
                   aria-label="Social"
                 >
                   <Icon size={16} />

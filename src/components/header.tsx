@@ -30,7 +30,7 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "border-b border-border/70 bg-background/80 py-4 backdrop-blur-xl rounded-b-2xl"
+          ? "border-b border-border/70 bg-background/80 py-4 backdrop-blur-xl"
           : "border-b border-transparent py-7"
       }`}
     >
@@ -56,7 +56,7 @@ export function Header() {
 
         <Link
           to="/contato"
-          className="hidden border border-gold/50 px-6 py-3 text-[0.72rem] uppercase tracking-[0.22em] text-gold transition-all duration-300 hover:bg-gold hover:text-primary-foreground lg:inline-block"
+          className="hidden rounded-full border border-gold/50 px-6 py-3 text-[0.72rem] uppercase tracking-[0.22em] text-gold transition-all duration-300 hover:bg-gold hover:text-primary-foreground lg:inline-block"
         >
           Solicitar Projeto
         </Link>
@@ -92,7 +92,7 @@ export function Header() {
           <Link
             to="/contato"
             onClick={() => setOpen(false)}
-            className="mt-10 inline-block w-fit border border-gold/50 px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-gold"
+            className="mt-10 inline-block w-fit rounded-full border border-gold/50 px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-gold"
           >
             Solicitar Projeto
           </Link>
