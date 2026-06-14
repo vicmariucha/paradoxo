@@ -56,7 +56,7 @@ export function Header() {
 
         <Link
           to="/contato"
-          className="hidden border border-gold/50 px-6 py-3 text-[0.72rem] uppercase tracking-[0.22em] text-gold transition-all duration-300 hover:bg-gold hover:text-primary-foreground lg:inline-block"
+          className="hidden rounded-full border border-gold/50 px-6 py-3 text-[0.72rem] uppercase tracking-[0.22em] text-gold transition-all duration-300 hover:bg-gold hover:text-primary-foreground lg:inline-block"
         >
           Solicitar Projeto
         </Link>
