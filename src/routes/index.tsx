@@ -55,11 +55,7 @@ const SHOWCASE = [
   },
 ];
 
-const TILES = [
-  { title: "Comunicação Visual", image: portFacade },
-  { title: "Displays & Eventos", image: portDisplay },
-  { title: "Portfólio Completo", image: manifestoImg },
-];
+
 
 function Home() {
   useReveal();
