@@ -92,7 +92,7 @@ export function Header() {
           <Link
             to="/contato"
             onClick={() => setOpen(false)}
-            className="mt-10 inline-block w-fit border border-gold/50 px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-gold"
+            className="mt-10 inline-block w-fit rounded-full border border-gold/50 px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-gold"
           >
             Solicitar Projeto
           </Link>
