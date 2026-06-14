@@ -73,7 +73,7 @@ function PortfolioDetail() {
               </p>
 
               <ul className="mt-8 space-y-3">
-                {item.details.map((d) => (
+                {item.details.map((d: string) => (
                   <li key={d} className="flex items-start gap-3 text-sm text-foreground/90">
                     <Check size={18} className="mt-0.5 shrink-0 text-gold" />
                     {d}
