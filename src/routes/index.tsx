@@ -28,12 +28,6 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const HIGHLIGHTS = [
-  { title: "Embalagens de Assinatura", image: portPackaging },
-  { title: "Catálogo Institucional", image: portCatalog },
-  { title: "Kits Corporativos Premium", image: portKits },
-];
-
 const SHOWCASE = [
   {
     signature: "Impressos",
