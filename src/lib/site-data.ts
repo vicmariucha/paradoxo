@@ -23,6 +23,96 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Displays para Eventos", category: "Comunicação Visual", image: portDisplay, tall: true },
 ];
 
+export type HomePortfolioItem = {
+  slug: string;
+  title: string;
+  category: string;
+  image: string;
+  description: string;
+  details: string[];
+};
+
+export const HOME_PORTFOLIO: HomePortfolioItem[] = [
+  {
+    slug: "embalagens-de-assinatura",
+    title: "Embalagens de Assinatura",
+    category: "Embalagens",
+    image: portPackaging,
+    description:
+      "Embalagens premium que transformam o ato de abrir em uma experiência memorável de marca.",
+    details: [
+      "Acabamentos em hot stamping e relevo seco",
+      "Papéis e cartões nobres selecionados",
+      "Projeto estrutural sob medida",
+    ],
+  },
+  {
+    slug: "catalogo-institucional",
+    title: "Catálogo Institucional",
+    category: "Catálogos",
+    image: portCatalog,
+    description:
+      "Catálogos corporativos que comunicam autoridade e cuidado em cada página.",
+    details: [
+      "Editorial e diagramação de alto padrão",
+      "Encadernação premium",
+      "Tratamento de imagem profissional",
+    ],
+  },
+  {
+    slug: "kits-corporativos-premium",
+    title: "Kits Corporativos Premium",
+    category: "Kits",
+    image: portKits,
+    description:
+      "Kits que encantam clientes e colaboradores com curadoria e acabamento impecáveis.",
+    details: [
+      "Curadoria de itens exclusivos",
+      "Personalização completa da marca",
+      "Montagem e logística cuidadas",
+    ],
+  },
+  {
+    slug: "comunicacao-visual",
+    title: "Comunicação Visual",
+    category: "Comunicação Visual",
+    image: portFacade,
+    description:
+      "Sinalização e comunicação visual que dão presença e identidade ao seu espaço.",
+    details: [
+      "Fachadas e sinalização interna",
+      "Materiais resistentes e duráveis",
+      "Instalação profissional",
+    ],
+  },
+  {
+    slug: "displays-e-eventos",
+    title: "Displays & Eventos",
+    category: "Comunicação Visual",
+    image: portDisplay,
+    description:
+      "Displays e estruturas para eventos que colocam sua marca no centro das atenções.",
+    details: [
+      "Estruturas modulares e portáteis",
+      "Impressão de grande formato",
+      "Projeto pensado para impacto",
+    ],
+  },
+  {
+    slug: "portfolio-completo",
+    title: "Portfólio Completo",
+    category: "Todos",
+    image: portUniforms,
+    description:
+      "Explore a amplitude de tudo o que a PARADOXO pode criar para a sua marca.",
+    details: [
+      "Soluções completas de comunicação",
+      "Do impresso à estratégia",
+      "Um único parceiro de excelência",
+    ],
+  },
+];
+
 export const PORTFOLIO_CATEGORIES = [
   "Todos",
   "Embalagens",

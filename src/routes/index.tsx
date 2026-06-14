@@ -4,15 +4,13 @@ import { useState } from "react";
 import { SiteLayout } from "@/components/site-layout";
 import { useReveal } from "@/hooks/use-reveal";
 import { useScrollBg } from "@/hooks/use-scroll-bg";
+import { HOME_PORTFOLIO } from "@/lib/site-data";
 
 import heroImg from "@/assets/hero.jpg";
-import manifestoImg from "@/assets/manifesto.jpg";
 import portPackaging from "@/assets/port-packaging.jpg";
 import portCatalog from "@/assets/port-catalog.jpg";
 import portKits from "@/assets/port-kits.jpg";
 import portCards from "@/assets/port-cards.jpg";
-import portFacade from "@/assets/port-facade.jpg";
-import portDisplay from "@/assets/port-display.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,12 +24,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Home,
 });
-
-const HIGHLIGHTS = [
-  { title: "Embalagens de Assinatura", image: portPackaging },
-  { title: "Catálogo Institucional", image: portCatalog },
-  { title: "Kits Corporativos Premium", image: portKits },
-];
 
 const SHOWCASE = [
   {
@@ -60,11 +52,7 @@ const SHOWCASE = [
   },
 ];
 
-const TILES = [
-  { title: "Comunicação Visual", image: portFacade },
-  { title: "Displays & Eventos", image: portDisplay },
-  { title: "Portfólio Completo", image: manifestoImg },
-];
+
 
 function Home() {
   useReveal();
@@ -175,15 +163,16 @@ function Home() {
 
       {/* PORTFOLIO GRID — expanding rows of 2 (60/40 on hover) */}
       <section className="py-6">
-        <div className="mx-auto flex max-w-[1600px] flex-col gap-4 px-6 lg:px-12">
-          {Array.from({ length: Math.ceil([...HIGHLIGHTS, ...TILES].length / 2) }).map((_, row) => {
-            const rowItems = [...HIGHLIGHTS, ...TILES].slice(row * 2, row * 2 + 2);
+        <div className="mx-auto flex max-w-[1600px] flex-col gap-10 px-6 lg:gap-14 lg:px-12">
+          {Array.from({ length: Math.ceil(HOME_PORTFOLIO.length / 2) }).map((_, row) => {
+            const rowItems = HOME_PORTFOLIO.slice(row * 2, row * 2 + 2);
             return (
-              <div key={row} className="flex flex-col gap-4 md:flex-row">
+              <div key={row} className="flex flex-col gap-10 md:flex-row lg:gap-14">
                 {rowItems.map((item, i) => (
                   <Link
-                    key={item.title}
-                    to="/portfolio"
+                    key={item.slug}
+                    to="/portfolio/$slug"
+                    params={{ slug: item.slug }}
                     data-delay={i * 90}
                     className="reveal group relative aspect-[4/3] grow basis-0 overflow-hidden rounded-2xl transition-[flex-grow] duration-500 ease-out md:aspect-[16/9] md:hover:grow-[1.5]"
                   >
@@ -195,6 +184,14 @@ function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                     <h3 className="absolute bottom-6 left-6 font-display text-2xl text-foreground">{item.title}</h3>
+
+                    {/* Expand-on-hover explore button (bottom-right) */}
+                    <span className="absolute bottom-6 right-6 inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-3.5 py-3 text-[0.72rem] uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300">
+                      <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 group-hover:max-w-[8rem] group-hover:opacity-100">
+                        Explorar
+                      </span>
+                      <ArrowRight size={16} className="shrink-0" />
+                    </span>
                   </Link>
                 ))}
               </div>
@@ -202,6 +199,7 @@ function Home() {
           })}
         </div>
       </section>
+
 
 
       {/* FINDER CTA — search-style band */}
