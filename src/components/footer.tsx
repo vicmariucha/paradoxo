@@ -20,7 +20,7 @@ export function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="grid h-10 w-10 place-items-center border border-border text-muted-foreground transition-colors hover:border-gold hover:text-gold"
+                  className="grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-gold hover:text-gold"
                   aria-label="Social"
                 >
                   <Icon size={16} />
