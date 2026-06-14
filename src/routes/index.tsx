@@ -4,6 +4,7 @@ import { useState } from "react";
 import { SiteLayout } from "@/components/site-layout";
 import { useReveal } from "@/hooks/use-reveal";
 import { useScrollBg } from "@/hooks/use-scroll-bg";
+import { HOME_PORTFOLIO } from "@/lib/site-data";
 
 import heroImg from "@/assets/hero.jpg";
 import manifestoImg from "@/assets/manifesto.jpg";
