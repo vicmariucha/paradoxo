@@ -128,14 +128,10 @@ function Home() {
         </button>
       </section>
 
-      {/* SHOWCASE — "Sua jornada começa agora" (Porsche model grid style) */}
+      {/* SHOWCASE — services grid (Porsche model grid style) */}
       <section id="jornada" className="py-24 lg:py-32">
         <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
-          <h2 className="reveal text-center font-display text-4xl leading-tight lg:text-5xl">
-            Sua jornada com a PARADOXO começa agora.
-          </h2>
-
-          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SHOWCASE.map((s, i) => (
               <Link
                 key={s.signature}
@@ -168,28 +164,45 @@ function Home() {
         </div>
       </section>
 
-      {/* PORTFOLIO GRID — 2 cards per row */}
-      <section className="py-6">
-        <div className="mx-auto grid max-w-[1600px] gap-4 px-6 md:grid-cols-2 lg:px-12">
-          {[...HIGHLIGHTS, ...TILES].map((item, i) => (
-            <Link
-              key={item.title}
-              to="/portfolio"
-              data-delay={i * 90}
-              className="reveal group relative aspect-[4/3] overflow-hidden rounded-2xl"
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-              <h3 className="absolute bottom-6 left-6 font-display text-2xl text-foreground">{item.title}</h3>
-            </Link>
-          ))}
+      {/* PORTFOLIO INTRO TITLE */}
+      <section className="pt-12 pb-6 lg:pt-20">
+        <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
+          <h2 className="reveal text-center font-display text-4xl leading-tight lg:text-5xl">
+            Sua jornada com a PARADOXO começa agora.
+          </h2>
         </div>
       </section>
+
+      {/* PORTFOLIO GRID — expanding rows of 2 (60/40 on hover) */}
+      <section className="py-6">
+        <div className="mx-auto flex max-w-[1600px] flex-col gap-4 px-6 lg:px-12">
+          {Array.from({ length: Math.ceil([...HIGHLIGHTS, ...TILES].length / 2) }).map((_, row) => {
+            const rowItems = [...HIGHLIGHTS, ...TILES].slice(row * 2, row * 2 + 2);
+            return (
+              <div key={row} className="flex flex-col gap-4 md:flex-row">
+                {rowItems.map((item, i) => (
+                  <Link
+                    key={item.title}
+                    to="/portfolio"
+                    data-delay={i * 90}
+                    className="reveal group relative aspect-[4/3] grow basis-0 overflow-hidden rounded-2xl transition-[flex-grow] duration-500 ease-out md:aspect-[16/9] md:hover:grow-[1.5]"
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                    <h3 className="absolute bottom-6 left-6 font-display text-2xl text-foreground">{item.title}</h3>
+                  </Link>
+                ))}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
 
       {/* FINDER CTA — search-style band */}
       <section className="border-y border-border/60 bg-card/30 py-24 lg:py-32">
