@@ -184,7 +184,7 @@ function Home() {
                     <h3 className="absolute bottom-6 left-6 font-display text-2xl text-foreground">{item.title}</h3>
 
                     {/* Expand-on-hover explore button (bottom-right) */}
-                    <span className="absolute bottom-6 right-6 inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-3.5 py-3 text-[0.72rem] uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300">
+                    <span className="absolute bottom-6 right-6 inline-flex items-center justify-center gap-0 overflow-hidden rounded-full bg-gold px-3 py-3 text-[0.72rem] uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 group-hover:gap-2 group-hover:px-3.5">
                       <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 group-hover:max-w-[8rem] group-hover:opacity-100">
                         Explorar
                       </span>
