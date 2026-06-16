@@ -7,13 +7,8 @@ import { useEffect } from "react";
  */
 type RGB = [number, number, number];
 
-function lerp(a: number, b: number, t: number) {
-  return a + (b - a) * t;
-}
 
-function mix(a: RGB, b: RGB, t: number): RGB {
-  return [lerp(a[0], b[0], t), lerp(a[1], b[1], t), lerp(a[2], b[2], t)];
-}
+
 
 export function useScrollBg(stops: RGB[], speed = 1, startSelector?: string) {
   useEffect(() => {
