@@ -43,16 +43,16 @@ function Contato() {
       </section>
 
       <section className="px-6 pb-28 lg:px-10">
-        <div className="mx-auto grid max-w-[1400px] gap-16 border-t border-border/60 pt-16 lg:grid-cols-[1fr_1.2fr]">
+        <div className="mx-auto grid max-w-[1400px] gap-16 pt-16 lg:grid-cols-[1fr_1.2fr]">
           {/* CHANNELS */}
-          <div className="reveal space-y-px">
+          <div className="reveal space-y-3">
             {CHANNELS.map((c) => (
               <a
                 key={c.label}
                 href={c.href}
-                className="group flex items-center gap-5 border border-border/60 p-6 transition-colors duration-300 hover:border-gold/60 hover:bg-card/40"
+                className="group flex items-center gap-5 border border-border/60 rounded-xl p-6 transition-colors duration-300 hover:border-gold/60 hover:bg-card/40"
               >
-                <span className="grid h-12 w-12 shrink-0 place-items-center border border-border text-gold transition-colors group-hover:border-gold">
+                <span className="grid h-12 w-12 shrink-0 place-items-center border border-border rounded-lg text-gold transition-colors group-hover:border-gold">
                   <c.icon size={18} />
                 </span>
                 <span className="min-w-0">
@@ -73,7 +73,7 @@ function Contato() {
             }}
           >
             {sent ? (
-              <div className="flex h-full min-h-[320px] flex-col items-center justify-center border border-gold/40 p-10 text-center">
+              <div className="flex h-full min-h-[320px] flex-col items-center justify-center border border-gold/40 rounded-2xl p-10 text-center">
                 <h3 className="font-display text-3xl text-gold">Recebido com excelência.</h3>
                 <p className="mt-4 max-w-sm text-muted-foreground">
                   Obrigado. Nossa equipe entrará em contato em breve para dar
@@ -90,7 +90,7 @@ function Contato() {
                   <label className="overline">Tipo de projeto</label>
                   <select
                     name="tipo"
-                    className="mt-3 w-full border-b border-border bg-transparent py-3 text-foreground outline-none transition-colors focus:border-gold"
+                    className="mt-3 w-full border border-border bg-transparent rounded-xl py-3 px-4 text-foreground outline-none transition-colors focus:border-gold"
                   >
                     <option className="bg-background">Impressos Premium</option>
                     <option className="bg-background">Marketing, SEO & Campanhas</option>
@@ -104,12 +104,12 @@ function Contato() {
                     name="mensagem"
                     rows={4}
                     placeholder="Conte-nos sobre o seu projeto…"
-                    className="mt-3 w-full resize-none border-b border-border bg-transparent py-3 text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-gold"
+                    className="mt-3 w-full resize-none border border-border bg-transparent rounded-xl py-3 px-4 text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-gold"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="group mt-2 inline-flex w-fit items-center gap-3 bg-gold px-10 py-4 text-[0.75rem] uppercase tracking-[0.24em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft sm:col-span-2"
+                  className="group mt-2 inline-flex w-fit items-center gap-3 rounded-full bg-gold px-10 py-4 text-[0.75rem] uppercase tracking-[0.24em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft sm:col-span-2"
                 >
                   Enviar solicitação
                   <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
@@ -140,7 +140,7 @@ function Field({
       <input
         type={type}
         name={name}
-        className="mt-3 w-full border-b border-border bg-transparent py-3 text-foreground outline-none transition-colors focus:border-gold"
+        className="mt-3 w-full border border-border bg-transparent rounded-xl py-3 px-4 text-foreground outline-none transition-colors focus:border-gold"
       />
     </div>
   );

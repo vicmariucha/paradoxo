@@ -71,7 +71,7 @@ function Home() {
   return (
     <SiteLayout>
       <div
-        className="pointer-events-none fixed inset-0 -z-10 transition-colors duration-700 ease-out"
+        className="pointer-events-none fixed inset-0 -z-10 transition-colors duration-[1100ms] ease-out"
         style={{ backgroundColor: "var(--scroll-bg, var(--background))" }}
         aria-hidden
       />
@@ -153,7 +153,7 @@ function Home() {
       {/* PORTFOLIO INTRO TITLE */}
       <section className="pt-12 pb-6 lg:pt-20">
         <div className="mx-auto max-w-[1600px] px-6 lg:px-12">
-          <h2 className="reveal text-center font-display text-4xl leading-tight lg:text-5xl">
+          <h2 className="reveal text-center font-display text-4xl leading-tight text-white mix-blend-difference lg:text-5xl">
             Sua jornada com a PARADOXO começa agora.
           </h2>
         </div>
