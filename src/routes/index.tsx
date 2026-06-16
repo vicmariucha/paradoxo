@@ -60,12 +60,10 @@ function Home() {
   useScrollBg(
     [
       [5, 5, 5], // near-black (hero)
-      [40, 38, 35], // warm charcoal
       [255, 255, 255], // pure white (mid-scroll highlight)
-      [40, 38, 35], // warm charcoal
       [5, 5, 6], // back to near-black (CTA)
     ],
-    2.5,
+    1.5,
     "#jornada",
   );
   const [paused, setPaused] = useState(false);
