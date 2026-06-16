@@ -71,7 +71,7 @@ function Home() {
   return (
     <SiteLayout>
       <div
-        className="pointer-events-none fixed inset-0 -z-10 transition-colors duration-700 ease-out"
+        className="pointer-events-none fixed inset-0 -z-10 transition-colors duration-[1100ms] ease-out"
         style={{ backgroundColor: "var(--scroll-bg, var(--background))" }}
         aria-hidden
       />
