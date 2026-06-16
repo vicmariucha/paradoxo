@@ -60,12 +60,10 @@ function Home() {
   useScrollBg(
     [
       [5, 5, 5], // near-black (hero)
-      [40, 38, 35], // warm charcoal
       [255, 255, 255], // pure white (mid-scroll highlight)
-      [40, 38, 35], // warm charcoal
       [5, 5, 6], // back to near-black (CTA)
     ],
-    2.5,
+    1.5,
     "#jornada",
   );
   const [paused, setPaused] = useState(false);
@@ -163,11 +161,11 @@ function Home() {
 
       {/* PORTFOLIO GRID — expanding rows of 2 (60/40 on hover) */}
       <section className="py-6">
-        <div className="mx-auto flex max-w-[1600px] flex-col gap-10 px-6 lg:gap-14 lg:px-12">
+        <div className="mx-auto flex max-w-[1600px] flex-col gap-6 px-6 lg:gap-8 lg:px-12">
           {Array.from({ length: Math.ceil(HOME_PORTFOLIO.length / 2) }).map((_, row) => {
             const rowItems = HOME_PORTFOLIO.slice(row * 2, row * 2 + 2);
             return (
-              <div key={row} className="flex flex-col gap-10 md:flex-row lg:gap-14">
+              <div key={row} className="flex flex-col gap-6 md:flex-row lg:gap-8">
                 {rowItems.map((item, i) => (
                   <Link
                     key={item.slug}
@@ -186,7 +184,7 @@ function Home() {
                     <h3 className="absolute bottom-6 left-6 font-display text-2xl text-foreground">{item.title}</h3>
 
                     {/* Expand-on-hover explore button (bottom-right) */}
-                    <span className="absolute bottom-6 right-6 inline-flex items-center gap-2 overflow-hidden rounded-full bg-gold px-3.5 py-3 text-[0.72rem] uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300">
+                    <span className="absolute bottom-6 right-6 inline-flex items-center justify-center gap-0 overflow-hidden rounded-full bg-gold px-3 py-3 text-[0.72rem] uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 group-hover:gap-2 group-hover:px-3.5">
                       <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 group-hover:max-w-[8rem] group-hover:opacity-100">
                         Explorar
                       </span>

@@ -7,13 +7,8 @@ import { useEffect } from "react";
  */
 type RGB = [number, number, number];
 
-function lerp(a: number, b: number, t: number) {
-  return a + (b - a) * t;
-}
 
-function mix(a: RGB, b: RGB, t: number): RGB {
-  return [lerp(a[0], b[0], t), lerp(a[1], b[1], t), lerp(a[2], b[2], t)];
-}
+
 
 export function useScrollBg(stops: RGB[], speed = 1, startSelector?: string) {
   useEffect(() => {
@@ -37,10 +32,13 @@ export function useScrollBg(stops: RGB[], speed = 1, startSelector?: string) {
       const raw = max > 0 ? (window.scrollY - startY) / max : 0;
       const progress = Math.min(1, Math.max(0, raw * speed));
 
+      // Snap to the nearest stop so the background is always a target color
+      // (never frozen on an intermediate gray). The CSS `transition-colors`
+      // on the background element animates between snapped colors as the user
+      // crosses each transition point.
       const scaled = progress * (stops.length - 1);
-      const i = Math.min(stops.length - 2, Math.floor(scaled));
-      const t = scaled - i;
-      const [r, g, b] = mix(stops[i], stops[i + 1], t);
+      const i = Math.round(scaled);
+      const [r, g, b] = stops[Math.min(stops.length - 1, Math.max(0, i))];
 
       doc.style.setProperty(
         "--scroll-bg",
