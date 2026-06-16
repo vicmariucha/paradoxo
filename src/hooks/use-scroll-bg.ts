@@ -37,10 +37,13 @@ export function useScrollBg(stops: RGB[], speed = 1, startSelector?: string) {
       const raw = max > 0 ? (window.scrollY - startY) / max : 0;
       const progress = Math.min(1, Math.max(0, raw * speed));
 
+      // Snap to the nearest stop so the background is always a target color
+      // (never frozen on an intermediate gray). The CSS `transition-colors`
+      // on the background element animates between snapped colors as the user
+      // crosses each transition point.
       const scaled = progress * (stops.length - 1);
-      const i = Math.min(stops.length - 2, Math.floor(scaled));
-      const t = scaled - i;
-      const [r, g, b] = mix(stops[i], stops[i + 1], t);
+      const i = Math.round(scaled);
+      const [r, g, b] = stops[Math.min(stops.length - 1, Math.max(0, i))];
 
       doc.style.setProperty(
         "--scroll-bg",
