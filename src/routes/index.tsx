@@ -161,11 +161,11 @@ function Home() {
 
       {/* PORTFOLIO GRID — expanding rows of 2 (60/40 on hover) */}
       <section className="py-6">
-        <div className="mx-auto flex max-w-[1600px] flex-col gap-10 px-6 lg:gap-14 lg:px-12">
+        <div className="mx-auto flex max-w-[1600px] flex-col gap-6 px-6 lg:gap-8 lg:px-12">
           {Array.from({ length: Math.ceil(HOME_PORTFOLIO.length / 2) }).map((_, row) => {
             const rowItems = HOME_PORTFOLIO.slice(row * 2, row * 2 + 2);
             return (
-              <div key={row} className="flex flex-col gap-10 md:flex-row lg:gap-14">
+              <div key={row} className="flex flex-col gap-6 md:flex-row lg:gap-8">
                 {rowItems.map((item, i) => (
                   <Link
                     key={item.slug}
