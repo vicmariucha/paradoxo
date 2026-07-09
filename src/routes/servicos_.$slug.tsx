@@ -6,7 +6,7 @@ import { SiteLayout } from "@/components/site-layout";
 import { useReveal } from "@/hooks/use-reveal";
 import { SERVICE_DETAILS } from "@/lib/site-data";
 
-export const Route = createFileRoute("/servicos/$slug")({
+export const Route = createFileRoute("/servicos_/$slug")({
   loader: ({ params }) => {
     const service = SERVICE_DETAILS[params.slug];
     if (!service) throw notFound();
@@ -79,7 +79,7 @@ function ServiceDetail() {
         <div className="mx-auto max-w-[1400px]">
           <p className="overline reveal">Para quem serve</p>
           <div className="mt-12 grid gap-4 md:grid-cols-2">
-            {service.audience.map((a, i) => (
+            {service.audience.map((a: string, i: number) => (
               <div
                 key={a}
                 data-delay={(i % 2) * 90}
@@ -100,7 +100,7 @@ function ServiceDetail() {
         <div className="mx-auto max-w-[1400px]">
           <p className="overline reveal">Como funciona</p>
           <div className="mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-            {service.how.map((step, i) => (
+            {service.how.map((step: { n: string; t: string; d: string }, i: number) => (
               <div key={step.n} data-delay={i * 100} className="reveal">
                 <span className="font-display text-5xl text-gold/50">{step.n}</span>
                 <div className="hairline mt-6 w-12" />
@@ -117,7 +117,7 @@ function ServiceDetail() {
         <div className="mx-auto max-w-[1400px]">
           <p className="overline reveal">Portfólio & Exemplos</p>
           <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {service.showcase.map((item, i) => (
+            {service.showcase.map((item: { title: string; image: string }, i: number) => (
               <div
                 key={item.title}
                 data-delay={(i % 4) * 80}
@@ -142,7 +142,7 @@ function ServiceDetail() {
         <div className="mx-auto max-w-[900px]">
           <p className="overline reveal">Perguntas frequentes</p>
           <div className="mt-12 space-y-4">
-            {service.faq.map((item, i) => (
+            {service.faq.map((item: { q: string; a: string }, i: number) => (
               <div key={item.q} data-delay={(i % 4) * 70} className="reveal overflow-hidden rounded-2xl border border-border/60">
                 <button
                   onClick={() => setOpen(open === i ? null : i)}
