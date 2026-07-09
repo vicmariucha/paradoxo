@@ -67,7 +67,7 @@ function Portfolio() {
             <div
               key={p.title}
               data-delay={(i % 3) * 90}
-              className={`reveal group relative overflow-hidden ${p.tall ? "row-span-2" : ""}`}
+              className={`reveal group relative overflow-hidden rounded-2xl ${p.tall ? "row-span-2" : ""}`}
             >
               <div className={p.tall ? "aspect-[3/4]" : "aspect-[4/3]"}>
                 <img
