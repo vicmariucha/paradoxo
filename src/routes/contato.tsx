@@ -23,9 +23,71 @@ const CHANNELS = [
   { icon: MapPin, label: "Atelier", value: "São Paulo, Brasil", href: "#" },
 ];
 
+const PROJECT_TYPES = [
+  "Impressos Premium",
+  "Marketing, SEO & Campanhas",
+  "Finanças & Suporte",
+  "Outro",
+];
+
+type FormState = {
+  nome: string;
+  empresa: string;
+  email: string;
+  telefone: string;
+  tipo: string;
+  outro: string;
+  mensagem: string;
+};
+
+const EMPTY: FormState = {
+  nome: "",
+  empresa: "",
+  email: "",
+  telefone: "",
+  tipo: PROJECT_TYPES[0],
+  outro: "",
+  mensagem: "",
+};
+
 function Contato() {
   useReveal();
   const [sent, setSent] = useState(false);
+  const [form, setForm] = useState<FormState>(EMPTY);
+  const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
+
+  const update = (key: keyof FormState, value: string) => {
+    setForm((f) => ({ ...f, [key]: value }));
+    setErrors((e) => ({ ...e, [key]: undefined }));
+  };
+
+  const validate = (): boolean => {
+    const next: Partial<Record<keyof FormState, string>> = {};
+
+    if (!form.nome.trim()) next.nome = "Informe o seu nome.";
+    else if (/\d/.test(form.nome)) next.nome = "O nome não pode conter números.";
+
+    if (!form.empresa.trim()) next.empresa = "Informe a sua empresa.";
+
+    if (!form.email.trim()) next.email = "Informe o seu e-mail.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) next.email = "E-mail inválido.";
+
+    if (!form.telefone.trim()) next.telefone = "Informe o seu telefone.";
+    else if (form.telefone.replace(/\D/g, "").length < 10) next.telefone = "Telefone inválido.";
+
+    if (form.tipo === "Outro" && !form.outro.trim())
+      next.outro = "Descreva qual o tipo de projeto.";
+
+    if (!form.mensagem.trim()) next.mensagem = "Escreva a sua mensagem.";
+
+    setErrors(next);
+    return Object.keys(next).length === 0;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (validate()) setSent(true);
+  };
 
   return (
     <SiteLayout>
@@ -52,7 +114,7 @@ function Contato() {
                 href={c.href}
                 className="group flex items-center gap-5 border border-border/60 rounded-xl p-6 transition-colors duration-300 hover:border-gold/60 hover:bg-card/40"
               >
-                <span className="grid h-12 w-12 shrink-0 place-items-center border border-border rounded-lg text-gold transition-colors group-hover:border-gold">
+                <span className="grid h-12 w-12 shrink-0 place-items-center border border-border rounded-full text-gold transition-colors group-hover:border-gold">
                   <c.icon size={18} />
                 </span>
                 <span className="min-w-0">
@@ -64,14 +126,7 @@ function Contato() {
           </div>
 
           {/* FORM */}
-          <form
-            className="reveal"
-            data-delay="120"
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSent(true);
-            }}
-          >
+          <form className="reveal" data-delay="120" noValidate onSubmit={handleSubmit}>
             {sent ? (
               <div className="flex h-full min-h-[320px] flex-col items-center justify-center border border-gold/40 rounded-2xl p-10 text-center">
                 <h3 className="font-display text-3xl text-gold">Recebido com excelência.</h3>
@@ -82,30 +137,68 @@ function Contato() {
               </div>
             ) : (
               <div className="grid gap-6 sm:grid-cols-2">
-                <Field label="Nome" name="nome" className="sm:col-span-1" />
-                <Field label="Empresa" name="empresa" className="sm:col-span-1" />
-                <Field label="E-mail" name="email" type="email" className="sm:col-span-1" />
-                <Field label="Telefone" name="telefone" className="sm:col-span-1" />
+                <Field
+                  label="Nome"
+                  value={form.nome}
+                  error={errors.nome}
+                  onChange={(v) => update("nome", v.replace(/[0-9]/g, ""))}
+                  className="sm:col-span-1"
+                />
+                <Field
+                  label="Empresa"
+                  value={form.empresa}
+                  error={errors.empresa}
+                  onChange={(v) => update("empresa", v)}
+                  className="sm:col-span-1"
+                />
+                <Field
+                  label="E-mail"
+                  type="email"
+                  value={form.email}
+                  error={errors.email}
+                  onChange={(v) => update("email", v)}
+                  className="sm:col-span-1"
+                />
+                <Field
+                  label="Telefone"
+                  type="tel"
+                  inputMode="numeric"
+                  value={form.telefone}
+                  error={errors.telefone}
+                  onChange={(v) => update("telefone", v.replace(/\D/g, ""))}
+                  className="sm:col-span-1"
+                />
                 <div className="sm:col-span-2">
                   <label className="overline">Tipo de projeto</label>
                   <select
-                    name="tipo"
+                    value={form.tipo}
+                    onChange={(e) => update("tipo", e.target.value)}
                     className="mt-3 w-full border border-border bg-transparent rounded-xl py-3 px-4 text-foreground outline-none transition-colors focus:border-gold"
                   >
-                    <option className="bg-background">Impressos Premium</option>
-                    <option className="bg-background">Marketing, SEO & Campanhas</option>
-                    <option className="bg-background">Finanças & Suporte</option>
-                    <option className="bg-background">Outro</option>
+                    {PROJECT_TYPES.map((t) => (
+                      <option key={t} className="bg-background">{t}</option>
+                    ))}
                   </select>
                 </div>
+                {form.tipo === "Outro" && (
+                  <Field
+                    label="Qual tipo de projeto?"
+                    value={form.outro}
+                    error={errors.outro}
+                    onChange={(v) => update("outro", v)}
+                    className="sm:col-span-2"
+                  />
+                )}
                 <div className="sm:col-span-2">
                   <label className="overline">Mensagem</label>
                   <textarea
-                    name="mensagem"
+                    value={form.mensagem}
+                    onChange={(e) => update("mensagem", e.target.value)}
                     rows={4}
                     placeholder="Conte-nos sobre o seu projeto…"
-                    className="mt-3 w-full resize-none border border-border bg-transparent rounded-xl py-3 px-4 text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-gold"
+                    className={`mt-3 w-full resize-none border bg-transparent rounded-xl py-3 px-4 text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-gold ${errors.mensagem ? "border-destructive" : "border-border"}`}
                   />
+                  {errors.mensagem && <p className="mt-2 text-xs text-destructive">{errors.mensagem}</p>}
                 </div>
                 <button
                   type="submit"
@@ -125,13 +218,19 @@ function Contato() {
 
 function Field({
   label,
-  name,
+  value,
+  onChange,
+  error,
   type = "text",
+  inputMode,
   className = "",
 }: {
   label: string;
-  name: string;
+  value: string;
+  onChange: (v: string) => void;
+  error?: string;
   type?: string;
+  inputMode?: "text" | "numeric" | "email" | "tel";
   className?: string;
 }) {
   return (
@@ -139,9 +238,12 @@ function Field({
       <label className="overline">{label}</label>
       <input
         type={type}
-        name={name}
-        className="mt-3 w-full border border-border bg-transparent rounded-xl py-3 px-4 text-foreground outline-none transition-colors focus:border-gold"
+        inputMode={inputMode}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className={`mt-3 w-full border bg-transparent rounded-xl py-3 px-4 text-foreground outline-none transition-colors focus:border-gold ${error ? "border-destructive" : "border-border"}`}
       />
+      {error && <p className="mt-2 text-xs text-destructive">{error}</p>}
     </div>
   );
 }
