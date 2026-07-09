@@ -125,7 +125,7 @@ function Home() {
 
         <button
           aria-label={paused ? "Reproduzir" : "Pausar"}
-          onClick={() => setPaused((v) => !v)}
+          onClick={togglePlay}
           className="absolute bottom-10 right-8 flex h-12 w-12 items-center justify-center rounded-full border border-foreground/30 text-foreground/80 backdrop-blur-sm transition-colors hover:border-gold hover:text-gold"
         >
           {paused ? <Play size={16} /> : <Pause size={16} />}
