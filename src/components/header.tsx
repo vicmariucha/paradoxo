@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { SERVICES } from "@/lib/site-data";
 
 const NAV = [
   { to: "/", label: "Início" },
