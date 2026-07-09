@@ -136,8 +136,8 @@ function Home() {
             {SHOWCASE.map((s, i) => (
               <Link
                 key={s.signature}
-                to={s.to}
-                hash={s.hash}
+                to="/servicos/$slug"
+                params={{ slug: s.slug }}
                 data-delay={i * 100}
                 className="reveal group relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl"
               >
