@@ -185,7 +185,7 @@ export const SERVICES: Service[] = [
     tagline: "Estrutura",
     description:
       "Organização, processo e clareza financeira para que sua operação cresça com solidez.",
-    ctaLabel: "Estruturar minha operação",
+    ctaLabel: "Ver mais sobre finanças & suporte",
     items: [
       "Gestão financeira",
       "Organização administrativa",
