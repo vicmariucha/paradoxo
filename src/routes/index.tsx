@@ -92,13 +92,17 @@ function Home() {
 
       {/* HERO — fullscreen, headline bottom-left (Porsche style) */}
       <section className="relative h-screen w-full overflow-hidden">
-        <img
-          src={heroImg}
-          alt="Material premium PARADOXO em preto e dourado"
-          className={`absolute inset-0 h-full w-full object-cover transition-transform duration-[8s] ease-out ${
-            paused ? "scale-100" : "scale-110"
-          }`}
+        <video
+          ref={videoRef}
+          src={heroVideo.url}
+          poster={heroImg}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
         />
+
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-background/30" />
 
         <div className="absolute inset-x-0 bottom-0 mx-auto w-full max-w-[1600px] px-6 pb-20 lg:px-12 lg:pb-24">
