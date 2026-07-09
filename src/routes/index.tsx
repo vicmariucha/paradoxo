@@ -7,6 +7,7 @@ import { useScrollBg } from "@/hooks/use-scroll-bg";
 import { HOME_PORTFOLIO } from "@/lib/site-data";
 
 import heroImg from "@/assets/hero.jpg";
+import heroVideo from "@/assets/hero-section-background.mp4.asset.json";
 import portKits from "@/assets/port-kits.jpg";
 import showcaseImpressos from "@/assets/showcase-impressos.jpeg.asset.json";
 import showcaseMarketing from "@/assets/showcase-marketing.jpeg.asset.json";
