@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowDown, Pause, Play, Search } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { SiteLayout } from "@/components/site-layout";
 import { useReveal } from "@/hooks/use-reveal";
 import { useScrollBg } from "@/hooks/use-scroll-bg";
