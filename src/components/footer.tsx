@@ -50,11 +50,15 @@ export function Footer() {
           <div>
             <h4 className="overline">Contato</h4>
             <ul className="mt-6 space-y-4 text-sm text-muted-foreground">
-              <li className="flex items-center gap-3">
-                <Phone size={15} className="text-gold" /> +55 (11) 90000-0000
+              <li>
+                <a href="tel:+5511984431907" className="flex items-center gap-3 transition-colors hover:text-gold">
+                  <Phone size={15} className="text-gold" /> +55 (11) 98443-1907
+                </a>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail size={15} className="text-gold" /> contato@paradoxo.com
+              <li>
+                <a href="mailto:salomao@suporteparadoxo.com.br" className="flex items-center gap-3 transition-colors hover:text-gold">
+                  <Mail size={15} className="text-gold" /> salomao@suporteparadoxo.com.br
+                </a>
               </li>
             </ul>
           </div>

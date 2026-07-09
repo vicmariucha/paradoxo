@@ -64,7 +64,7 @@ function Sobre() {
       {/* ORIGEM */}
       <section className="px-6 lg:px-10">
         <div className="mx-auto grid max-w-[1400px] items-center gap-12 border-t border-border/60 py-24 lg:grid-cols-2 lg:gap-20 lg:py-32">
-          <div className="reveal relative aspect-[5/6] overflow-hidden">
+          <div className="reveal relative aspect-[5/6] overflow-hidden rounded-2xl">
             <img
               src={manifestoImg}
               alt="Detalhe de material premium em preto e dourado"
@@ -131,10 +131,10 @@ function Sobre() {
               </div>
             </div>
             <div className="reveal grid grid-cols-2 gap-4 lg:col-span-4 lg:col-start-9" data-delay="120">
-              <div className="relative aspect-[4/5] overflow-hidden">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
                 <img src={portCards} alt="Cartões em hot stamping" loading="lazy" className="h-full w-full object-cover" />
               </div>
-              <div className="relative mt-8 aspect-[4/5] overflow-hidden">
+              <div className="relative mt-8 aspect-[4/5] overflow-hidden rounded-2xl">
                 <img src={portKits} alt="Kits corporativos premium" loading="lazy" className="h-full w-full object-cover" />
               </div>
             </div>
@@ -160,9 +160,9 @@ function Sobre() {
               <div
                 key={p.rank}
                 data-delay={i * 120}
-                className="reveal group flex flex-col overflow-hidden border border-border/60 bg-background"
+                className="reveal group flex flex-col overflow-hidden rounded-2xl border border-border/60 bg-background"
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-t-2xl">
                   <img
                     src={p.image}
                     alt={p.title}

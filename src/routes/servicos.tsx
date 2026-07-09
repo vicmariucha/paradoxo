@@ -61,16 +61,17 @@ function Servicos() {
               <h2 className="mt-3 font-display text-4xl leading-tight lg:text-5xl">{s.title}</h2>
               <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">{s.description}</p>
               <Link
-                to="/contato"
-                className="group mt-10 inline-flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-gold"
+                to="/servicos/$slug"
+                params={{ slug: s.slug }}
+                className="group mt-10 inline-flex items-center gap-3 rounded-full border border-gold/50 px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.2em] text-gold transition-all duration-300 hover:bg-gold hover:text-primary-foreground"
               >
-                Solicitar este serviço
+                {s.ctaLabel}
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
 
             <div className="reveal" data-delay="150">
-              <div className="grid gap-px overflow-hidden border border-border/60 sm:grid-cols-2">
+              <div className="grid gap-px overflow-hidden rounded-2xl border border-border/60 sm:grid-cols-2">
                 {s.items.map((it) => (
                   <div key={it} className="flex items-center gap-3 bg-background p-5 text-sm">
                     <Check size={15} className="shrink-0 text-gold" />
