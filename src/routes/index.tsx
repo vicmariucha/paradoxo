@@ -7,10 +7,10 @@ import { useScrollBg } from "@/hooks/use-scroll-bg";
 import { HOME_PORTFOLIO } from "@/lib/site-data";
 
 import heroImg from "@/assets/hero.jpg";
-import portPackaging from "@/assets/port-packaging.jpg";
-import portCatalog from "@/assets/port-catalog.jpg";
 import portKits from "@/assets/port-kits.jpg";
-import portCards from "@/assets/port-cards.jpg";
+import showcaseImpressos from "@/assets/showcase-impressos.jpeg.asset.json";
+import showcaseMarketing from "@/assets/showcase-marketing.jpeg.asset.json";
+import showcaseFinancas from "@/assets/showcase-financas.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
