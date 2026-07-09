@@ -32,24 +32,21 @@ const SHOWCASE = [
     image: showcaseImpressos.url,
     tag: "Nosso métier",
     desc: "Embalagens, cartões e materiais de altíssimo padrão. Onde o papel encontra a percepção de valor.",
-    to: "/servicos" as const,
-    hash: "impressos",
+    slug: "impressos",
   },
   {
     signature: "Marketing",
     image: showcaseMarketing.url,
     tag: "Posicionamento",
     desc: "SEO, gestão de tráfego e campanhas que colocam sua marca onde o cliente certo a encontra.",
-    to: "/servicos" as const,
-    hash: "marketing",
+    slug: "marketing",
   },
   {
     signature: "Finanças",
     image: showcaseFinancas.url,
     tag: "Estrutura",
     desc: "Organização, processo e clareza financeira para que sua operação cresça com solidez.",
-    to: "/servicos" as const,
-    hash: "financas",
+    slug: "financas",
   },
 ];
 
