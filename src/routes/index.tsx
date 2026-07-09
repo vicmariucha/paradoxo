@@ -7,10 +7,10 @@ import { useScrollBg } from "@/hooks/use-scroll-bg";
 import { HOME_PORTFOLIO } from "@/lib/site-data";
 
 import heroImg from "@/assets/hero.jpg";
-import portPackaging from "@/assets/port-packaging.jpg";
-import portCatalog from "@/assets/port-catalog.jpg";
 import portKits from "@/assets/port-kits.jpg";
-import portCards from "@/assets/port-cards.jpg";
+import showcaseImpressos from "@/assets/showcase-impressos.jpeg.asset.json";
+import showcaseMarketing from "@/assets/showcase-marketing.jpeg.asset.json";
+import showcaseFinancas from "@/assets/showcase-financas.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
 const SHOWCASE = [
   {
     signature: "Impressos",
-    image: portPackaging,
+    image: showcaseImpressos.url,
     tag: "Nosso métier",
     desc: "Embalagens, cartões e materiais de altíssimo padrão. Onde o papel encontra a percepção de valor.",
     to: "/servicos" as const,
@@ -36,7 +36,7 @@ const SHOWCASE = [
   },
   {
     signature: "Marketing",
-    image: portCards,
+    image: showcaseMarketing.url,
     tag: "Posicionamento",
     desc: "SEO, gestão de tráfego e campanhas que colocam sua marca onde o cliente certo a encontra.",
     to: "/servicos" as const,
@@ -44,7 +44,7 @@ const SHOWCASE = [
   },
   {
     signature: "Finanças",
-    image: portCatalog,
+    image: showcaseFinancas.url,
     tag: "Estrutura",
     desc: "Organização, processo e clareza financeira para que sua operação cresça com solidez.",
     to: "/servicos" as const,
