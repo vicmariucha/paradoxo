@@ -95,7 +95,7 @@ function Portfolio() {
           <Link
             to="/contato"
             data-delay="120"
-            className="reveal mt-10 inline-flex items-center gap-3 bg-gold px-10 py-5 text-[0.75rem] uppercase tracking-[0.24em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
+            className="reveal mt-10 inline-flex items-center gap-3 rounded-full bg-gold px-10 py-5 text-[0.75rem] uppercase tracking-[0.24em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
           >
             Iniciar um projeto
             <ArrowRight size={16} />

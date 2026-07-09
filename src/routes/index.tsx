@@ -1,12 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowDown, Pause, Play, Search } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { SiteLayout } from "@/components/site-layout";
 import { useReveal } from "@/hooks/use-reveal";
 import { useScrollBg } from "@/hooks/use-scroll-bg";
 import { HOME_PORTFOLIO } from "@/lib/site-data";
 
 import heroImg from "@/assets/hero.jpg";
+import heroVideo from "@/assets/hero-section-background.mp4.asset.json";
 import portKits from "@/assets/port-kits.jpg";
 import showcaseImpressos from "@/assets/showcase-impressos.jpeg.asset.json";
 import showcaseMarketing from "@/assets/showcase-marketing.jpeg.asset.json";
@@ -67,6 +68,19 @@ function Home() {
     "#jornada",
   );
   const [paused, setPaused] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const togglePlay = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    if (v.paused) {
+      v.play();
+      setPaused(false);
+    } else {
+      v.pause();
+      setPaused(true);
+    }
+  };
 
   return (
     <SiteLayout>
@@ -78,13 +92,17 @@ function Home() {
 
       {/* HERO — fullscreen, headline bottom-left (Porsche style) */}
       <section className="relative h-screen w-full overflow-hidden">
-        <img
-          src={heroImg}
-          alt="Material premium PARADOXO em preto e dourado"
-          className={`absolute inset-0 h-full w-full object-cover transition-transform duration-[8s] ease-out ${
-            paused ? "scale-100" : "scale-110"
-          }`}
+        <video
+          ref={videoRef}
+          src={heroVideo.url}
+          poster={heroImg}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
         />
+
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-background/30" />
 
         <div className="absolute inset-x-0 bottom-0 mx-auto w-full max-w-[1600px] px-6 pb-20 lg:px-12 lg:pb-24">
@@ -107,7 +125,7 @@ function Home() {
 
         <button
           aria-label={paused ? "Reproduzir" : "Pausar"}
-          onClick={() => setPaused((v) => !v)}
+          onClick={togglePlay}
           className="absolute bottom-10 right-8 flex h-12 w-12 items-center justify-center rounded-full border border-foreground/30 text-foreground/80 backdrop-blur-sm transition-colors hover:border-gold hover:text-gold"
         >
           {paused ? <Play size={16} /> : <Pause size={16} />}
