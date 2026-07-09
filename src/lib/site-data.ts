@@ -143,7 +143,7 @@ export const SERVICES: Service[] = [
     tagline: "Nosso métier",
     description:
       "Produtos de comunicação visual e materiais impressos de altíssima qualidade — onde o papel encontra a percepção de valor.",
-    ctaLabel: "Criar meus impressos premium",
+    ctaLabel: "Ver mais sobre impressos premium",
     items: [
       "Embalagens premium",
       "Cartões de visita de luxo",
