@@ -51,11 +51,6 @@ function Servicos() {
             <div className="reveal">
               <div className="flex items-center gap-4">
                 <span className="font-display text-5xl text-gold/60">{s.rank}</span>
-                {i === 0 && (
-                  <span className="border border-gold/40 px-3 py-1 text-[0.6rem] uppercase tracking-[0.2em] text-gold">
-                    Área principal
-                  </span>
-                )}
               </div>
               <p className="mt-8 text-[0.7rem] uppercase tracking-[0.25em] text-muted-foreground">{s.tagline}</p>
               <h2 className="mt-3 font-display text-4xl leading-tight lg:text-5xl">{s.title}</h2>

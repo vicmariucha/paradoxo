@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { SERVICES } from "@/lib/site-data";
 
 const NAV = [
   { to: "/", label: "Início" },
@@ -41,17 +42,44 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-10 lg:flex">
-          {NAV.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="group relative text-[0.82rem] font-light uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
-              activeProps={{ className: "text-foreground" }}
-            >
-              {item.label}
-              <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full" />
-            </Link>
-          ))}
+          {NAV.map((item) =>
+            item.to === "/servicos" ? (
+              <div key={item.to} className="group relative">
+                <Link
+                  to={item.to}
+                  className="relative text-[0.82rem] font-light uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground group-hover:text-foreground"
+                  activeProps={{ className: "text-foreground" }}
+                >
+                  {item.label}
+                  <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full" />
+                </Link>
+                <div className="invisible absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 translate-y-2 pt-4 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                  <div className="overflow-hidden rounded-2xl border border-border/70 bg-background/95 p-2 backdrop-blur-xl">
+                    {SERVICES.map((s) => (
+                      <Link
+                        key={s.slug}
+                        to="/servicos/$slug"
+                        params={{ slug: s.slug }}
+                        className="block rounded-xl px-4 py-3 text-[0.8rem] font-light tracking-[0.06em] text-muted-foreground transition-colors hover:bg-card hover:text-gold"
+                      >
+                        {s.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="group relative text-[0.82rem] font-light uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
+                activeProps={{ className: "text-foreground" }}
+              >
+                {item.label}
+                <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full" />
+              </Link>
+            ),
+          )}
         </nav>
 
         <Link
