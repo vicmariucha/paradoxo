@@ -48,7 +48,7 @@ function Portfolio() {
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`border px-5 py-2 text-[0.72rem] uppercase tracking-[0.18em] transition-all duration-300 ${
+              className={`rounded-full border px-5 py-2 text-[0.72rem] uppercase tracking-[0.18em] transition-all duration-300 ${
                 active === cat
                   ? "border-gold bg-gold text-primary-foreground"
                   : "border-border text-muted-foreground hover:border-gold hover:text-gold"
