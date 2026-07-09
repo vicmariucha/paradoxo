@@ -167,7 +167,7 @@ export const SERVICES: Service[] = [
     tagline: "Posicionamento",
     description:
       "Estratégias de presença e crescimento que colocam sua marca onde o cliente certo a encontra.",
-    ctaLabel: "Impulsionar minha marca",
+    ctaLabel: "Ver mais sobre marketing & SEO",
     items: [
       "SEO",
       "Gestão de tráfego",
