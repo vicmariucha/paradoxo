@@ -92,11 +92,12 @@ function Home() {
         <video
           ref={videoRef}
           src={heroVideo.url}
-          poster={heroImg}
+          poster={heroPoster.url}
           autoPlay
           muted
           loop
           playsInline
+          preload="metadata"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
