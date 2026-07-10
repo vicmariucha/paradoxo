@@ -204,6 +204,28 @@ function Contato() {
                   />
                   {errors.mensagem && <p className="mt-2 text-xs text-destructive">{errors.mensagem}</p>}
                 </div>
+                <div className="sm:col-span-2">
+                  <label className="flex cursor-pointer items-start gap-3 text-sm text-muted-foreground">
+                    <input
+                      type="checkbox"
+                      checked={form.aceite}
+                      onChange={(e) => update("aceite", e.target.checked)}
+                      className="mt-0.5 h-5 w-5 shrink-0 cursor-pointer rounded-md border border-border bg-transparent accent-gold"
+                    />
+                    <span>
+                      Li e concordo com a{" "}
+                      <Link to="/privacidade" className="text-gold underline-offset-2 hover:underline">
+                        Política de Privacidade
+                      </Link>{" "}
+                      e os{" "}
+                      <Link to="/termos" className="text-gold underline-offset-2 hover:underline">
+                        Termos de Uso
+                      </Link>
+                      .
+                    </span>
+                  </label>
+                  {errors.aceite && <p className="mt-2 text-xs text-destructive">{errors.aceite}</p>}
+                </div>
                 <button
                   type="submit"
                   className="group mt-2 inline-flex w-fit items-center gap-3 rounded-full bg-gold px-10 py-4 text-[0.75rem] uppercase tracking-[0.24em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft sm:col-span-2"
