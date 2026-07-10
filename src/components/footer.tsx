@@ -78,8 +78,8 @@ export function Footer() {
                   <Mail size={15} className="text-gold" /> salomao@suporteparadoxo.com.br
                 </a>
               </li>
-              <li className="pt-2 text-xs uppercase tracking-[0.12em]">
-                CNPJ: 00.000.000/0001-00
+              <li className="flex items-center gap-3 pt-2 text-xs uppercase tracking-[0.12em]">
+                <Building2 size={15} className="text-gold" /> CNPJ: 00.000.000/0001-00
               </li>
             </ul>
           </div>
