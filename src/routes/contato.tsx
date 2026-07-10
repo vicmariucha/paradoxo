@@ -58,7 +58,7 @@ function Contato() {
   const [form, setForm] = useState<FormState>(EMPTY);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
 
-  const update = (key: keyof FormState, value: string) => {
+  const update = (key: keyof FormState, value: string | boolean) => {
     setForm((f) => ({ ...f, [key]: value }));
     setErrors((e) => ({ ...e, [key]: undefined }));
   };
