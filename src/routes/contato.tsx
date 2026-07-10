@@ -38,6 +38,7 @@ type FormState = {
   tipo: string;
   outro: string;
   mensagem: string;
+  aceite: boolean;
 };
 
 const EMPTY: FormState = {
@@ -48,6 +49,7 @@ const EMPTY: FormState = {
   tipo: PROJECT_TYPES[0],
   outro: "",
   mensagem: "",
+  aceite: false,
 };
 
 function Contato() {
