@@ -82,6 +82,8 @@ function Contato() {
 
     if (!form.mensagem.trim()) next.mensagem = "Escreva a sua mensagem.";
 
+    if (!form.aceite) next.aceite = "Você precisa aceitar as políticas antes de enviar.";
+
     setErrors(next);
     return Object.keys(next).length === 0;
   };
