@@ -85,9 +85,20 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border/60 pt-8 text-xs uppercase tracking-[0.2em] text-muted-foreground sm:flex-row">
-          <span>© {new Date().getFullYear()} PARADOXO. Todos os direitos reservados.</span>
-          <span>Excelência visível em cada detalhe.</span>
+        <div className="mt-16 flex flex-col items-center gap-6 border-t border-border/60 pt-8 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          <div className="flex flex-col items-center gap-4 sm:flex-row">
+            <Link to="/privacidade" className="transition-colors hover:text-gold">
+              Política de Privacidade
+            </Link>
+            <span className="hidden text-border sm:inline">•</span>
+            <Link to="/termos" className="transition-colors hover:text-gold">
+              Termos de Uso
+            </Link>
+          </div>
+          <div className="flex flex-col items-center justify-between gap-4 text-center sm:w-full sm:flex-row sm:text-left">
+            <span>© {new Date().getFullYear()} PARADOXO. Todos os direitos reservados.</span>
+            <span>Excelência visível em cada detalhe.</span>
+          </div>
         </div>
       </div>
     </footer>
