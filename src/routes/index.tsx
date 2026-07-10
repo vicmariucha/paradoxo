@@ -8,6 +8,7 @@ import { HOME_PORTFOLIO } from "@/lib/site-data";
 
 import heroImg from "@/assets/hero.jpg";
 import heroVideo from "@/assets/hero-section-background.mp4.asset.json";
+import heroPoster from "@/assets/hero-poster.jpg.asset.json";
 import portKits from "@/assets/port-kits.jpg";
 import showcaseImpressos from "@/assets/showcase-impressos.jpeg.asset.json";
 import showcaseMarketing from "@/assets/showcase-marketing.jpeg.asset.json";
@@ -92,11 +93,12 @@ function Home() {
         <video
           ref={videoRef}
           src={heroVideo.url}
-          poster={heroImg}
+          poster={heroPoster.url}
           autoPlay
           muted
           loop
           playsInline
+          preload="metadata"
           className="absolute inset-0 h-full w-full object-cover"
         />
 
