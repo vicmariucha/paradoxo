@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Linkedin, Mail, Phone, ArrowUp } from "lucide-react";
+import { Instagram, Linkedin, Mail, Phone, ArrowUp, Building2 } from "lucide-react";
 
 export function Footer() {
   const scrollToTop = () =>
@@ -55,8 +55,6 @@ export function Footer() {
                 { to: "/portfolio", label: "Portfólio" },
                 { to: "/sobre", label: "Sobre" },
                 { to: "/contato", label: "Contato" },
-                { to: "/privacidade", label: "Política de Privacidade" },
-                { to: "/termos", label: "Termos de Uso" },
               ].map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} className="transition-colors hover:text-gold">
@@ -80,16 +78,27 @@ export function Footer() {
                   <Mail size={15} className="text-gold" /> salomao@suporteparadoxo.com.br
                 </a>
               </li>
-              <li className="pt-2 text-xs uppercase tracking-[0.12em]">
-                CNPJ: 00.000.000/0001-00
+              <li className="flex items-center gap-3 pt-2 text-xs uppercase tracking-[0.12em]">
+                <Building2 size={15} className="text-gold" /> CNPJ: 00.000.000/0001-00
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border/60 pt-8 text-xs uppercase tracking-[0.2em] text-muted-foreground sm:flex-row">
-          <span>© {new Date().getFullYear()} PARADOXO. Todos os direitos reservados.</span>
-          <span>Excelência visível em cada detalhe.</span>
+        <div className="mt-16 flex flex-col items-center gap-6 border-t border-border/60 pt-8 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          <div className="flex flex-col items-center gap-4 sm:flex-row">
+            <Link to="/privacidade" className="transition-colors hover:text-gold">
+              Política de Privacidade
+            </Link>
+            <span className="hidden text-border sm:inline">•</span>
+            <Link to="/termos" className="transition-colors hover:text-gold">
+              Termos de Uso
+            </Link>
+          </div>
+          <div className="flex flex-col items-center justify-between gap-4 text-center sm:w-full sm:flex-row sm:text-left">
+            <span>© {new Date().getFullYear()} PARADOXO. Todos os direitos reservados.</span>
+            <span>Excelência visível em cada detalhe.</span>
+          </div>
         </div>
       </div>
     </footer>

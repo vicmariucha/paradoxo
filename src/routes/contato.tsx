@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowRight, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
@@ -38,6 +38,7 @@ type FormState = {
   tipo: string;
   outro: string;
   mensagem: string;
+  aceite: boolean;
 };
 
 const EMPTY: FormState = {
@@ -48,6 +49,7 @@ const EMPTY: FormState = {
   tipo: PROJECT_TYPES[0],
   outro: "",
   mensagem: "",
+  aceite: false,
 };
 
 function Contato() {
@@ -56,7 +58,7 @@ function Contato() {
   const [form, setForm] = useState<FormState>(EMPTY);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
 
-  const update = (key: keyof FormState, value: string) => {
+  const update = (key: keyof FormState, value: string | boolean) => {
     setForm((f) => ({ ...f, [key]: value }));
     setErrors((e) => ({ ...e, [key]: undefined }));
   };
@@ -79,6 +81,8 @@ function Contato() {
       next.outro = "Descreva qual o tipo de projeto.";
 
     if (!form.mensagem.trim()) next.mensagem = "Escreva a sua mensagem.";
+
+    if (!form.aceite) next.aceite = "Você precisa aceitar as políticas antes de enviar.";
 
     setErrors(next);
     return Object.keys(next).length === 0;
@@ -199,6 +203,28 @@ function Contato() {
                     className={`mt-3 w-full resize-none border bg-transparent rounded-xl py-3 px-4 text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-gold ${errors.mensagem ? "border-destructive" : "border-border"}`}
                   />
                   {errors.mensagem && <p className="mt-2 text-xs text-destructive">{errors.mensagem}</p>}
+                </div>
+                <div className="sm:col-span-2">
+                  <label className="flex cursor-pointer items-start gap-3 text-sm text-muted-foreground">
+                    <input
+                      type="checkbox"
+                      checked={form.aceite}
+                      onChange={(e) => update("aceite", e.target.checked)}
+                      className="mt-0.5 h-5 w-5 shrink-0 cursor-pointer rounded-md border border-border bg-transparent accent-gold"
+                    />
+                    <span>
+                      Li e concordo com a{" "}
+                      <Link to="/privacidade" className="text-gold underline-offset-2 hover:underline">
+                        Política de Privacidade
+                      </Link>{" "}
+                      e os{" "}
+                      <Link to="/termos" className="text-gold underline-offset-2 hover:underline">
+                        Termos de Uso
+                      </Link>
+                      .
+                    </span>
+                  </label>
+                  {errors.aceite && <p className="mt-2 text-xs text-destructive">{errors.aceite}</p>}
                 </div>
                 <button
                   type="submit"
