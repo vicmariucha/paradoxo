@@ -55,8 +55,6 @@ export function Footer() {
                 { to: "/portfolio", label: "Portfólio" },
                 { to: "/sobre", label: "Sobre" },
                 { to: "/contato", label: "Contato" },
-                { to: "/privacidade", label: "Política de Privacidade" },
-                { to: "/termos", label: "Termos de Uso" },
               ].map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} className="transition-colors hover:text-gold">
