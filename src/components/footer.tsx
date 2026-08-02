@@ -34,12 +34,17 @@ export function Footer() {
               percepção de valor — para clientes que não negociam excelência.
             </p>
             <div className="mt-8 flex gap-4">
-              {[Instagram, Linkedin, Mail].map((Icon, i) => (
+              {[
+                { Icon: Linkedin, href: "https://www.linkedin.com/in/salom%C3%A3o-junior-81111b1b/", label: "LinkedIn" },
+                { Icon: Mail, href: "mailto:salomao@suporteparadoxo.com.br", label: "E-mail" },
+              ].map(({ Icon, href, label }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-gold hover:text-gold"
-                  aria-label="Social"
+                  aria-label={label}
                 >
                   <Icon size={16} />
                 </a>
