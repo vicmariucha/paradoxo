@@ -76,7 +76,7 @@ function Sobre() {
           </div>
           <div className="reveal space-y-8" data-delay="150">
             <h2 className="font-display text-3xl leading-tight text-foreground lg:text-4xl">
-              Nascemos para resolver uma falha silenciosa do mercado.
+              Nascemos para resolver uma falha silenciosa do mercado de impressões gráficas.
             </h2>
             <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
               <p>
