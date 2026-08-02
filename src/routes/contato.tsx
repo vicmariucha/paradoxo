@@ -215,11 +215,11 @@ function Contato() {
                     />
                     <span>
                       Li e concordo com a{" "}
-                      <Link to="/privacidade" className="text-gold underline-offset-2 hover:underline">
+                      <Link to="/privacidade" target="_blank" rel="noopener noreferrer" className="text-gold underline-offset-2 hover:underline">
                         Política de Privacidade
                       </Link>{" "}
                       e os{" "}
-                      <Link to="/termos" className="text-gold underline-offset-2 hover:underline">
+                      <Link to="/termos" target="_blank" rel="noopener noreferrer" className="text-gold underline-offset-2 hover:underline">
                         Termos de Uso
                       </Link>
                       .
