@@ -101,8 +101,8 @@ function Contato() {
             Vamos criar algo <span className="italic text-gold-gradient">memorável.</span>
           </h1>
           <p className="reveal mt-8 max-w-xl text-lg text-muted-foreground" data-delay="200">
-            Conte-nos sobre o seu projeto. Respondemos com a atenção que cada
-            marca exigente merece.
+            Compartilhe a visão do seu projeto. Retribuiremos com foco, disciplina
+            e o refinamento que a sua demanda requer.
           </p>
         </div>
       </section>
