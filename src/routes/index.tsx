@@ -102,7 +102,11 @@ function Home() {
           className="absolute inset-0 h-full w-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-background/30" />
+        {/* Contrast layers — keep navbar, h1 and CTAs legible over any video */}
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-40 backdrop-blur-md [mask-image:linear-gradient(to_bottom,black,transparent)]" />
 
         <div className="absolute inset-x-0 bottom-0 mx-auto w-full max-w-[1600px] px-6 pb-20 lg:px-12 lg:pb-24">
           <h1 className="font-display text-5xl leading-[0.95] text-foreground sm:text-7xl lg:text-[7rem]">
