@@ -10,9 +10,9 @@ import heroImg from "@/assets/hero.jpg";
 import heroVideo from "@/assets/hero-section-background.mp4.asset.json";
 import heroPoster from "@/assets/hero-poster.jpg.asset.json";
 import portKits from "@/assets/port-kits.jpg";
-import showcaseImpressos from "@/assets/showcase-impressos.jpeg.asset.json";
-import showcaseMarketing from "@/assets/showcase-marketing.jpeg.asset.json";
-import showcaseFinancas from "@/assets/showcase-financas.jpeg.asset.json";
+import showcaseImpressos from "@/assets/showcase-impressos-v2.png.asset.json";
+import showcaseMarketing from "@/assets/showcase-marketing-v2.png.asset.json";
+import showcaseFinancas from "@/assets/showcase-financas-v2.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
