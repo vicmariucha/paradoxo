@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Linkedin, Mail, Phone, ArrowUp, Building2 } from "lucide-react";
+import { Linkedin, Mail, Phone, ArrowUp, Building2 } from "lucide-react";
 
 export function Footer() {
   const scrollToTop = () =>
