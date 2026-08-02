@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Linkedin, Mail, Phone, ArrowUp, Building2 } from "lucide-react";
+import { Linkedin, Mail, Phone, ArrowUp, Building2 } from "lucide-react";
 
 export function Footer() {
   const scrollToTop = () =>
@@ -34,12 +34,17 @@ export function Footer() {
               percepção de valor — para clientes que não negociam excelência.
             </p>
             <div className="mt-8 flex gap-4">
-              {[Instagram, Linkedin, Mail].map((Icon, i) => (
+              {[
+                { Icon: Linkedin, href: "https://www.linkedin.com/in/salom%C3%A3o-junior-81111b1b/", label: "LinkedIn" },
+                { Icon: Mail, href: "mailto:salomao@suporteparadoxo.com.br", label: "E-mail" },
+              ].map(({ Icon, href, label }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-gold hover:text-gold"
-                  aria-label="Social"
+                  aria-label={label}
                 >
                   <Icon size={16} />
                 </a>
@@ -69,7 +74,7 @@ export function Footer() {
             <h4 className="overline">Contato</h4>
             <ul className="mt-6 space-y-4 text-sm text-muted-foreground">
               <li>
-                <a href="tel:+5511984431907" className="flex items-center gap-3 transition-colors hover:text-gold">
+                <a href="https://wa.me/5511984431907?text=Vim%20pelo%20site%20da%20Paradoxo.%20Gostaria%20de%20conversar%20sobre%20um%20projeto!" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 transition-colors hover:text-gold">
                   <Phone size={15} className="text-gold" /> +55 (11) 98443-1907
                 </a>
               </li>
@@ -79,7 +84,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-3 pt-2 text-xs uppercase tracking-[0.12em]">
-                <Building2 size={15} className="text-gold" /> CNPJ: 00.000.000/0001-00
+                <Building2 size={15} className="text-gold" /> CNPJ: 65.754.885/0001-60
               </li>
             </ul>
           </div>

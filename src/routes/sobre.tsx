@@ -53,10 +53,10 @@ function Sobre() {
         <div className="mx-auto max-w-[1400px]">
           <p className="overline reveal">Sobre</p>
           <p className="reveal mt-8 max-w-3xl font-display text-2xl italic leading-snug text-gold/90 lg:text-3xl" data-delay="80">
-            A Paradoxo tornar o Complexo, no admirável.
+            Criação, desenvolvimento e produções admiráveis!
           </p>
           <h1 className="reveal mt-6 max-w-4xl font-display text-5xl leading-[1.05] lg:text-7xl" data-delay="160">
-            O paradoxo de tornar o <span className="italic text-gold-gradient">complexo, impecável.</span>
+            O paradoxo de tornar o <span className="italic text-gold-gradient">complexo, tangível e impecável.</span>
           </h1>
         </div>
       </section>
@@ -126,7 +126,7 @@ function Sobre() {
                   É onde a marca se torna tangível. Onde o valor ganha forma, textura e permanência.
                 </p>
                 <p>
-                  Criamos materiais de alta performance que não representam apenas empresas — posicionamos. Impressões que atravessam o olhar, permanecem na memória e elevam a forma como uma marca é percebida.
+                  Criamos materiais de alta performance que não representam apenas empresas — nos a posicionamos. Impressões que atravessam o olhar, permanecem na memória e elevam a forma como uma marca é percebida.
                 </p>
               </div>
             </div>
@@ -151,7 +151,7 @@ function Sobre() {
               Mas presença, por si só, não sustenta crescimento.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              Por isso, além das operações gráficas, ofertamos mais dois braços de ação: o Suporte e Finanças.
+              Por isso, além das operações gráficas, ofertamos mais dois braços de ações: Suporte e Finanças.
             </p>
           </div>
 
@@ -219,7 +219,7 @@ function Sobre() {
         <div className="absolute inset-0 bg-background/80" />
         <div className="relative mx-auto max-w-3xl px-6 text-center">
           <h2 className="reveal font-display text-4xl leading-tight lg:text-5xl">
-            Construímos reputações <span className="italic text-gold-gradient">um detalhe por vez.</span>
+            Construímos reputações <span className="italic text-gold-gradient">um<br />detalhe por vez.</span>
           </h2>
           <Link
             to="/contato"

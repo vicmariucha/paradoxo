@@ -17,10 +17,9 @@ export const Route = createFileRoute("/contato")({
 });
 
 const CHANNELS = [
-  { icon: Phone, label: "Tel/WhatsApp", value: "+55 (11) 98443-1907", href: "tel:+5511984431907" },
-  { icon: MessageCircle, label: "WhatsApp", value: "Conversar agora", href: "https://wa.me/5511984431907" },
-  { icon: Mail, label: "E-mail", value: "salomao@suporteparadoxo.com.br", href: "mailto:salomao@suporteparadoxo.com.br" },
-  { icon: MapPin, label: "Atelier", value: "São Paulo, Brasil", href: "#" },
+  { icon: MessageCircle, label: "WhatsApp", value: "Conversar agora", href: "https://wa.me/5511984431907?text=Vim%20pelo%20site%20da%20Paradoxo.%20Gostaria%20de%20conversar%20sobre%20um%20projeto!", external: true },
+  { icon: Mail, label: "E-mail", value: "salomao@suporteparadoxo.com.br", href: "mailto:salomao@suporteparadoxo.com.br", external: false },
+  { icon: MapPin, label: "Atelier", value: "São Paulo, Brasil", href: "#", external: false },
 ];
 
 const PROJECT_TYPES = [
@@ -102,8 +101,8 @@ function Contato() {
             Vamos criar algo <span className="italic text-gold-gradient">memorável.</span>
           </h1>
           <p className="reveal mt-8 max-w-xl text-lg text-muted-foreground" data-delay="200">
-            Conte-nos sobre o seu projeto. Respondemos com a atenção que cada
-            marca exigente merece.
+            Compartilhe a visão do seu projeto. Retribuiremos com foco, disciplina
+            e o refinamento que a sua demanda requer.
           </p>
         </div>
       </section>
@@ -116,6 +115,8 @@ function Contato() {
               <a
                 key={c.label}
                 href={c.href}
+                target={c.external ? "_blank" : undefined}
+                rel={c.external ? "noopener noreferrer" : undefined}
                 className="group flex items-center gap-5 border border-border/60 rounded-xl p-6 transition-colors duration-300 hover:border-gold/60 hover:bg-card/40"
               >
                 <span className="grid h-12 w-12 shrink-0 place-items-center border border-border rounded-full text-gold transition-colors group-hover:border-gold">
@@ -214,11 +215,11 @@ function Contato() {
                     />
                     <span>
                       Li e concordo com a{" "}
-                      <Link to="/privacidade" className="text-gold underline-offset-2 hover:underline">
+                      <Link to="/privacidade" target="_blank" rel="noopener noreferrer" className="text-gold underline-offset-2 hover:underline">
                         Política de Privacidade
                       </Link>{" "}
                       e os{" "}
-                      <Link to="/termos" className="text-gold underline-offset-2 hover:underline">
+                      <Link to="/termos" target="_blank" rel="noopener noreferrer" className="text-gold underline-offset-2 hover:underline">
                         Termos de Uso
                       </Link>
                       .
