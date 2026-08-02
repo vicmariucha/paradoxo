@@ -53,7 +53,7 @@ function Sobre() {
         <div className="mx-auto max-w-[1400px]">
           <p className="overline reveal">Sobre</p>
           <p className="reveal mt-8 max-w-3xl font-display text-2xl italic leading-snug text-gold/90 lg:text-3xl" data-delay="80">
-            A Paradoxo tornar o Complexo, no admirável.
+            Criação, desenvolvimento e produções admiráveis!
           </p>
           <h1 className="reveal mt-6 max-w-4xl font-display text-5xl leading-[1.05] lg:text-7xl" data-delay="160">
             O paradoxo de tornar o <span className="italic text-gold-gradient">complexo, impecável.</span>
