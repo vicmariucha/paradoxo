@@ -17,10 +17,9 @@ export const Route = createFileRoute("/contato")({
 });
 
 const CHANNELS = [
-  { icon: Phone, label: "Tel/WhatsApp", value: "+55 (11) 98443-1907", href: "tel:+5511984431907" },
-  { icon: MessageCircle, label: "WhatsApp", value: "Conversar agora", href: "https://wa.me/5511984431907" },
-  { icon: Mail, label: "E-mail", value: "salomao@suporteparadoxo.com.br", href: "mailto:salomao@suporteparadoxo.com.br" },
-  { icon: MapPin, label: "Atelier", value: "São Paulo, Brasil", href: "#" },
+  { icon: MessageCircle, label: "WhatsApp", value: "Conversar agora", href: "https://wa.me/5511984431907?text=Vim%20pelo%20site%20da%20Paradoxo.%20Gostaria%20de%20conversar%20sobre%20um%20projeto!", external: true },
+  { icon: Mail, label: "E-mail", value: "salomao@suporteparadoxo.com.br", href: "mailto:salomao@suporteparadoxo.com.br", external: false },
+  { icon: MapPin, label: "Atelier", value: "São Paulo, Brasil", href: "#", external: false },
 ];
 
 const PROJECT_TYPES = [
