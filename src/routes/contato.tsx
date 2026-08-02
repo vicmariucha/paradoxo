@@ -115,6 +115,8 @@ function Contato() {
               <a
                 key={c.label}
                 href={c.href}
+                target={c.external ? "_blank" : undefined}
+                rel={c.external ? "noopener noreferrer" : undefined}
                 className="group flex items-center gap-5 border border-border/60 rounded-xl p-6 transition-colors duration-300 hover:border-gold/60 hover:bg-card/40"
               >
                 <span className="grid h-12 w-12 shrink-0 place-items-center border border-border rounded-full text-gold transition-colors group-hover:border-gold">
