@@ -10,6 +10,7 @@ import heroImg from "@/assets/hero.jpg";
 import heroVideo from "@/assets/hero-section-background.mp4.asset.json";
 import heroPoster from "@/assets/hero-poster.jpg.asset.json";
 import portKits from "@/assets/port-kits.jpg";
+import ctaHomeImg from "@/assets/cta-home.jpg.asset.json";
 import showcaseImpressos from "@/assets/showcase-impressos-v2.png.asset.json";
 import showcaseMarketing from "@/assets/showcase-marketing-v2.png.asset.json";
 import showcaseFinancas from "@/assets/showcase-financas-v2.png.asset.json";
@@ -32,7 +33,7 @@ const SHOWCASE = [
     signature: "Impressos",
     image: showcaseImpressos.url,
     tag: "Nosso métier",
-    desc: "Embalagens, cartões e materiais de altíssimo padrão. Onde o papel encontra a percepção de valor.",
+    desc: "Pastas comerciais, envelopes, timbrados, cartões e demais papelarias corporativas de altíssimo padrão. Onde o papel encontra a percepção de valor.",
     slug: "impressos",
   },
   {
@@ -246,7 +247,7 @@ function Home() {
             </Link>
           </div>
           <div className="reveal aspect-[4/3] overflow-hidden rounded-2xl" data-delay="120">
-            <img src={portKits} alt="Projeto premium PARADOXO" loading="lazy" className="h-full w-full object-cover" />
+            <img src={ctaHomeImg.url} alt="Toque premium PARADOXO" loading="lazy" className="h-full w-full object-cover" />
           </div>
         </div>
       </section>
