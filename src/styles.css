@@ -4,7 +4,16 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Rosnoc";
+  src: url("/__l5e/assets-v1/b3e7d5bb-a6d4-4c4c-8b9b-edf211e265c4/Rosnoc.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
+  --font-brand: "Rosnoc", serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
