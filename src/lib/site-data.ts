@@ -273,7 +273,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       { title: "Conteúdo & SEO", image: portCatalog },
     ],
     faq: [
-      { q: "Em quanto tempo vejo resultado?", a: "Tráfego pago traz retorno rápido; SEO e branding constroem resultado sólido e crescente ao longo dos meses." },
+      { q: "Em quanto tempo vejo resultado?", a: "O tempo de retorno depende da estratégia escolhida. Campanhas de tráfego pago costumam gerar resultados a médio prazo. Não existem respostas imediatistas. Trabalhamos com inteligência, consistência e continuidade para que os resultados sejam sólidos e sustentáveis." },
       { q: "Vocês trabalham com qual investimento mínimo?", a: "Montamos a estratégia de acordo com o seu momento e orçamento, sempre priorizando eficiência." },
       { q: "Cuidam das redes sociais também?", a: "Sim, integramos conteúdo, campanhas e presença digital de forma coerente com a marca." },
       { q: "Há relatórios de resultado?", a: "Sim. Você acompanha métricas claras e recebe análises periódicas do desempenho." },
