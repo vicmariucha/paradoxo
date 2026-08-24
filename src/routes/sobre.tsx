@@ -10,6 +10,8 @@ import portFacade from "@/assets/port-facade.jpg";
 import portKits from "@/assets/port-kits.jpg";
 import portPackaging from "@/assets/port-packaging.jpg";
 import impressaoGraficaEstruturaImg from "@/assets/impressao-grafica-estrutura.jpg.asset.json";
+import marketingEstruturaImg from "@/assets/marketing-estrutura.jpg.asset.json";
+import suporteFinancasEstruturaImg from "@/assets/suporte-financas-estrutura.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
