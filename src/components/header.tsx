@@ -37,7 +37,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 lg:px-10">
         <Link to="/" className="group flex items-baseline gap-[2px]" onClick={() => setOpen(false)}>
-          <span className="font-display text-2xl tracking-[0.3em] text-foreground">PARADOXO</span>
+          <span className="font-brand text-3xl tracking-[0.18em] text-foreground">PARADOXO</span>
           <span className="h-1 w-1 translate-y-[-2px] rounded-full bg-gold transition-transform duration-300 group-hover:scale-150" />
         </Link>
 

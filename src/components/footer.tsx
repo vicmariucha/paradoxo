@@ -26,7 +26,7 @@ export function Footer() {
         <div className="grid gap-14 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Link to="/" className="flex items-baseline gap-[2px]">
-              <span className="font-display text-3xl tracking-[0.3em]">PARADOXO</span>
+              <span className="font-brand text-4xl tracking-[0.18em]">PARADOXO</span>
               <span className="h-1.5 w-1.5 rounded-full bg-gold" />
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
