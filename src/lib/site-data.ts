@@ -5,6 +5,10 @@ import portUniforms from "@/assets/port-uniforms.jpg";
 import portKits from "@/assets/port-kits.jpg";
 import portFacade from "@/assets/port-facade.jpg";
 import portDisplay from "@/assets/port-display.jpg";
+import pastaNuzzo from "@/assets/pasta-alessandra-nuzzo.jpg.asset.json";
+import pastaAlide from "@/assets/pasata-alide.jpg.asset.json";
+import pastaJopak from "@/assets/pasta-jopak.jpg.asset.json";
+import pastaLins from "@/assets/pasta-linsborsatti.jpg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
