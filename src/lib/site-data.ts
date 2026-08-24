@@ -130,15 +130,36 @@ export const HOME_PORTFOLIO: HomePortfolioItem[] = [
   },
 ];
 
-export const PORTFOLIO_CATEGORIES = [
-  "Todos",
-  "Embalagens",
-  "Catálogos",
-  "Comunicação Visual",
-  "Uniformes",
-  "Kits",
-  "Fachadas",
-] as const;
+export const PORTFOLIO_GROUPS = ["Impressos", "Design"] as const;
+
+export const PORTFOLIO_CATEGORIES: Record<PortfolioGroup, readonly string[]> = {
+  Impressos: [
+    "Todos",
+    "Pastas Personalizadas",
+    "Envelopes Corporativos",
+    "Papelaria de Escritório",
+    "Catálogos e Manuais",
+    "Materiais Informacionais",
+    "Materiais para Eventos",
+    "Impressões Especiais",
+    "Convites e Cartões Comerciais",
+    "Sacolas Premium",
+    "Brindes Corporativos",
+    "Kits Corporativos",
+  ],
+  Design: [
+    "Todos",
+    "Identidade Visual",
+    "Comunicação Visual",
+    "Catálogo",
+    "Cartão Digital",
+    "Brindes",
+    "Uniformes",
+    "Rótulos",
+    "Sites",
+    "Imagens de Produto",
+  ],
+};
 
 export type Service = {
   id: string;
