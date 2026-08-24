@@ -36,13 +36,13 @@ const PILLARS = [
     rank: "02",
     title: "Suporte e Finanças",
     text: "Presença, por si só, não sustenta crescimento. Planejamos e operamos a presença digital com inteligência, e organizamos a base financeira e administrativa com clareza, controle e segurança.",
-    image: portCatalog,
+    image: suporteFinancasEstruturaImg.url,
   },
   {
     rank: "03",
-    title: "Ambiente Institucional",
-    text: "Conectamos posicionamento a experiências digitais e físicas coerentes, sofisticadas e homologadas. Traduzimos marca em ambiente.",
-    image: portFacade,
+    title: "Marketing",
+    text: "Conectamos posicionamento a experiências digitais e físicas coerentes, sofisticadas e homologadas. Traduzimos marca em presença.",
+    image: marketingEstruturaImg.url,
   },
 ];
 
