@@ -21,7 +21,10 @@ export type PortfolioItem = {
 };
 
 export const PORTFOLIO: PortfolioItem[] = [
-  { title: "Pastas Personalizadas", category: "Pastas Personalizadas", group: "Impressos", image: portPackaging },
+  { title: "Pasta Alessandra Nuzzo", category: "Pastas Personalizadas", group: "Impressos", image: pastaNuzzo.url, tall: true },
+  { title: "Pasta Allide", category: "Pastas Personalizadas", group: "Impressos", image: pastaAlide.url, tall: true },
+  { title: "Pasta Jopak", category: "Pastas Personalizadas", group: "Impressos", image: pastaJopak.url, tall: true },
+  { title: "Pasta Lins Borsatti", category: "Pastas Personalizadas", group: "Impressos", image: pastaLins.url, tall: true },
   { title: "Envelopes Corporativos", category: "Envelopes Corporativos", group: "Impressos", image: portCards, tall: true },
   { title: "Papelaria de Escritório", category: "Papelaria de Escritório", group: "Impressos", image: portCatalog },
   { title: "Catálogos e Manuais", category: "Catálogos e Manuais", group: "Impressos", image: portCatalog },
