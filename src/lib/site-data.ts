@@ -221,8 +221,8 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       "É a produção gráfica de alta performance da PARADOXO: embalagens, cartões, catálogos, kits e comunicação visual com acabamentos nobres — hot stamping, relevo seco, papéis especiais e projeto estrutural sob medida. Impressos que atravessam o olhar e permanecem na memória.",
     audience: [
       "Marcas premium que tratam cada ponto de contato como parte da experiência",
-      "Empresas que lançam produtos e querem embalagens memoráveis",
-      "Negócios que buscam cartões, catálogos e kits que comunicam autoridade",
+      "Negócios que necessitam de papelaria corporativa no seu dia a dia",
+      "Empresas que fortificam sua marca através de propagandas e publicidade",
       "Times de marketing que exigem acabamento impecável e prazo respeitado",
     ],
     how: [
@@ -238,10 +238,10 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       { title: "Catálogo Institucional", image: portCatalog },
     ],
     faq: [
-      { q: "Qual a tiragem mínima?", a: "Trabalhamos desde pequenas tiragens exclusivas até grandes volumes, sempre com o mesmo padrão de acabamento." },
-      { q: "Vocês criam o design ou só imprimem?", a: "Ambos. Oferecemos direção criativa completa ou produzimos a partir da sua arte." },
-      { q: "Quais acabamentos estão disponíveis?", a: "Hot stamping, relevo seco, laminações especiais, papéis nobres, cortes especiais e projeto estrutural personalizado." },
-      { q: "Qual o prazo médio de entrega?", a: "Depende da complexidade, mas trabalhamos com cronogramas claros e prazos respeitados desde a primeira conversa." },
+      { q: "Qual a tiragem mínima?", a: "Cada produto possui sua própria quantidade mínima de produção. Por exemplo:\n\nPastas Comerciais Personalizadas: a partir de 25 unidades\n\nPapel Timbrado: a partir de 100 unidades\n\nNo orçamento padrão, já informamos a tiragem mínima de cada item. Não há limite máximo: você pode solicitar quantidades maiores conforme a sua necessidade." },
+      { q: "Vocês criam o design ou só imprimem?", a: "Ofertamos as duas opções: criação e impressão. Nossa equipe pode desenvolver o design completo e entregar o material pronto a partir da ideia inicial do seu projeto ou realizar as impressões a partir da sua arte. Flexibilidade total para que sua marca tenha o resultado que deseja, sem etapas desnecessárias." },
+      { q: "Quais acabamentos estão disponíveis?", a: "Ofertamos uma ampla gama de acabamentos para valorizar seus materiais: hot stamping, relevo seco, laminações especiais, papéis nobres e cortes diferenciados, além de todas as opções comerciais tradicionais. Você escolhe o acabamento que traduz melhor a identidade da sua marca, sem abrir mão da qualidade." },
+      { q: "Qual o prazo médio de entrega?", a: "Cada projeto tem seu ritmo e complexidade. Definimos o cronograma em nossos orçamentos e cumprimos os prazos acordados. No prazo comunicado, tudo aquilo que esteja dentro da nossa estrutura interna será cumprido. Ações externas, muitas vezes necessárias, como transportadoras, correios e afins, seguem suas demandas internas." },
     ],
   },
   marketing: {
