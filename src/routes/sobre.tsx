@@ -28,11 +28,11 @@ const PILLARS = [
     rank: "01",
     title: "Impressão Gráfica",
     text: "O centro de tudo. Onde a marca se torna tangível, o valor ganha forma, textura e permanência. Criamos materiais de alta performance que posicionam, não apenas representam.",
-    image: portPackaging,
+    image: impressaoGraficaEstruturaImg.url,
   },
   {
     rank: "02",
-    title: "Marketing, Suporte & Finanças",
+    title: "Suporte e Finanças",
     text: "Presença, por si só, não sustenta crescimento. Planejamos e operamos a presença digital com inteligência, e organizamos a base financeira e administrativa com clareza, controle e segurança.",
     image: portCatalog,
   },
