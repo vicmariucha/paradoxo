@@ -12,6 +12,7 @@ import portPackaging from "@/assets/port-packaging.jpg";
 import impressaoGraficaEstruturaImg from "@/assets/impressao-grafica-estrutura.jpg.asset.json";
 import marketingEstruturaImg from "@/assets/marketing-estrutura.jpg.asset.json";
 import suporteFinancasEstruturaImg from "@/assets/suporte-financas-estrutura.jpg.asset.json";
+import impressosParadoxoImg from "@/assets/impressos-paradoxo.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -138,7 +139,7 @@ function Sobre() {
                 <img src={portCards} alt="Cartões em hot stamping" loading="lazy" className="h-full w-full object-cover" />
               </div>
               <div className="relative mt-8 aspect-[4/5] overflow-hidden rounded-2xl">
-                <img src={portKits} alt="Kits corporativos premium" loading="lazy" className="h-full w-full object-cover" />
+                <img src={impressosParadoxoImg.url} alt="Papelaria corporativa premium da PARADOXO" loading="lazy" className="h-full w-full object-cover" />
               </div>
             </div>
           </div>
