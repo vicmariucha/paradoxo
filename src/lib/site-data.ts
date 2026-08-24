@@ -6,21 +6,38 @@ import portKits from "@/assets/port-kits.jpg";
 import portFacade from "@/assets/port-facade.jpg";
 import portDisplay from "@/assets/port-display.jpg";
 
+export type PortfolioGroup = "Impressos" | "Design";
+
 export type PortfolioItem = {
   title: string;
   category: string;
+  group: PortfolioGroup;
   image: string;
   tall?: boolean;
 };
 
 export const PORTFOLIO: PortfolioItem[] = [
-  { title: "Embalagens de Assinatura", category: "Embalagens", image: portPackaging },
-  { title: "Cartões em Hot Stamping", category: "Comunicação Visual", image: portCards, tall: true },
-  { title: "Catálogo Institucional", category: "Catálogos", image: portCatalog },
-  { title: "Uniformes Corporativos", category: "Uniformes", image: portUniforms, tall: true },
-  { title: "Kits Corporativos Premium", category: "Kits", image: portKits },
-  { title: "Fachada & Sinalização", category: "Fachadas", image: portFacade },
-  { title: "Displays para Eventos", category: "Comunicação Visual", image: portDisplay, tall: true },
+  { title: "Pastas Personalizadas", category: "Pastas Personalizadas", group: "Impressos", image: portPackaging },
+  { title: "Envelopes Corporativos", category: "Envelopes Corporativos", group: "Impressos", image: portCards, tall: true },
+  { title: "Papelaria de Escritório", category: "Papelaria de Escritório", group: "Impressos", image: portCatalog },
+  { title: "Catálogos e Manuais", category: "Catálogos e Manuais", group: "Impressos", image: portCatalog },
+  { title: "Materiais Informacionais", category: "Materiais Informacionais", group: "Impressos", image: portDisplay, tall: true },
+  { title: "Materiais para Eventos", category: "Materiais para Eventos", group: "Impressos", image: portDisplay },
+  { title: "Impressões Especiais", category: "Impressões Especiais", group: "Impressos", image: portCards },
+  { title: "Convites e Cartões Comerciais", category: "Convites e Cartões Comerciais", group: "Impressos", image: portCards, tall: true },
+  { title: "Sacolas Premium", category: "Sacolas Premium", group: "Impressos", image: portPackaging },
+  { title: "Brindes Corporativos", category: "Brindes Corporativos", group: "Impressos", image: portKits },
+  { title: "Kits Corporativos", category: "Kits Corporativos", group: "Impressos", image: portKits, tall: true },
+
+  { title: "Identidade Visual", category: "Identidade Visual", group: "Design", image: portCards },
+  { title: "Comunicação Visual", category: "Comunicação Visual", group: "Design", image: portFacade, tall: true },
+  { title: "Catálogo", category: "Catálogo", group: "Design", image: portCatalog },
+  { title: "Cartão Digital", category: "Cartão Digital", group: "Design", image: portDisplay },
+  { title: "Brindes", category: "Brindes", group: "Design", image: portKits, tall: true },
+  { title: "Uniformes", category: "Uniformes", group: "Design", image: portUniforms },
+  { title: "Rótulos", category: "Rótulos", group: "Design", image: portPackaging },
+  { title: "Sites", category: "Sites", group: "Design", image: portDisplay, tall: true },
+  { title: "Imagens de Produto", category: "Imagens de Produto", group: "Design", image: portPackaging },
 ];
 
 export type HomePortfolioItem = {
@@ -113,15 +130,36 @@ export const HOME_PORTFOLIO: HomePortfolioItem[] = [
   },
 ];
 
-export const PORTFOLIO_CATEGORIES = [
-  "Todos",
-  "Embalagens",
-  "Catálogos",
-  "Comunicação Visual",
-  "Uniformes",
-  "Kits",
-  "Fachadas",
-] as const;
+export const PORTFOLIO_GROUPS = ["Impressos", "Design"] as const;
+
+export const PORTFOLIO_CATEGORIES: Record<PortfolioGroup, readonly string[]> = {
+  Impressos: [
+    "Todos",
+    "Pastas Personalizadas",
+    "Envelopes Corporativos",
+    "Papelaria de Escritório",
+    "Catálogos e Manuais",
+    "Materiais Informacionais",
+    "Materiais para Eventos",
+    "Impressões Especiais",
+    "Convites e Cartões Comerciais",
+    "Sacolas Premium",
+    "Brindes Corporativos",
+    "Kits Corporativos",
+  ],
+  Design: [
+    "Todos",
+    "Identidade Visual",
+    "Comunicação Visual",
+    "Catálogo",
+    "Cartão Digital",
+    "Brindes",
+    "Uniformes",
+    "Rótulos",
+    "Sites",
+    "Imagens de Produto",
+  ],
+};
 
 export type Service = {
   id: string;
@@ -273,7 +311,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       { title: "Conteúdo & SEO", image: portCatalog },
     ],
     faq: [
-      { q: "Em quanto tempo vejo resultado?", a: "Tráfego pago traz retorno rápido; SEO e branding constroem resultado sólido e crescente ao longo dos meses." },
+      { q: "Em quanto tempo vejo resultado?", a: "O tempo de retorno depende da estratégia escolhida. Campanhas de tráfego pago costumam gerar resultados a médio prazo. Não existem respostas imediatistas. Trabalhamos com inteligência, consistência e continuidade para que os resultados sejam sólidos e sustentáveis." },
       { q: "Vocês trabalham com qual investimento mínimo?", a: "Montamos a estratégia de acordo com o seu momento e orçamento, sempre priorizando eficiência." },
       { q: "Cuidam das redes sociais também?", a: "Sim, integramos conteúdo, campanhas e presença digital de forma coerente com a marca." },
       { q: "Há relatórios de resultado?", a: "Sim. Você acompanha métricas claras e recebe análises periódicas do desempenho." },

@@ -3,27 +3,31 @@ import { useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
 import { useReveal } from "@/hooks/use-reveal";
-import { PORTFOLIO, PORTFOLIO_CATEGORIES } from "@/lib/site-data";
+import { PORTFOLIO, PORTFOLIO_CATEGORIES, PORTFOLIO_GROUPS, type PortfolioGroup } from "@/lib/site-data";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
       { title: "Portfólio — PARADOXO" },
-      { name: "description", content: "Showcase de impressos premium: embalagens, catálogos, comunicação visual, uniformes, kits corporativos e fachadas." },
+      { name: "description", content: "Showcase de impressos premium e design: pastas, envelopes, papelaria, catálogos, identidade visual, uniformes e mais." },
       { property: "og:title", content: "Portfólio — PARADOXO" },
-      { property: "og:description", content: "Galeria de projetos de impressos de alto padrão." },
+      { property: "og:description", content: "Galeria de projetos de impressos e design de alto padrão." },
     ],
   }),
   component: Portfolio,
 });
 
 function Portfolio() {
+  const [group, setGroup] = useState<PortfolioGroup>("Impressos");
   const [active, setActive] = useState<string>("Todos");
-  useReveal([active]);
+  useReveal([active, group]);
 
   const items = useMemo(
-    () => (active === "Todos" ? PORTFOLIO : PORTFOLIO.filter((p) => p.category === active)),
-    [active],
+    () =>
+      PORTFOLIO.filter(
+        (p) => p.group === group && (active === "Todos" || p.category === active),
+      ),
+    [active, group],
   );
 
   return (
@@ -41,22 +45,43 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* FILTERS */}
+      {/* TABS + FILTERS */}
       <section className="px-6 lg:px-10">
-        <div className="mx-auto flex max-w-[1400px] flex-wrap gap-3 border-y border-border/60 py-6">
-          {PORTFOLIO_CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActive(cat)}
-              className={`rounded-full border px-5 py-2 text-[0.72rem] uppercase tracking-[0.18em] transition-all duration-300 ${
-                active === cat
-                  ? "border-gold bg-gold text-primary-foreground"
-                  : "border-border text-muted-foreground hover:border-gold hover:text-gold"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+        <div className="mx-auto max-w-[1400px] border-y border-border/60 py-6">
+          <div className="flex flex-wrap gap-3">
+            {PORTFOLIO_GROUPS.map((g) => (
+              <button
+                key={g}
+                onClick={() => {
+                  setGroup(g);
+                  setActive("Todos");
+                }}
+                className={`rounded-full px-7 py-2.5 font-display text-base tracking-wide transition-all duration-300 ${
+                  group === g
+                    ? "bg-foreground text-background"
+                    : "bg-transparent text-muted-foreground hover:text-gold"
+                }`}
+              >
+                {g}
+              </button>
+            ))}
+          </div>
+
+          <div className="mt-5 flex flex-wrap gap-3">
+            {PORTFOLIO_CATEGORIES[group].map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActive(cat)}
+                className={`rounded-full border px-5 py-2 text-[0.72rem] uppercase tracking-[0.18em] transition-all duration-300 ${
+                  active === cat
+                    ? "border-gold bg-gold text-primary-foreground"
+                    : "border-border text-muted-foreground hover:border-gold hover:text-gold"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
