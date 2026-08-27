@@ -78,7 +78,11 @@ export const PORTFOLIO: PortfolioItem[] = [
 
   { title: "Identidade Visual", category: "Identidade Visual", group: "Design", image: portCards },
   { title: "Comunicação Visual", category: "Comunicação Visual", group: "Design", image: portFacade, tall: true },
-  { title: "Catálogo", category: "Catálogo", group: "Design", image: portCatalog },
+  { title: "Catálogo Elpak Embalagens", category: "Catálogo", group: "Design", image: catElpak.url, tall: true },
+  { title: "Catálogo Inoxfer Design", category: "Catálogo", group: "Design", image: catInoxfer.url, tall: true },
+  { title: "Catálogo Jopak", category: "Catálogo", group: "Design", image: catJopak.url, tall: true },
+  { title: "Catálogo Metta Pisos", category: "Catálogo", group: "Design", image: catMetta.url, tall: true },
+  { title: "Catálogo Pró Eventos", category: "Catálogo", group: "Design", image: catPro.url, tall: true },
   { title: "Cartão Digital", category: "Cartão Digital", group: "Design", image: portDisplay },
   { title: "Brindes", category: "Brindes", group: "Design", image: portKits, tall: true },
   { title: "Uniformes", category: "Uniformes", group: "Design", image: portUniforms },
