@@ -9,6 +9,16 @@ import pastaNuzzo from "@/assets/pasta-alessandra-nuzzo.jpg.asset.json";
 import pastaAlide from "@/assets/pasata-alide.jpg.asset.json";
 import pastaJopak from "@/assets/pasta-jopak.jpg.asset.json";
 import pastaLins from "@/assets/pasta-linsborsatti.jpg.asset.json";
+import pastaMetta from "@/assets/pasta-metta.jpg.asset.json";
+import pastaRenova from "@/assets/pasta-renova.jpg.asset.json";
+import envJopak from "@/assets/envelope-jopak.jpg.asset.json";
+import envAlessandra from "@/assets/envelope-alessandra.jpg.asset.json";
+import envAllide from "@/assets/envelope-allide.jpg.asset.json";
+import envAna from "@/assets/envelope-ana.jpg.asset.json";
+import envOfSheila from "@/assets/envelope-oficio-sheila.jpg.asset.json";
+import envOfAllide from "@/assets/envelope-oficio-allide.jpg.asset.json";
+import envOfInova from "@/assets/envelope-oficio-inova.jpg.asset.json";
+import envOfJopak from "@/assets/envelope-oficio-jopak.jpg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
@@ -25,7 +35,16 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Pasta Allide", category: "Pastas Personalizadas", group: "Impressos", image: pastaAlide.url, tall: true },
   { title: "Pasta Jopak", category: "Pastas Personalizadas", group: "Impressos", image: pastaJopak.url, tall: true },
   { title: "Pasta Lins Borsatti", category: "Pastas Personalizadas", group: "Impressos", image: pastaLins.url, tall: true },
-  { title: "Envelopes Corporativos", category: "Envelopes Corporativos", group: "Impressos", image: portCards, tall: true },
+  { title: "Pasta Metta Pisos", category: "Pastas Personalizadas", group: "Impressos", image: pastaMetta.url, tall: true },
+  { title: "Pasta Renova Sun", category: "Pastas Personalizadas", group: "Impressos", image: pastaRenova.url, tall: true },
+  { title: "Envelope Saco Jopak", category: "Envelopes Saco", group: "Impressos", image: envJopak.url },
+  { title: "Envelope Saco Alessandra Nuzzo", category: "Envelopes Saco", group: "Impressos", image: envAlessandra.url, tall: true },
+  { title: "Envelope Saco Allide", category: "Envelopes Saco", group: "Impressos", image: envAllide.url, tall: true },
+  { title: "Envelope Saco Ana Luiza", category: "Envelopes Saco", group: "Impressos", image: envAna.url, tall: true },
+  { title: "Envelope Ofício Dra. Sheila Lobo", category: "Envelopes Ofício", group: "Impressos", image: envOfSheila.url, tall: true },
+  { title: "Envelope Ofício Allide", category: "Envelopes Ofício", group: "Impressos", image: envOfAllide.url, tall: true },
+  { title: "Envelope Ofício Inova Cursos", category: "Envelopes Ofício", group: "Impressos", image: envOfInova.url, tall: true },
+  { title: "Envelope Ofício Jopak", category: "Envelopes Ofício", group: "Impressos", image: envOfJopak.url, tall: true },
   { title: "Papelaria de Escritório", category: "Papelaria de Escritório", group: "Impressos", image: portCatalog },
   { title: "Catálogos e Manuais", category: "Catálogos e Manuais", group: "Impressos", image: portCatalog },
   { title: "Materiais Informacionais", category: "Materiais Informacionais", group: "Impressos", image: portDisplay, tall: true },
@@ -143,7 +162,8 @@ export const PORTFOLIO_CATEGORIES: Record<PortfolioGroup, readonly string[]> = {
   Impressos: [
     "Todos",
     "Pastas Personalizadas",
-    "Envelopes Corporativos",
+    "Envelopes Saco",
+    "Envelopes Ofício",
     "Papelaria de Escritório",
     "Catálogos e Manuais",
     "Materiais Informacionais",
