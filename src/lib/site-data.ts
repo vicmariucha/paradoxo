@@ -32,6 +32,14 @@ import catInoxfer from "@/assets/catalogo-inoxfer.jpg.asset.json";
 import catJopak from "@/assets/catalogo-jopak.jpg.asset.json";
 import catMetta from "@/assets/catalogo-metta.jpg.asset.json";
 import catPro from "@/assets/catalogo-pro.jpg.asset.json";
+import evStandJopak from "@/assets/stand-feira-jopak.jpg.asset.json";
+import evCalendario from "@/assets/calendario-fs-contabil.jpg.asset.json";
+import evCamiseta from "@/assets/camiseta-custom-body.jpg.asset.json";
+import evBackdrop from "@/assets/backdrop-acaert-2018.jpg.asset.json";
+import evConvite from "@/assets/convite-caneta-iwm.jpg.asset.json";
+import evCaneta from "@/assets/caneta-personalizada-gg.jpg.asset.json";
+import evBannerLion from "@/assets/wind-banner-lion.jpg.asset.json";
+import evBannerHomeo from "@/assets/wind-banner-homeo.jpg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
