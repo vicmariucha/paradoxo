@@ -27,6 +27,11 @@ import timbradoInova from "@/assets/papel-timbrado-inova.jpg.asset.json";
 import timbradoAlessandra from "@/assets/papel-timbrado-alessandra.jpg.asset.json";
 import timbradoConforma from "@/assets/papel-timbrado-conforma.jpg.asset.json";
 import timbradoCredvic from "@/assets/papel-timbrado-credivic.jpg.asset.json";
+import catElpak from "@/assets/catalogo-elpak.jpg.asset.json";
+import catInoxfer from "@/assets/catalogo-inoxfer.jpg.asset.json";
+import catJopak from "@/assets/catalogo-jopak.jpg.asset.json";
+import catMetta from "@/assets/catalogo-metta.jpg.asset.json";
+import catPro from "@/assets/catalogo-pro.jpg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
@@ -45,16 +50,16 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Pasta Lins Borsatti", category: "Pastas Personalizadas", group: "Impressos", image: pastaLins.url, tall: true },
   { title: "Pasta Metta Pisos", category: "Pastas Personalizadas", group: "Impressos", image: pastaMetta.url, tall: true },
   { title: "Pasta Renova Sun", category: "Pastas Personalizadas", group: "Impressos", image: pastaRenova.url, tall: true },
-  { title: "Envelope Saco Jopak", category: "Envelopes Saco", group: "Impressos", image: envJopak.url },
-  { title: "Envelope Saco Alessandra Nuzzo", category: "Envelopes Saco", group: "Impressos", image: envAlessandra.url, tall: true },
-  { title: "Envelope Saco Allide", category: "Envelopes Saco", group: "Impressos", image: envAllide.url, tall: true },
-  { title: "Envelope Saco Ana Luiza", category: "Envelopes Saco", group: "Impressos", image: envAna.url, tall: true },
-  { title: "Envelope Ofício Dra. Sheila Lobo", category: "Envelopes Ofício", group: "Impressos", image: envOfSheila.url, tall: true },
-  { title: "Envelope Ofício Allide", category: "Envelopes Ofício", group: "Impressos", image: envOfAllide.url, tall: true },
-  { title: "Envelope Ofício Inova Cursos", category: "Envelopes Ofício", group: "Impressos", image: envOfInova.url, tall: true },
-  { title: "Envelope Ofício Jopak", category: "Envelopes Ofício", group: "Impressos", image: envOfJopak.url, tall: true },
-  { title: "Envelope Ofício Alessandra Nuzzo", category: "Envelopes Ofício", group: "Impressos", image: envOfAlessandra.url, tall: true },
-  { title: "Envelope Ofício Renova Sun", category: "Envelopes Ofício", group: "Impressos", image: envOfRenova.url, tall: true },
+  { title: "Envelope Saco Jopak", category: "Envelopes Corporativos", group: "Impressos", image: envJopak.url },
+  { title: "Envelope Saco Alessandra Nuzzo", category: "Envelopes Corporativos", group: "Impressos", image: envAlessandra.url, tall: true },
+  { title: "Envelope Saco Allide", category: "Envelopes Corporativos", group: "Impressos", image: envAllide.url, tall: true },
+  { title: "Envelope Saco Ana Luiza", category: "Envelopes Corporativos", group: "Impressos", image: envAna.url, tall: true },
+  { title: "Envelope Ofício Dra. Sheila Lobo", category: "Envelopes Corporativos", group: "Impressos", image: envOfSheila.url, tall: true },
+  { title: "Envelope Ofício Allide", category: "Envelopes Corporativos", group: "Impressos", image: envOfAllide.url, tall: true },
+  { title: "Envelope Ofício Inova Cursos", category: "Envelopes Corporativos", group: "Impressos", image: envOfInova.url, tall: true },
+  { title: "Envelope Ofício Jopak", category: "Envelopes Corporativos", group: "Impressos", image: envOfJopak.url, tall: true },
+  { title: "Envelope Ofício Alessandra Nuzzo", category: "Envelopes Corporativos", group: "Impressos", image: envOfAlessandra.url, tall: true },
+  { title: "Envelope Ofício Renova Sun", category: "Envelopes Corporativos", group: "Impressos", image: envOfRenova.url, tall: true },
   { title: "Papel Timbrado Digcont", category: "Papel Timbrado", group: "Impressos", image: timbradoDigcont.url, tall: true },
   { title: "Papel Timbrado Eco G.A", category: "Papel Timbrado", group: "Impressos", image: timbradoEcoga.url, tall: true },
   { title: "Papel Timbrado Inova Cursos", category: "Papel Timbrado", group: "Impressos", image: timbradoInova.url, tall: true },
@@ -73,7 +78,11 @@ export const PORTFOLIO: PortfolioItem[] = [
 
   { title: "Identidade Visual", category: "Identidade Visual", group: "Design", image: portCards },
   { title: "Comunicação Visual", category: "Comunicação Visual", group: "Design", image: portFacade, tall: true },
-  { title: "Catálogo", category: "Catálogo", group: "Design", image: portCatalog },
+  { title: "Catálogo Elpak Embalagens", category: "Catálogo", group: "Design", image: catElpak.url, tall: true },
+  { title: "Catálogo Inoxfer Design", category: "Catálogo", group: "Design", image: catInoxfer.url, tall: true },
+  { title: "Catálogo Jopak", category: "Catálogo", group: "Design", image: catJopak.url, tall: true },
+  { title: "Catálogo Metta Pisos", category: "Catálogo", group: "Design", image: catMetta.url, tall: true },
+  { title: "Catálogo Pró Eventos", category: "Catálogo", group: "Design", image: catPro.url, tall: true },
   { title: "Cartão Digital", category: "Cartão Digital", group: "Design", image: portDisplay },
   { title: "Brindes", category: "Brindes", group: "Design", image: portKits, tall: true },
   { title: "Uniformes", category: "Uniformes", group: "Design", image: portUniforms },
@@ -178,8 +187,7 @@ export const PORTFOLIO_CATEGORIES: Record<PortfolioGroup, readonly string[]> = {
   Impressos: [
     "Todos",
     "Pastas Personalizadas",
-    "Envelopes Saco",
-    "Envelopes Ofício",
+    "Envelopes Corporativos",
     "Papel Timbrado",
     "Papelaria de Escritório",
     "Catálogos e Manuais",
