@@ -162,7 +162,8 @@ export const PORTFOLIO_CATEGORIES: Record<PortfolioGroup, readonly string[]> = {
   Impressos: [
     "Todos",
     "Pastas Personalizadas",
-    "Envelopes Corporativos",
+    "Envelopes Saco",
+    "Envelopes Ofício",
     "Papelaria de Escritório",
     "Catálogos e Manuais",
     "Materiais Informacionais",
