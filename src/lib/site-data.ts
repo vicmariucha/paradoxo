@@ -32,6 +32,14 @@ import catInoxfer from "@/assets/catalogo-inoxfer.jpg.asset.json";
 import catJopak from "@/assets/catalogo-jopak.jpg.asset.json";
 import catMetta from "@/assets/catalogo-metta.jpg.asset.json";
 import catPro from "@/assets/catalogo-pro.jpg.asset.json";
+import evStandJopak from "@/assets/stand-feira-jopak.jpg.asset.json";
+import evCalendario from "@/assets/calendario-fs-contabil.jpg.asset.json";
+import evCamiseta from "@/assets/camiseta-custom-body.jpg.asset.json";
+import evBackdrop from "@/assets/backdrop-acaert-2018.jpg.asset.json";
+import evConvite from "@/assets/convite-caneta-iwm.jpg.asset.json";
+import evCaneta from "@/assets/caneta-personalizada-gg.jpg.asset.json";
+import evBannerLion from "@/assets/wind-banner-lion.jpg.asset.json";
+import evBannerHomeo from "@/assets/wind-banner-homeo.jpg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
@@ -67,9 +75,20 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Papel Timbrado Confarma", category: "Papel Timbrado", group: "Impressos", image: timbradoConforma.url, tall: true },
   { title: "Papel Timbrado Credvic", category: "Papel Timbrado", group: "Impressos", image: timbradoCredvic.url, tall: true },
   { title: "Papelaria de Escritório", category: "Papelaria de Escritório", group: "Impressos", image: portCatalog },
-  { title: "Catálogos e Manuais", category: "Catálogos e Manuais", group: "Impressos", image: portCatalog },
+  { title: "Catálogo Elpak Embalagens", category: "Catálogos e Manuais", group: "Impressos", image: catElpak.url, tall: true },
+  { title: "Catálogo Inoxfer Design", category: "Catálogos e Manuais", group: "Impressos", image: catInoxfer.url, tall: true },
+  { title: "Catálogo Jopak", category: "Catálogos e Manuais", group: "Impressos", image: catJopak.url, tall: true },
+  { title: "Catálogo Metta Pisos", category: "Catálogos e Manuais", group: "Impressos", image: catMetta.url, tall: true },
+  { title: "Catálogo Pró Eventos", category: "Catálogos e Manuais", group: "Impressos", image: catPro.url, tall: true },
   { title: "Materiais Informacionais", category: "Materiais Informacionais", group: "Impressos", image: portDisplay, tall: true },
-  { title: "Materiais para Eventos", category: "Materiais para Eventos", group: "Impressos", image: portDisplay },
+  { title: "Stand de Feira Jopak", category: "Materiais para Eventos", group: "Impressos", image: evStandJopak.url, tall: true },
+  { title: "Backdrop Debate ACAERT", category: "Materiais para Eventos", group: "Impressos", image: evBackdrop.url },
+  { title: "Wind Banner Lion Assessoria", category: "Materiais para Eventos", group: "Impressos", image: evBannerLion.url, tall: true },
+  { title: "Wind Banner Homeo Ervas", category: "Materiais para Eventos", group: "Impressos", image: evBannerHomeo.url, tall: true },
+  { title: "Camisetas Custom Body", category: "Materiais para Eventos", group: "Impressos", image: evCamiseta.url, tall: true },
+  { title: "Calendário FS Contábil", category: "Materiais para Eventos", group: "Impressos", image: evCalendario.url },
+  { title: "Convite e Caneta IMW", category: "Materiais para Eventos", group: "Impressos", image: evConvite.url },
+  { title: "Canetas Personalizadas G&G", category: "Materiais para Eventos", group: "Impressos", image: evCaneta.url, tall: true },
   { title: "Impressões Especiais", category: "Impressões Especiais", group: "Impressos", image: portCards },
   { title: "Convites e Cartões Comerciais", category: "Convites e Cartões Comerciais", group: "Impressos", image: portCards, tall: true },
   { title: "Sacolas Premium", category: "Sacolas Premium", group: "Impressos", image: portPackaging },
@@ -78,11 +97,7 @@ export const PORTFOLIO: PortfolioItem[] = [
 
   { title: "Identidade Visual", category: "Identidade Visual", group: "Design", image: portCards },
   { title: "Comunicação Visual", category: "Comunicação Visual", group: "Design", image: portFacade, tall: true },
-  { title: "Catálogo Elpak Embalagens", category: "Catálogo", group: "Design", image: catElpak.url, tall: true },
-  { title: "Catálogo Inoxfer Design", category: "Catálogo", group: "Design", image: catInoxfer.url, tall: true },
-  { title: "Catálogo Jopak", category: "Catálogo", group: "Design", image: catJopak.url, tall: true },
-  { title: "Catálogo Metta Pisos", category: "Catálogo", group: "Design", image: catMetta.url, tall: true },
-  { title: "Catálogo Pró Eventos", category: "Catálogo", group: "Design", image: catPro.url, tall: true },
+  { title: "Catálogo", category: "Catálogo", group: "Design", image: portCatalog, tall: true },
   { title: "Cartão Digital", category: "Cartão Digital", group: "Design", image: portDisplay },
   { title: "Brindes", category: "Brindes", group: "Design", image: portKits, tall: true },
   { title: "Uniformes", category: "Uniformes", group: "Design", image: portUniforms },
