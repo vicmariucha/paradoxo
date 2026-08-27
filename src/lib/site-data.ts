@@ -9,6 +9,16 @@ import pastaNuzzo from "@/assets/pasta-alessandra-nuzzo.jpg.asset.json";
 import pastaAlide from "@/assets/pasata-alide.jpg.asset.json";
 import pastaJopak from "@/assets/pasta-jopak.jpg.asset.json";
 import pastaLins from "@/assets/pasta-linsborsatti.jpg.asset.json";
+import pastaMetta from "@/assets/pasta-metta.jpg.asset.json";
+import pastaRenova from "@/assets/pasta-renova.jpg.asset.json";
+import envJopak from "@/assets/envelope-jopak.jpg.asset.json";
+import envAlessandra from "@/assets/envelope-alessandra.jpg.asset.json";
+import envAllide from "@/assets/envelope-allide.jpg.asset.json";
+import envAna from "@/assets/envelope-ana.jpg.asset.json";
+import envOfSheila from "@/assets/envelope-oficio-sheila.jpg.asset.json";
+import envOfAllide from "@/assets/envelope-oficio-allide.jpg.asset.json";
+import envOfInova from "@/assets/envelope-oficio-inova.jpg.asset.json";
+import envOfJopak from "@/assets/envelope-oficio-jopak.jpg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
