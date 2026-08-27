@@ -19,6 +19,14 @@ import envOfSheila from "@/assets/envelope-oficio-sheila.jpg.asset.json";
 import envOfAllide from "@/assets/envelope-oficio-allide.jpg.asset.json";
 import envOfInova from "@/assets/envelope-oficio-inova.jpg.asset.json";
 import envOfJopak from "@/assets/envelope-oficio-jopak.jpg.asset.json";
+import envOfAlessandra from "@/assets/envelope-oficio-alessandra.jpg.asset.json";
+import envOfRenova from "@/assets/envelope-oficio-renova.jpg.asset.json";
+import timbradoDigcont from "@/assets/papel-timbrado-digcont.jpg.asset.json";
+import timbradoEcoga from "@/assets/papel-timbrado-ecoga.jpg.asset.json";
+import timbradoInova from "@/assets/papel-timbrado-inova.jpg.asset.json";
+import timbradoAlessandra from "@/assets/papel-timbrado-alessandra.jpg.asset.json";
+import timbradoConforma from "@/assets/papel-timbrado-conforma.jpg.asset.json";
+import timbradoCredvic from "@/assets/papel-timbrado-credivic.jpg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
@@ -45,6 +53,14 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Envelope Ofício Allide", category: "Envelopes Ofício", group: "Impressos", image: envOfAllide.url, tall: true },
   { title: "Envelope Ofício Inova Cursos", category: "Envelopes Ofício", group: "Impressos", image: envOfInova.url, tall: true },
   { title: "Envelope Ofício Jopak", category: "Envelopes Ofício", group: "Impressos", image: envOfJopak.url, tall: true },
+  { title: "Envelope Ofício Alessandra Nuzzo", category: "Envelopes Ofício", group: "Impressos", image: envOfAlessandra.url, tall: true },
+  { title: "Envelope Ofício Renova Sun", category: "Envelopes Ofício", group: "Impressos", image: envOfRenova.url, tall: true },
+  { title: "Papel Timbrado Digcont", category: "Papel Timbrado", group: "Impressos", image: timbradoDigcont.url, tall: true },
+  { title: "Papel Timbrado Eco G.A", category: "Papel Timbrado", group: "Impressos", image: timbradoEcoga.url, tall: true },
+  { title: "Papel Timbrado Inova Cursos", category: "Papel Timbrado", group: "Impressos", image: timbradoInova.url, tall: true },
+  { title: "Papel Timbrado Alessandra Nuzzo", category: "Papel Timbrado", group: "Impressos", image: timbradoAlessandra.url, tall: true },
+  { title: "Papel Timbrado Confarma", category: "Papel Timbrado", group: "Impressos", image: timbradoConforma.url, tall: true },
+  { title: "Papel Timbrado Credvic", category: "Papel Timbrado", group: "Impressos", image: timbradoCredvic.url, tall: true },
   { title: "Papelaria de Escritório", category: "Papelaria de Escritório", group: "Impressos", image: portCatalog },
   { title: "Catálogos e Manuais", category: "Catálogos e Manuais", group: "Impressos", image: portCatalog },
   { title: "Materiais Informacionais", category: "Materiais Informacionais", group: "Impressos", image: portDisplay, tall: true },
@@ -164,6 +180,7 @@ export const PORTFOLIO_CATEGORIES: Record<PortfolioGroup, readonly string[]> = {
     "Pastas Personalizadas",
     "Envelopes Saco",
     "Envelopes Ofício",
+    "Papel Timbrado",
     "Papelaria de Escritório",
     "Catálogos e Manuais",
     "Materiais Informacionais",
