@@ -27,6 +27,11 @@ import timbradoInova from "@/assets/papel-timbrado-inova.jpg.asset.json";
 import timbradoAlessandra from "@/assets/papel-timbrado-alessandra.jpg.asset.json";
 import timbradoConforma from "@/assets/papel-timbrado-conforma.jpg.asset.json";
 import timbradoCredvic from "@/assets/papel-timbrado-credivic.jpg.asset.json";
+import catElpak from "@/assets/catalogo-elpak.jpg.asset.json";
+import catInoxfer from "@/assets/catalogo-inoxfer.jpg.asset.json";
+import catJopak from "@/assets/catalogo-jopak.jpg.asset.json";
+import catMetta from "@/assets/catalogo-metta.jpg.asset.json";
+import catPro from "@/assets/catalogo-pro.jpg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
