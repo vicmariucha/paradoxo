@@ -19,6 +19,14 @@ import envOfSheila from "@/assets/envelope-oficio-sheila.jpg.asset.json";
 import envOfAllide from "@/assets/envelope-oficio-allide.jpg.asset.json";
 import envOfInova from "@/assets/envelope-oficio-inova.jpg.asset.json";
 import envOfJopak from "@/assets/envelope-oficio-jopak.jpg.asset.json";
+import envOfAlessandra from "@/assets/envelope-oficio-alessandra.jpg.asset.json";
+import envOfRenova from "@/assets/envelope-oficio-renova.jpg.asset.json";
+import timbradoDigcont from "@/assets/papel-timbrado-digcont.jpg.asset.json";
+import timbradoEcoga from "@/assets/papel-timbrado-ecoga.jpg.asset.json";
+import timbradoInova from "@/assets/papel-timbrado-inova.jpg.asset.json";
+import timbradoAlessandra from "@/assets/papel-timbrado-alessandra.jpg.asset.json";
+import timbradoConforma from "@/assets/papel-timbrado-conforma.jpg.asset.json";
+import timbradoCredvic from "@/assets/papel-timbrado-credivic.jpg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
