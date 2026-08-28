@@ -5,6 +5,11 @@ import portUniforms from "@/assets/port-uniforms.jpg";
 import portKits from "@/assets/port-kits.jpg";
 import portFacade from "@/assets/port-facade.jpg";
 import portDisplay from "@/assets/port-display.jpg";
+import prodCaixaModular from "@/assets/embalagem-caixa-projeto.jpg.asset.json";
+import prodPomadaMillion from "@/assets/embalagem-pomada-million.jpg.asset.json";
+import prodTintaWall2 from "@/assets/embalagem-balde-tinta-wall-collors-2.jpg.asset.json";
+import prodGessoGM from "@/assets/embalagem-saco-gesso-gm.jpg.asset.json";
+import prodTintaWall from "@/assets/embalagem-balde-tinta-wall-collors.jpg.asset.json";
 import pastaNuzzo from "@/assets/pasta-alessandra-nuzzo.jpg.asset.json";
 import pastaAlide from "@/assets/pasata-alide.jpg.asset.json";
 import pastaJopak from "@/assets/pasta-jopak.jpg.asset.json";
@@ -112,7 +117,11 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Uniformes", category: "Uniformes", group: "Design", image: portUniforms },
   { title: "Rótulos", category: "Rótulos", group: "Design", image: portPackaging },
   { title: "Sites", category: "Sites", group: "Design", image: portDisplay, tall: true },
-  { title: "Imagens de Produto", category: "Imagens de Produto", group: "Design", image: portPackaging },
+  { title: "Caixa Modular Móveis", category: "Imagens de Produto", group: "Design", image: prodCaixaModular.url },
+  { title: "Pomada Million", category: "Imagens de Produto", group: "Design", image: prodPomadaMillion.url, tall: true },
+  { title: "Tinta Acrílica Wall Collors 18L", category: "Imagens de Produto", group: "Design", image: prodTintaWall2.url, tall: true },
+  { title: "Gesso Cola Matarazzo", category: "Imagens de Produto", group: "Design", image: prodGessoGM.url, tall: true },
+  { title: "Linha Acrílica Wall Collors", category: "Imagens de Produto", group: "Design", image: prodTintaWall.url, tall: true },
 ];
 
 export type HomePortfolioItem = {
