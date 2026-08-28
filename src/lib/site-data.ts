@@ -40,6 +40,11 @@ import evConvite from "@/assets/convite-caneta-iwm.jpg.asset.json";
 import evCaneta from "@/assets/caneta-personalizada-gg.jpg.asset.json";
 import evBannerLion from "@/assets/wind-banner-lion.jpg.asset.json";
 import evBannerHomeo from "@/assets/wind-banner-homeo.jpg.asset.json";
+import cartaoKaluna from "@/assets/cartao-corte-especial-kaluna-bulls.jpg.asset.json";
+import cartaoRenovaCard from "@/assets/cartao-corte-especial-renova.jpg.asset.json";
+import cartaoJessica from "@/assets/cartao-jessica-alencar.jpg.asset.json";
+import cartaoLadies from "@/assets/cartao-corte-especial-ladies.jpg.asset.json";
+import cartaoModular from "@/assets/cartao-modular.jpg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
