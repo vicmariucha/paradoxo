@@ -40,6 +40,11 @@ import evConvite from "@/assets/convite-caneta-iwm.jpg.asset.json";
 import evCaneta from "@/assets/caneta-personalizada-gg.jpg.asset.json";
 import evBannerLion from "@/assets/wind-banner-lion.jpg.asset.json";
 import evBannerHomeo from "@/assets/wind-banner-homeo.jpg.asset.json";
+import cartaoKaluna from "@/assets/cartao-corte-especial-kaluna-bulls.jpg.asset.json";
+import cartaoRenovaCard from "@/assets/cartao-corte-especial-renova.jpg.asset.json";
+import cartaoJessica from "@/assets/cartao-jessica-alencar.jpg.asset.json";
+import cartaoLadies from "@/assets/cartao-corte-especial-ladies.jpg.asset.json";
+import cartaoModular from "@/assets/cartao-modular.jpg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
@@ -90,7 +95,11 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Convite e Caneta IMW", category: "Materiais para Eventos", group: "Impressos", image: evConvite.url },
   { title: "Canetas Personalizadas G&G", category: "Materiais para Eventos", group: "Impressos", image: evCaneta.url, tall: true },
   { title: "Impressões Especiais", category: "Impressões Especiais", group: "Impressos", image: portCards },
-  { title: "Convites e Cartões Comerciais", category: "Convites e Cartões Comerciais", group: "Impressos", image: portCards, tall: true },
+  { title: "Cartão Corte Especial Kaluana Bulls", category: "Convites e Cartões Comerciais", group: "Impressos", image: cartaoKaluna.url, tall: true },
+  { title: "Cartão Corte Especial Renova Sun", category: "Convites e Cartões Comerciais", group: "Impressos", image: cartaoRenovaCard.url, tall: true },
+  { title: "Cartão Dra. Jéssica Alencar", category: "Convites e Cartões Comerciais", group: "Impressos", image: cartaoJessica.url, tall: true },
+  { title: "Cartão Corte Especial Ladies Alta Costura", category: "Convites e Cartões Comerciais", group: "Impressos", image: cartaoLadies.url, tall: true },
+  { title: "Cartão Modular Móveis", category: "Convites e Cartões Comerciais", group: "Impressos", image: cartaoModular.url, tall: true },
   { title: "Sacolas Premium", category: "Sacolas Premium", group: "Impressos", image: portPackaging },
   { title: "Brindes Corporativos", category: "Brindes Corporativos", group: "Impressos", image: portKits },
   { title: "Kits Corporativos", category: "Kits Corporativos", group: "Impressos", image: portKits, tall: true },
