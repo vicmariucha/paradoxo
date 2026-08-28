@@ -112,7 +112,11 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Uniformes", category: "Uniformes", group: "Design", image: portUniforms },
   { title: "Rótulos", category: "Rótulos", group: "Design", image: portPackaging },
   { title: "Sites", category: "Sites", group: "Design", image: portDisplay, tall: true },
-  { title: "Imagens de Produto", category: "Imagens de Produto", group: "Design", image: portPackaging },
+  { title: "Caixa Modular Móveis", category: "Imagens de Produto", group: "Design", image: prodCaixaModular.url },
+  { title: "Pomada Million", category: "Imagens de Produto", group: "Design", image: prodPomadaMillion.url, tall: true },
+  { title: "Tinta Acrílica Wall Collors 18L", category: "Imagens de Produto", group: "Design", image: prodTintaWall2.url, tall: true },
+  { title: "Gesso Cola Matarazzo", category: "Imagens de Produto", group: "Design", image: prodGessoGM.url, tall: true },
+  { title: "Linha Acrílica Wall Collors", category: "Imagens de Produto", group: "Design", image: prodTintaWall.url, tall: true },
 ];
 
 export type HomePortfolioItem = {
