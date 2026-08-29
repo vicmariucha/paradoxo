@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Paradoxo - Suporte, Finanças e Branding | Impressos de Luxo e Papelaria Corporativa" },
-      { name: "description", content: "Paradoxo: Impressos corporativos de luxo, pastas institucionais, kits executivos e catálogos de alto padrão para construtoras, clínicas, startups, agro e escritórios." },
+      { name: "description", content: "Paradoxo: impressos corporativos de luxo, pastas institucionais, kits executivos e catálogos de alto padrão para clínicas, construtoras, startups, agronegócio e escritórios." },
       { name: "robots", content: "index, follow" },
       { name: "author", content: "Paradoxo - Suporte, Finanças e Branding" },
       { property: "og:type", content: "website" },
