@@ -114,7 +114,7 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Cartão Modular Móveis", category: "Convites e Cartões Comerciais", group: "Impressos", image: cartaoModular.url, tall: true },
   { title: "Sacolas Premium", category: "Sacolas Premium", group: "Impressos", image: portPackaging },
   { title: "Brindes Corporativos", category: "Brindes Corporativos", group: "Impressos", image: portKits },
-  { title: "Kits Corporativos", category: "Kits Corporativos", group: "Impressos", image: portKits, tall: true },
+  { title: "Caixa Personalizada Modular Móveis", category: "Kits Corporativos", group: "Impressos", image: kitCaixaModular.url, tall: true },
 
   { title: "Identidade Visual", category: "Identidade Visual", group: "Design", image: portCards },
   { title: "Comunicação Visual", category: "Comunicação Visual", group: "Design", image: portFacade, tall: true },
