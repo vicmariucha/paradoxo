@@ -13,10 +13,6 @@ export const Route = createFileRoute("/portfolio/$slug")({
   head: ({ loaderData }) => ({
     meta: loaderData
       ? [
-          { title: `${loaderData.item.title} — PARADOXO` },
-          { name: "description", content: loaderData.item.description },
-          { property: "og:title", content: `${loaderData.item.title} — PARADOXO` },
-          { property: "og:description", content: loaderData.item.description },
           { property: "og:image", content: loaderData.item.image },
         ]
       : [],
