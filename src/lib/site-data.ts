@@ -50,6 +50,13 @@ import cartaoRenovaCard from "@/assets/cartao-corte-especial-renova.jpg.asset.js
 import cartaoJessica from "@/assets/cartao-jessica-alencar.jpg.asset.json";
 import cartaoLadies from "@/assets/cartao-corte-especial-ladies.jpg.asset.json";
 import cartaoModular from "@/assets/cartao-modular.jpg.asset.json";
+import kitCaixaModular from "@/assets/caixa-papelao-modular.jpg.asset.json";
+import brindeFioAraruna from "@/assets/brinde-cartao-fio-dental-araruna.jpg.asset.json";
+import brindeFioCmk from "@/assets/brinde-cartao-fio-dental-cmk.jpg.asset.json";
+import brindeCapaCtps from "@/assets/capa-ctps-fs-contabil.jpg.asset.json";
+import brindeCaderno from "@/assets/caderno-empresarial-digcont.jpg.asset.json";
+import brindeCracha from "@/assets/cracha-eventos-citin.jpg.asset.json";
+import brindeGarrafa from "@/assets/garrafa-termica-cmk.jpg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
