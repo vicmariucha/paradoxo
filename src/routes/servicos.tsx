@@ -6,12 +6,7 @@ import { SERVICES } from "@/lib/site-data";
 
 export const Route = createFileRoute("/servicos")({
   head: () => ({
-    meta: [
-      { title: "Serviços — PARADOXO" },
-      { name: "description", content: "Impressos premium, marketing & SEO, finanças e suporte empresarial. Conheça as três frentes de atuação da PARADOXO." },
-      { property: "og:title", content: "Serviços — PARADOXO" },
-      { property: "og:description", content: "Impressos premium, marketing e consultoria de alto padrão." },
-    ],
+    meta: [],
   }),
   component: Servicos,
 });

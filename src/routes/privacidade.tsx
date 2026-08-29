@@ -4,12 +4,7 @@ import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/privacidade")({
   head: () => ({
-    meta: [
-      { title: "Política de Privacidade — PARADOXO" },
-      { name: "description", content: "Saiba como a PARADOXO coleta, utiliza e protege os seus dados pessoais." },
-      { property: "og:title", content: "Política de Privacidade — PARADOXO" },
-      { property: "og:description", content: "Como a PARADOXO trata e protege os seus dados pessoais." },
-    ],
+    meta: [],
   }),
   component: Privacidade,
 });

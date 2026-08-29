@@ -7,12 +7,7 @@ import { PORTFOLIO, PORTFOLIO_CATEGORIES, PORTFOLIO_GROUPS, type PortfolioGroup 
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
-    meta: [
-      { title: "Portfólio — PARADOXO" },
-      { name: "description", content: "Showcase de impressos premium e design: pastas, envelopes, papelaria, catálogos, identidade visual, uniformes e mais." },
-      { property: "og:title", content: "Portfólio — PARADOXO" },
-      { property: "og:description", content: "Galeria de projetos de impressos e design de alto padrão." },
-    ],
+    meta: [],
   }),
   component: Portfolio,
 });
