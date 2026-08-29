@@ -4,12 +4,7 @@ import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/termos")({
   head: () => ({
-    meta: [
-      { title: "Termos de Uso — PARADOXO" },
-      { name: "description", content: "Conheça os termos e condições de uso do site e dos serviços da PARADOXO." },
-      { property: "og:title", content: "Termos de Uso — PARADOXO" },
-      { property: "og:description", content: "Termos e condições de uso do site e serviços da PARADOXO." },
-    ],
+    meta: [],
   }),
   component: Termos,
 });

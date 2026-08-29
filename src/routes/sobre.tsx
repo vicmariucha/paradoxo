@@ -16,12 +16,7 @@ import impressosParadoxoImg from "@/assets/impressos-paradoxo.jpg.asset.json";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
-    meta: [
-      { title: "Sobre — PARADOXO" },
-      { name: "description", content: "A história da PARADOXO: autoridade, experiência e visão estratégica aplicadas a impressos de altíssimo padrão." },
-      { property: "og:title", content: "Sobre — PARADOXO" },
-      { property: "og:description", content: "Autoridade e excelência em soluções empresariais de alto padrão." },
-    ],
+    meta: [],
   }),
   component: Sobre,
 });

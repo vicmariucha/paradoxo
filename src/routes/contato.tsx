@@ -6,12 +6,7 @@ import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/contato")({
   head: () => ({
-    meta: [
-      { title: "Contato — PARADOXO" },
-      { name: "description", content: "Solicite seu projeto premium. Fale com a PARADOXO por formulário, WhatsApp, e-mail ou telefone." },
-      { property: "og:title", content: "Contato — PARADOXO" },
-      { property: "og:description", content: "Solicite um orçamento de impressos premium e soluções de alto padrão." },
-    ],
+    meta: [],
   }),
   component: Contato,
 });

@@ -18,10 +18,6 @@ import showcaseFinancas from "@/assets/showcase-financas-v2.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "PARADOXO — Quando qualidade não é negociável" },
-      { name: "description", content: "Empresa premium de impressos de alto padrão, marketing e consultoria. Transformamos impressão em percepção de valor." },
-      { property: "og:title", content: "PARADOXO — Quando qualidade não é negociável" },
-      { property: "og:description", content: "Impressos premium, marketing e consultoria para clientes exigentes." },
       { property: "og:image", content: heroImg },
     ],
   }),

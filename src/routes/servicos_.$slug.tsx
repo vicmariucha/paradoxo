@@ -14,15 +14,11 @@ export const Route = createFileRoute("/servicos_/$slug")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Serviço não encontrado — PARADOXO" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ name: "robots", content: "noindex" }] };
     }
     const { service } = loaderData;
     return {
       meta: [
-        { title: `${service.title} — PARADOXO` },
-        { name: "description", content: service.intro },
-        { property: "og:title", content: `${service.title} — PARADOXO` },
-        { property: "og:description", content: service.intro },
         { property: "og:image", content: service.hero },
       ],
     };
