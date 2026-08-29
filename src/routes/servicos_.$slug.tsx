@@ -78,7 +78,7 @@ function ServiceDetail() {
             </div>
 
             <div className="reveal mt-16 rounded-2xl border border-border/60 bg-card/30 p-8 lg:p-12" data-delay="150">
-              <p className="font-display text-base leading-snug text-foreground whitespace-nowrap lg:text-lg">
+              <p className="mx-auto max-w-4xl text-center font-display text-xl leading-snug text-foreground lg:text-2xl">
                 {service.context.objective}
               </p>
             </div>
