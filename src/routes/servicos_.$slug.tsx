@@ -58,6 +58,58 @@ function ServiceDetail() {
         </div>
       </section>
 
+      {/* CONTEXTO / MANIFESTO DO SERVIÇO */}
+      {service.context && (
+        <section className="border-t border-border/60 px-6 py-24 lg:px-10 lg:py-32">
+          <div className="mx-auto max-w-[1400px]">
+            <div className="grid gap-12 lg:grid-cols-12">
+              <div className="reveal lg:col-span-5">
+                <h2 className="font-display text-3xl leading-tight text-foreground lg:text-4xl">
+                  {service.context.heading}
+                </h2>
+              </div>
+              <div className="reveal space-y-6 lg:col-span-6 lg:col-start-8" data-delay="100">
+                {service.context.intro.map((p, idx) => (
+                  <p key={idx} className="text-base leading-relaxed text-muted-foreground">
+                    {p}
+                  </p>
+                ))}
+              </div>
+            </div>
+
+            <div className="reveal mt-16 rounded-2xl border border-border/60 bg-card/30 p-8 lg:p-12" data-delay="150">
+              <p className="max-w-3xl font-display text-xl leading-snug text-foreground lg:text-2xl">
+                {service.context.objective}
+              </p>
+            </div>
+
+            <div className="reveal mt-20" data-delay="200">
+              <p className="overline">{service.context.helpsIntro}</p>
+              <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                {service.context.helps.map((h, i) => (
+                  <div
+                    key={i}
+                    data-delay={(i % 3) * 80}
+                    className="reveal flex items-start gap-4 rounded-2xl border border-border/60 bg-background p-6"
+                  >
+                    <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-gold/50 text-gold">
+                      <Check size={15} />
+                    </span>
+                    <p className="text-sm leading-relaxed text-muted-foreground">{h}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="reveal mt-20 text-center" data-delay="250">
+              <p className="mx-auto max-w-2xl font-display text-2xl italic leading-snug text-gold/90 lg:text-3xl">
+                {service.context.closing}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* O QUE É */}
       <section className="border-t border-border/60 px-6 py-24 lg:px-10 lg:py-32">
         <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-12">
