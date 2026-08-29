@@ -78,13 +78,13 @@ function ServiceDetail() {
             </div>
 
             <div className="reveal mt-16 rounded-2xl border border-border/60 bg-card/30 p-8 lg:p-12" data-delay="150">
-              <p className="max-w-3xl font-display text-xl leading-snug text-foreground lg:text-2xl">
+              <p className="font-display text-base leading-snug text-foreground whitespace-nowrap lg:text-lg">
                 {service.context.objective}
               </p>
             </div>
 
             <div className="reveal mt-20" data-delay="200">
-              <p className="overline">{service.context.helpsIntro}</p>
+              <p className="text-base leading-relaxed text-muted-foreground">{service.context.helpsIntro}</p>
               <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
                 {service.context.helps.map((h, i) => (
                   <div
