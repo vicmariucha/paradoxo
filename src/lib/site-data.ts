@@ -338,6 +338,14 @@ export type ServiceDetail = {
   hero: string;
   intro: string;
   ctaLabel: string;
+  context?: {
+    heading: string;
+    intro: string[];
+    objective: string;
+    helpsIntro: string;
+    helps: string[];
+    closing: string;
+  };
   whatIs: string;
   audience: string[];
   how: { n: string; t: string; d: string }[];
