@@ -10,6 +10,8 @@ import prodPomadaMillion from "@/assets/embalagem-pomada-million.jpg.asset.json"
 import prodTintaWall2 from "@/assets/embalagem-balde-tinta-wall-collors-2.jpg.asset.json";
 import prodGessoGM from "@/assets/embalagem-saco-gesso-gm.jpg.asset.json";
 import prodTintaWall from "@/assets/embalagem-balde-tinta-wall-collors.jpg.asset.json";
+import folderCmk from "@/assets/folder-dobra-cmk.jpeg.asset.json";
+import folderHomeo from "@/assets/folder-multiplas-dobras-homeo-ervas.jpeg.asset.json";
 import pastaNuzzo from "@/assets/pasta-alessandra-nuzzo.jpg.asset.json";
 import pastaAlide from "@/assets/pasata-alide.jpg.asset.json";
 import pastaJopak from "@/assets/pasta-jopak.jpg.asset.json";
@@ -97,7 +99,8 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Catálogo Jopak", category: "Catálogos e Manuais", group: "Impressos", image: catJopak.url, tall: true },
   { title: "Catálogo Metta Pisos", category: "Catálogos e Manuais", group: "Impressos", image: catMetta.url, tall: true },
   { title: "Catálogo Pró Eventos", category: "Catálogos e Manuais", group: "Impressos", image: catPro.url, tall: true },
-  { title: "Materiais Informacionais", category: "Materiais Informacionais", group: "Impressos", image: portDisplay, tall: true },
+  { title: "Folder CMK Arruelas", category: "Materiais Informacionais", group: "Impressos", image: folderCmk.url, tall: true },
+  { title: "Folder Múltiplas Dobras Homeo Ervas", category: "Materiais Informacionais", group: "Impressos", image: folderHomeo.url, tall: true },
   { title: "Stand de Feira Jopak", category: "Materiais para Eventos", group: "Impressos", image: evStandJopak.url, tall: true },
   { title: "Backdrop Debate ACAERT", category: "Materiais para Eventos", group: "Impressos", image: evBackdrop.url },
   { title: "Wind Banner Lion Assessoria", category: "Materiais para Eventos", group: "Impressos", image: evBannerLion.url, tall: true },
@@ -127,13 +130,12 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Crachá de Evento CITIN", category: "Brindes", group: "Design", image: brindeCracha.url, tall: true },
   { title: "Garrafa Térmica CMK Arruelas", category: "Brindes", group: "Design", image: brindeGarrafa.url, tall: true },
   { title: "Uniformes", category: "Uniformes", group: "Design", image: portUniforms },
-  { title: "Rótulos", category: "Rótulos", group: "Design", image: portPackaging },
+  { title: "Pomada Million", category: "Rótulos", group: "Design", image: prodPomadaMillion.url, tall: true },
+  { title: "Tinta Acrílica Wall Collors 18L", category: "Rótulos", group: "Design", image: prodTintaWall2.url, tall: true },
+  { title: "Gesso Cola Matarazzo", category: "Rótulos", group: "Design", image: prodGessoGM.url, tall: true },
+  { title: "Linha Acrílica Wall Collors", category: "Rótulos", group: "Design", image: prodTintaWall.url, tall: true },
   { title: "Sites", category: "Sites", group: "Design", image: portDisplay, tall: true },
   { title: "Caixa Modular Móveis", category: "Imagens de Produto", group: "Design", image: prodCaixaModular.url },
-  { title: "Pomada Million", category: "Imagens de Produto", group: "Design", image: prodPomadaMillion.url, tall: true },
-  { title: "Tinta Acrílica Wall Collors 18L", category: "Imagens de Produto", group: "Design", image: prodTintaWall2.url, tall: true },
-  { title: "Gesso Cola Matarazzo", category: "Imagens de Produto", group: "Design", image: prodGessoGM.url, tall: true },
-  { title: "Linha Acrílica Wall Collors", category: "Imagens de Produto", group: "Design", image: prodTintaWall.url, tall: true },
 ];
 
 export type HomePortfolioItem = {
