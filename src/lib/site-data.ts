@@ -338,6 +338,14 @@ export type ServiceDetail = {
   hero: string;
   intro: string;
   ctaLabel: string;
+  context?: {
+    heading: string;
+    intro: string[];
+    objective: string;
+    helpsIntro: string;
+    helps: string[];
+    closing: string;
+  };
   whatIs: string;
   audience: string[];
   how: { n: string; t: string; d: string }[];
@@ -424,6 +432,26 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     intro:
       "Organização, processo e clareza financeira para que a sua operação cresça com solidez, controle e segurança.",
     ctaLabel: "Estruturar minha operação",
+    context: {
+      heading: "Gestão financeira e administrativa para decisões mais seguras.",
+      intro: [
+        "Transforme processos dispersos, controles frágeis e informações descentralizadas em uma visão clara do seu negócio.",
+        "Nossa assessoria atua no planejamento, organização e acompanhamento das rotinas financeiras, administrativas e operacionais da empresa.",
+      ],
+      objective:
+        "O objetivo é dar mais controle à gestão, apoiar decisões e reduzir os ruídos que consomem tempo, dinheiro e energia da equipe.",
+      helpsIntro: "Como ajudamos sua empresa:",
+      helps: [
+        "Analisamos rotinas administrativas e financeiras para identificar falhas, gargalos e oportunidades de melhoria.",
+        "Estruturamos controles, planilhas e fluxos de acompanhamento adequados à realidade de sua operação.",
+        "Orientamos o uso mais eficiente do seu ERP e criamos controles específicos quando o sistema não atende necessidades importantes.",
+        "Levantamos indicadores e pontos críticos para uma leitura mais gerencial do desempenho do negócio.",
+        "Apoiamos adequações fiscais, administrativas e financeiras conforme o segmento da empresa e as diretrizes aplicáveis.",
+        "Atuamos como um suporte organizacional remoto, fortalecendo a controladoria interna e ajudando sua equipe na condução de processos com mais consistência.",
+      ],
+      closing:
+        "Tenha informações organizadas para decidir com mais clareza e conduzir sua empresa com mais controle.",
+    },
     whatIs:
       "É o braço de estrutura da PARADOXO: gestão financeira, organização administrativa, consultoria operacional, estruturação de processos e suporte empresarial. Construímos a base para que a sua empresa cresça sem perder o controle.",
     audience: [
