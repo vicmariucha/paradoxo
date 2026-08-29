@@ -50,6 +50,13 @@ import cartaoRenovaCard from "@/assets/cartao-corte-especial-renova.jpg.asset.js
 import cartaoJessica from "@/assets/cartao-jessica-alencar.jpg.asset.json";
 import cartaoLadies from "@/assets/cartao-corte-especial-ladies.jpg.asset.json";
 import cartaoModular from "@/assets/cartao-modular.jpg.asset.json";
+import kitCaixaModular from "@/assets/caixa-papelao-modular.jpg.asset.json";
+import brindeFioAraruna from "@/assets/brinde-cartao-fio-dental-araruna.jpg.asset.json";
+import brindeFioCmk from "@/assets/brinde-cartao-fio-dental-cmk.jpg.asset.json";
+import brindeCapaCtps from "@/assets/capa-ctps-fs-contabil.jpg.asset.json";
+import brindeCaderno from "@/assets/caderno-empresarial-digcont.jpg.asset.json";
+import brindeCracha from "@/assets/cracha-eventos-citin.jpg.asset.json";
+import brindeGarrafa from "@/assets/garrafa-termica-cmk.jpg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
@@ -107,13 +114,18 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Cartão Modular Móveis", category: "Convites e Cartões Comerciais", group: "Impressos", image: cartaoModular.url, tall: true },
   { title: "Sacolas Premium", category: "Sacolas Premium", group: "Impressos", image: portPackaging },
   { title: "Brindes Corporativos", category: "Brindes Corporativos", group: "Impressos", image: portKits },
-  { title: "Kits Corporativos", category: "Kits Corporativos", group: "Impressos", image: portKits, tall: true },
+  { title: "Caixa Personalizada Modular Móveis", category: "Kits Corporativos", group: "Impressos", image: kitCaixaModular.url, tall: true },
 
   { title: "Identidade Visual", category: "Identidade Visual", group: "Design", image: portCards },
   { title: "Comunicação Visual", category: "Comunicação Visual", group: "Design", image: portFacade, tall: true },
   { title: "Catálogo", category: "Catálogo", group: "Design", image: portCatalog, tall: true },
   { title: "Cartão Digital", category: "Cartão Digital", group: "Design", image: portDisplay },
-  { title: "Brindes", category: "Brindes", group: "Design", image: portKits, tall: true },
+  { title: "Cartão Fio Dental Araruna Odontologia", category: "Brindes", group: "Design", image: brindeFioAraruna.url, tall: true },
+  { title: "Cartão Fio Dental CMK Arruelas", category: "Brindes", group: "Design", image: brindeFioCmk.url, tall: true },
+  { title: "Capa de Carteira de Trabalho FS Contábil", category: "Brindes", group: "Design", image: brindeCapaCtps.url, tall: true },
+  { title: "Caderno Empresarial Digcont", category: "Brindes", group: "Design", image: brindeCaderno.url, tall: true },
+  { title: "Crachá de Evento CITIN", category: "Brindes", group: "Design", image: brindeCracha.url, tall: true },
+  { title: "Garrafa Térmica CMK Arruelas", category: "Brindes", group: "Design", image: brindeGarrafa.url, tall: true },
   { title: "Uniformes", category: "Uniformes", group: "Design", image: portUniforms },
   { title: "Rótulos", category: "Rótulos", group: "Design", image: portPackaging },
   { title: "Sites", category: "Sites", group: "Design", image: portDisplay, tall: true },
