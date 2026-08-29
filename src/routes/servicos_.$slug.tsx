@@ -95,7 +95,7 @@ function ServiceDetail() {
                     <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-gold/50 text-gold">
                       <Check size={15} />
                     </span>
-                    <p className="text-sm leading-relaxed text-muted-foreground">{h}</p>
+                    <p className="text-base leading-relaxed text-muted-foreground">{h}</p>
                   </div>
                 ))}
               </div>
