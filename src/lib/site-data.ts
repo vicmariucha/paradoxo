@@ -69,6 +69,13 @@ import brindeR5 from "@/assets/brinde-r5.jpeg.asset.json";
 import brindeCalendarioFirmo from "@/assets/brinde-firma-silva-2.jpeg.asset.json";
 import brindeAgendaFirmo from "@/assets/brinde-firma-silva.jpeg.asset.json";
 import brindeYva from "@/assets/brinde-yva.jpeg.asset.json";
+import pastaBonaldi from "@/assets/pasta-banaldi.jpeg.asset.json";
+import espLeBoutique from "@/assets/impressoes-especiais-le-boutique.jpeg.asset.json";
+import espEzcopy from "@/assets/impressoes-especiais-ezcopy.jpeg.asset.json";
+import espFsContabil from "@/assets/impressoes-especiais-fs-contabil.jpeg.asset.json";
+import espRafit from "@/assets/impressoes-especiais-rafit.jpeg.asset.json";
+import espMayLui from "@/assets/impressoes-especiais-may-lui.jpeg.asset.json";
+import producoesProjetos from "@/assets/producoes-de-projetos.jpeg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
