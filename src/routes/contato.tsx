@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowRight, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, Mail, MapPin, MessageCircle, Phone, Instagram } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
 import { useReveal } from "@/hooks/use-reveal";
 
@@ -13,6 +13,7 @@ export const Route = createFileRoute("/contato")({
 
 const CHANNELS = [
   { icon: MessageCircle, label: "WhatsApp", value: "Conversar agora", href: "https://wa.me/5511984431907?text=Vim%20pelo%20site%20da%20Paradoxo.%20Gostaria%20de%20conversar%20sobre%20um%20projeto!", external: true },
+  { icon: Instagram, label: "Instagram", value: "@suporteparadoxo", href: "https://www.instagram.com/suporteparadoxo", external: true },
   { icon: Mail, label: "E-mail", value: "salomao@suporteparadoxo.com.br", href: "mailto:salomao@suporteparadoxo.com.br", external: false },
   { icon: MapPin, label: "Atelier", value: "São Paulo, Brasil", href: "#", external: false },
 ];

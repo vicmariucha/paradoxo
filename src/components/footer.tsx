@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Linkedin, Mail, Phone, ArrowUp, Building2 } from "lucide-react";
+import { Linkedin, Mail, Phone, Instagram, ArrowUp, Building2 } from "lucide-react";
 
 export function Footer() {
   const scrollToTop = () =>
@@ -36,6 +36,7 @@ export function Footer() {
             <div className="mt-8 flex gap-4">
               {[
                 { Icon: Linkedin, href: "https://www.linkedin.com/in/salom%C3%A3o-junior-81111b1b/", label: "LinkedIn" },
+                { Icon: Instagram, href: "https://www.instagram.com/suporteparadoxo", label: "Instagram" },
                 { Icon: Mail, href: "mailto:salomao@suporteparadoxo.com.br", label: "E-mail" },
               ].map(({ Icon, href, label }) => (
                 <a
