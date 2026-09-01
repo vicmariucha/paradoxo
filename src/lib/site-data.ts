@@ -69,6 +69,13 @@ import brindeR5 from "@/assets/brinde-r5.jpeg.asset.json";
 import brindeCalendarioFirmo from "@/assets/brinde-firma-silva-2.jpeg.asset.json";
 import brindeAgendaFirmo from "@/assets/brinde-firma-silva.jpeg.asset.json";
 import brindeYva from "@/assets/brinde-yva.jpeg.asset.json";
+import pastaBonaldi from "@/assets/pasta-banaldi.jpeg.asset.json";
+import espLeBoutique from "@/assets/impressoes-especiais-le-boutique.jpeg.asset.json";
+import espEzcopy from "@/assets/impressoes-especiais-ezcopy.jpeg.asset.json";
+import espFsContabil from "@/assets/impressoes-especiais-fs-contabil.jpeg.asset.json";
+import espRafit from "@/assets/impressoes-especiais-rafit.jpeg.asset.json";
+import espMayLui from "@/assets/impressoes-especiais-may-lui.jpeg.asset.json";
+import producoesProjetos from "@/assets/producoes-de-projetos.jpeg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
@@ -136,6 +143,13 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Agenda Firmo & Silva", category: "Brindes Corporativos", group: "Impressos", image: brindeAgendaFirmo.url, tall: true },
   { title: "Chaveiro YVA Joias", category: "Brindes Corporativos", group: "Impressos", image: brindeYva.url, tall: true },
   { title: "Caixa Personalizada Modular Móveis", category: "Kits Corporativos", group: "Impressos", image: kitCaixaModular.url, tall: true },
+  { title: "Pasta Bonaldi & Mustafá Arquitetura", category: "Pastas Personalizadas", group: "Impressos", image: pastaBonaldi.url, tall: true },
+  { title: "Tapete Personalizado Le Boutique", category: "Impressões Especiais", group: "Impressos", image: espLeBoutique.url },
+  { title: "Embalagem EZCOPY", category: "Impressões Especiais", group: "Impressos", image: espEzcopy.url, tall: true },
+  { title: "Pasta Sacola FS Contábil", category: "Impressões Especiais", group: "Impressos", image: espFsContabil.url, tall: true },
+  { title: "Tag Corte Especial Rafit Kids", category: "Impressões Especiais", group: "Impressos", image: espRafit.url },
+  { title: "Tag Corte Especial May-Lui Kids", category: "Impressões Especiais", group: "Impressos", image: espMayLui.url, tall: true },
+  { title: "Display de Folheteria Personalizado", category: "Produções de Projetos", group: "Impressos", image: producoesProjetos.url, tall: true },
 
   { title: "Identidade Visual", category: "Identidade Visual", group: "Design", image: portCards },
   { title: "Comunicação Visual", category: "Comunicação Visual", group: "Design", image: portFacade, tall: true },
@@ -263,6 +277,7 @@ export const PORTFOLIO_CATEGORIES: Record<PortfolioGroup, readonly string[]> = {
     "Sacolas Premium",
     "Brindes Corporativos",
     "Kits Corporativos",
+    "Produções de Projetos",
   ],
   Design: [
     "Todos",
