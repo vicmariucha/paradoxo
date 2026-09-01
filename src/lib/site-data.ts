@@ -111,6 +111,8 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Catálogo Pró Eventos", category: "Catálogos e Manuais", group: "Impressos", image: catPro.url, tall: true },
   { title: "Folder CMK Arruelas", category: "Materiais Informacionais", group: "Impressos", image: folderCmk.url, tall: true },
   { title: "Folder Múltiplas Dobras Homeo Ervas", category: "Materiais Informacionais", group: "Impressos", image: folderHomeo.url, tall: true },
+  { title: "Material Informacional Firmo & Silva", category: "Materiais Informacionais", group: "Impressos", image: infoFirmoSilva.url, tall: true },
+  { title: "Material Informacional LCMCA", category: "Materiais Informacionais", group: "Impressos", image: infoLcma.url, tall: true },
   { title: "Stand de Feira Jopak", category: "Materiais para Eventos", group: "Impressos", image: evStandJopak.url, tall: true },
   { title: "Backdrop Debate ACAERT", category: "Materiais para Eventos", group: "Impressos", image: evBackdrop.url },
   { title: "Wind Banner Lion Assessoria", category: "Materiais para Eventos", group: "Impressos", image: evBannerLion.url, tall: true },
