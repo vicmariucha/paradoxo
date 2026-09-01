@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, Minus, Plus } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
 import { useReveal } from "@/hooks/use-reveal";
 import manifestoImg from "@/assets/manifesto.jpg";
@@ -42,8 +43,28 @@ const PILLARS = [
   },
 ];
 
+const FAQ = [
+  {
+    q: "O que a Paradoxo Suporte, Finanças e Branding faz?",
+    a: "A Paradoxo é um ateliê gráfico e consultoria especializada em impressos corporativos de luxo, como pastas comerciais, envelopes executivos, catálogos premium e kits de apresentação, com acabamentos nobres. Também oferece suporte estratégico em branding e finanças para empresas que buscam fortalecer sua imagem e estrutura institucional.",
+  },
+  {
+    q: "Quais tipos de impressos de luxo a Paradoxo produz?",
+    a: "Produzimos pastas comerciais institucionais, envelopes personalizados (saco e ofício), catálogos premium, kits de onboarding e materiais de fechamento de contratos, com acabamentos como laminação soft touch, hot stamping, verniz UV localizado e papéis de alta gramatura dentre outras especificações.",
+  },
+  {
+    q: "Qual a diferença entre um impresso comum e um impresso de luxo corporativo?",
+    a: "Um impresso comum utiliza papel padrão e acabamento simples, enquanto o impresso de luxo emprega papéis especiais, técnicas de acabamento nobre e design exclusivo, transmitindo maior credibilidade, sofisticação e valor percebido de marca em negociações e apresentações.",
+  },
+  {
+    q: "Quais empresas podem contratar os serviços da Paradoxo?",
+    a: "Atendemos empresas de diversos setores que valorizam apresentação institucional, incluindo startups, escritórios de advocacia, clínicas, hospitais, construtoras, instituições financeiras, concessionárias, hotéis, escritórios de arquitetura e engenharia, agronegócio e instituições de ensino dentre outros segmentos.",
+  },
+];
+
 function Sobre() {
   useReveal();
+  const [open, setOpen] = useState<number | null>(0);
 
   return (
     <SiteLayout>
@@ -208,6 +229,31 @@ function Sobre() {
                 <p>Memória que permanece.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ INSTITUCIONAL */}
+      <section className="border-t border-border/60 px-6 py-24 lg:px-10 lg:py-32">
+        <div className="mx-auto max-w-[900px]">
+          <p className="overline reveal">FAQ Institucional</p>
+          <div className="mt-12 space-y-4">
+            {FAQ.map((item, i) => (
+              <div key={item.q} data-delay={(i % 4) * 70} className="reveal overflow-hidden rounded-2xl border border-border/60">
+                <button
+                  onClick={() => setOpen(open === i ? null : i)}
+                  className="flex w-full items-center justify-between gap-4 p-6 text-left transition-colors hover:bg-card/40"
+                >
+                  <span className="font-display text-xl text-foreground">{item.q}</span>
+                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-gold/50 text-gold">
+                    {open === i ? <Minus size={15} /> : <Plus size={15} />}
+                  </span>
+                </button>
+                {open === i && (
+                  <p className="px-6 pb-6 text-base leading-relaxed text-muted-foreground">{item.a}</p>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
