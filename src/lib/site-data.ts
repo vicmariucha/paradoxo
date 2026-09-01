@@ -277,6 +277,7 @@ export const PORTFOLIO_CATEGORIES: Record<PortfolioGroup, readonly string[]> = {
     "Sacolas Premium",
     "Brindes Corporativos",
     "Kits Corporativos",
+    "Produções de Projetos",
   ],
   Design: [
     "Todos",
