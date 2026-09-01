@@ -59,6 +59,16 @@ import brindeCapaCtps from "@/assets/capa-ctps-fs-contabil.jpg.asset.json";
 import brindeCaderno from "@/assets/caderno-empresarial-digcont.jpg.asset.json";
 import brindeCracha from "@/assets/cracha-eventos-citin.jpg.asset.json";
 import brindeGarrafa from "@/assets/garrafa-termica-cmk.jpg.asset.json";
+import sacolaLeBoutique from "@/assets/sacola-le-boutique.jpeg.asset.json";
+import sacolaLadies from "@/assets/sacola-ladies.jpeg.asset.json";
+import sacolaPlastica from "@/assets/sacola.jpeg.asset.json";
+import sacolaYva from "@/assets/sacola-yva.jpeg.asset.json";
+import infoFirmoSilva from "@/assets/material-informacional-firmo-silva.jpeg.asset.json";
+import infoLcma from "@/assets/material-informacional-lcma.jpeg.asset.json";
+import brindeR5 from "@/assets/brinde-r5.jpeg.asset.json";
+import brindeCalendarioFirmo from "@/assets/brinde-firma-silva-2.jpeg.asset.json";
+import brindeAgendaFirmo from "@/assets/brinde-firma-silva.jpeg.asset.json";
+import brindeYva from "@/assets/brinde-yva.jpeg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
@@ -101,6 +111,8 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Catálogo Pró Eventos", category: "Catálogos e Manuais", group: "Impressos", image: catPro.url, tall: true },
   { title: "Folder CMK Arruelas", category: "Materiais Informacionais", group: "Impressos", image: folderCmk.url, tall: true },
   { title: "Folder Múltiplas Dobras Homeo Ervas", category: "Materiais Informacionais", group: "Impressos", image: folderHomeo.url, tall: true },
+  { title: "Material Informacional Firmo & Silva", category: "Materiais Informacionais", group: "Impressos", image: infoFirmoSilva.url, tall: true },
+  { title: "Material Informacional LCMCA", category: "Materiais Informacionais", group: "Impressos", image: infoLcma.url, tall: true },
   { title: "Stand de Feira Jopak", category: "Materiais para Eventos", group: "Impressos", image: evStandJopak.url, tall: true },
   { title: "Backdrop Debate ACAERT", category: "Materiais para Eventos", group: "Impressos", image: evBackdrop.url },
   { title: "Wind Banner Lion Assessoria", category: "Materiais para Eventos", group: "Impressos", image: evBannerLion.url, tall: true },
@@ -115,8 +127,14 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Cartão Dra. Jéssica Alencar", category: "Convites e Cartões Comerciais", group: "Impressos", image: cartaoJessica.url, tall: true },
   { title: "Cartão Corte Especial Ladies Alta Costura", category: "Impressões Especiais", group: "Impressos", image: cartaoLadies.url, tall: true },
   { title: "Cartão Modular Móveis", category: "Convites e Cartões Comerciais", group: "Impressos", image: cartaoModular.url, tall: true },
-  { title: "Sacolas Premium", category: "Sacolas Premium", group: "Impressos", image: portPackaging },
-  { title: "Brindes Corporativos", category: "Brindes Corporativos", group: "Impressos", image: portKits },
+  { title: "Sacola Le Boutique Spa", category: "Sacolas Premium", group: "Impressos", image: sacolaLeBoutique.url, tall: true },
+  { title: "Sacolas Ladies Alta Costura", category: "Sacolas Premium", group: "Impressos", image: sacolaLadies.url, tall: true },
+  { title: "Sacola Plástica Personalizada", category: "Sacolas Premium", group: "Impressos", image: sacolaPlastica.url },
+  { title: "Sacolas YVA Joias", category: "Sacolas Premium", group: "Impressos", image: sacolaYva.url, tall: true },
+  { title: "Mouse Pad e Caneta R5 Negócios", category: "Brindes Corporativos", group: "Impressos", image: brindeR5.url },
+  { title: "Calendário de Mesa Firmo & Silva", category: "Brindes Corporativos", group: "Impressos", image: brindeCalendarioFirmo.url, tall: true },
+  { title: "Agenda Firmo & Silva", category: "Brindes Corporativos", group: "Impressos", image: brindeAgendaFirmo.url, tall: true },
+  { title: "Chaveiro YVA Joias", category: "Brindes Corporativos", group: "Impressos", image: brindeYva.url, tall: true },
   { title: "Caixa Personalizada Modular Móveis", category: "Kits Corporativos", group: "Impressos", image: kitCaixaModular.url, tall: true },
 
   { title: "Identidade Visual", category: "Identidade Visual", group: "Design", image: portCards },
