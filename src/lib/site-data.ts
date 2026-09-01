@@ -59,6 +59,16 @@ import brindeCapaCtps from "@/assets/capa-ctps-fs-contabil.jpg.asset.json";
 import brindeCaderno from "@/assets/caderno-empresarial-digcont.jpg.asset.json";
 import brindeCracha from "@/assets/cracha-eventos-citin.jpg.asset.json";
 import brindeGarrafa from "@/assets/garrafa-termica-cmk.jpg.asset.json";
+import sacolaLeBoutique from "@/assets/sacola-le-boutique.jpeg.asset.json";
+import sacolaLadies from "@/assets/sacola-ladies.jpeg.asset.json";
+import sacolaPlastica from "@/assets/sacola.jpeg.asset.json";
+import sacolaYva from "@/assets/sacola-yva.jpeg.asset.json";
+import infoFirmoSilva from "@/assets/material-informacional-firmo-silva.jpeg.asset.json";
+import infoLcma from "@/assets/material-informacional-lcma.jpeg.asset.json";
+import brindeR5 from "@/assets/brinde-r5.jpeg.asset.json";
+import brindeCalendarioFirmo from "@/assets/brinde-firma-silva-2.jpeg.asset.json";
+import brindeAgendaFirmo from "@/assets/brinde-firma-silva.jpeg.asset.json";
+import brindeYva from "@/assets/brinde-yva.jpeg.asset.json";
 
 export type PortfolioGroup = "Impressos" | "Design";
 
