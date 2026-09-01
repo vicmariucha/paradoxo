@@ -143,6 +143,13 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Agenda Firmo & Silva", category: "Brindes Corporativos", group: "Impressos", image: brindeAgendaFirmo.url, tall: true },
   { title: "Chaveiro YVA Joias", category: "Brindes Corporativos", group: "Impressos", image: brindeYva.url, tall: true },
   { title: "Caixa Personalizada Modular Móveis", category: "Kits Corporativos", group: "Impressos", image: kitCaixaModular.url, tall: true },
+  { title: "Pasta Bonaldi & Mustafá Arquitetura", category: "Pastas Personalizadas", group: "Impressos", image: pastaBonaldi.url, tall: true },
+  { title: "Tapete Personalizado Le Boutique", category: "Impressões Especiais", group: "Impressos", image: espLeBoutique.url },
+  { title: "Embalagem EZCOPY", category: "Impressões Especiais", group: "Impressos", image: espEzcopy.url, tall: true },
+  { title: "Pasta Sacola FS Contábil", category: "Impressões Especiais", group: "Impressos", image: espFsContabil.url, tall: true },
+  { title: "Tag Corte Especial Rafit Kids", category: "Impressões Especiais", group: "Impressos", image: espRafit.url },
+  { title: "Tag Corte Especial May-Lui Kids", category: "Impressões Especiais", group: "Impressos", image: espMayLui.url, tall: true },
+  { title: "Display de Folheteria Personalizado", category: "Produções de Projetos", group: "Impressos", image: producoesProjetos.url, tall: true },
 
   { title: "Identidade Visual", category: "Identidade Visual", group: "Design", image: portCards },
   { title: "Comunicação Visual", category: "Comunicação Visual", group: "Design", image: portFacade, tall: true },
