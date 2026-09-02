@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { ArrowRight, Minus, Plus } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
+import { FaqSection } from "@/components/faq-section";
 import { useReveal } from "@/hooks/use-reveal";
 import manifestoImg from "@/assets/manifesto.jpg";
 import heroImg from "@/assets/hero.jpg";
@@ -64,7 +64,6 @@ const FAQ = [
 
 function Sobre() {
   useReveal();
-  const [open, setOpen] = useState<number | null>(0);
 
   return (
     <SiteLayout>
@@ -234,29 +233,7 @@ function Sobre() {
       </section>
 
       {/* FAQ INSTITUCIONAL */}
-      <section className="border-t border-border/60 px-6 py-24 lg:px-10 lg:py-32">
-        <div className="mx-auto max-w-[900px]">
-          <p className="overline reveal">FAQ Institucional</p>
-          <div className="mt-12 space-y-4">
-            {FAQ.map((item, i) => (
-              <div key={item.q} data-delay={(i % 4) * 70} className="reveal overflow-hidden rounded-2xl border border-border/60">
-                <button
-                  onClick={() => setOpen(open === i ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 p-6 text-left transition-colors hover:bg-card/40"
-                >
-                  <span className="font-display text-xl text-foreground">{item.q}</span>
-                  <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-gold/50 text-gold">
-                    {open === i ? <Minus size={15} /> : <Plus size={15} />}
-                  </span>
-                </button>
-                {open === i && (
-                  <p className="px-6 pb-6 text-base leading-relaxed text-muted-foreground">{item.a}</p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FaqSection title="FAQ Institucional" items={FAQ} />
 
       {/* CTA */}
       <section className="relative overflow-hidden py-32 lg:py-44">
