@@ -1,8 +1,8 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useRouter } from "@tanstack/react-router";
-import { useState } from "react";
-import { ArrowRight, Check, Minus, Plus } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
+import { FaqSection } from "@/components/faq-section";
 import { useReveal } from "@/hooks/use-reveal";
 import { SERVICE_DETAILS } from "@/lib/site-data";
 
