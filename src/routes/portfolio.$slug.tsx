@@ -81,7 +81,7 @@ function PortfolioDetail() {
                 to="/contato"
                 className="mt-10 inline-flex items-center gap-3 rounded-full bg-gold px-9 py-4 text-[0.78rem] uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
               >
-                Solicitar projeto
+                Quero algo assim para minha marca
                 <ArrowRight size={16} />
               </Link>
             </div>
