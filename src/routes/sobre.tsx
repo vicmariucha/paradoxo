@@ -64,7 +64,6 @@ const FAQ = [
 
 function Sobre() {
   useReveal();
-  const [open, setOpen] = useState<number | null>(0);
 
   return (
     <SiteLayout>
