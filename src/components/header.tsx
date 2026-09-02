@@ -86,7 +86,7 @@ export function Header() {
           to="/contato"
           className="hidden rounded-full border border-gold/50 px-6 py-3 text-[0.72rem] uppercase tracking-[0.22em] text-gold transition-all duration-300 hover:bg-gold hover:text-primary-foreground lg:inline-block"
         >
-          Solicitar Projeto
+          Começar meu projeto
         </Link>
 
         <button
@@ -122,7 +122,7 @@ export function Header() {
             onClick={() => setOpen(false)}
             className="mt-10 inline-block w-fit rounded-full border border-gold/50 px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-gold"
           >
-            Solicitar Projeto
+            Começar meu projeto
           </Link>
         </div>
       </div>

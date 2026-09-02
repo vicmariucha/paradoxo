@@ -31,6 +31,7 @@ const SHOWCASE = [
     tag: "Nosso métier",
     desc: "Pastas comerciais, envelopes, timbrados, cartões e demais papelarias corporativas de altíssimo padrão. Onde o papel encontra a percepção de valor.",
     slug: "impressos",
+    cta: "Ver papéis e acabamentos",
   },
   {
     signature: "Marketing",
@@ -38,6 +39,7 @@ const SHOWCASE = [
     tag: "Posicionamento",
     desc: "SEO, gestão de tráfego e campanhas que colocam sua marca onde o cliente certo a encontra.",
     slug: "marketing",
+    cta: "Ver como atraímos o cliente certo",
   },
   {
     signature: "Finanças",
@@ -45,6 +47,7 @@ const SHOWCASE = [
     tag: "Estrutura",
     desc: "Organização, processo e clareza financeira para que sua operação cresça com solidez.",
     slug: "financas",
+    cta: "Ver como organizamos sua operação",
   },
 ];
 
@@ -160,7 +163,7 @@ function Home() {
                   <p className="mt-3 text-sm leading-relaxed text-white/80">{s.desc}</p>
                   <span className="mt-5 inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-white transition-colors group-hover:text-gold">
                     <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                    Explorar
+                    {s.cta}
                   </span>
                 </div>
               </Link>
@@ -204,8 +207,8 @@ function Home() {
 
                     {/* Expand-on-hover explore button (bottom-right) */}
                     <span className="absolute bottom-6 right-6 inline-flex items-center justify-center gap-0 overflow-hidden rounded-full bg-gold px-3 py-3 text-[0.72rem] uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 group-hover:gap-2 group-hover:px-3.5">
-                      <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 group-hover:max-w-[8rem] group-hover:opacity-100">
-                        Explorar
+                      <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 group-hover:max-w-[12rem] group-hover:opacity-100">
+                        Ver este trabalho
                       </span>
                       <ArrowRight size={16} className="shrink-0" />
                     </span>
@@ -238,7 +241,7 @@ function Home() {
               to="/contato"
               className="mt-8 inline-flex items-center gap-3 rounded-full bg-gold px-9 py-4 text-[0.78rem] uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
             >
-              Solicitar projeto
+              Contar o que eu preciso
               <ArrowRight size={16} />
             </Link>
           </div>
@@ -263,7 +266,7 @@ function Home() {
             data-delay="160"
             className="reveal group mt-12 inline-flex items-center gap-3 rounded-full bg-gold px-10 py-5 text-[0.75rem] uppercase tracking-[0.24em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
           >
-            Solicitar orçamento
+            Quero a PARADOXO no meu próximo projeto
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
