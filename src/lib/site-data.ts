@@ -324,7 +324,7 @@ export const SERVICES: Service[] = [
     tagline: "Nosso métier",
     description:
       "Produtos de comunicação corporativa através de materiais impressos de altíssima qualidade — onde o papel se transforma em mensageiro de percepção agregada.",
-    ctaLabel: "Ver mais sobre impressos premium",
+    ctaLabel: "Ver papéis, acabamentos e possibilidades",
     items: [
       "Pastas e Envelopes Corporativos",
       "Papelaria de Escritório",
@@ -346,7 +346,7 @@ export const SERVICES: Service[] = [
     tagline: "Posicionamento",
     description:
       "Estratégias de presença e crescimento que colocam sua marca onde o cliente certo a encontra.",
-    ctaLabel: "Ver mais sobre marketing & SEO",
+    ctaLabel: "Ver como colocamos sua marca na frente",
     items: [
       "SEO",
       "Gestão de tráfego",
@@ -364,7 +364,7 @@ export const SERVICES: Service[] = [
     tagline: "Estrutura",
     description:
       "Organização, processo e clareza financeira para que sua operação cresça com solidez.",
-    ctaLabel: "Ver mais sobre finanças & suporte",
+    ctaLabel: "Ver como damos clareza aos seus números",
     items: [
       "Gestão financeira",
       "Organização administrativa",
