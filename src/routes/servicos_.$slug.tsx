@@ -31,7 +31,6 @@ export const Route = createFileRoute("/servicos_/$slug")({
 function ServiceDetail() {
   useReveal();
   const { service } = Route.useLoaderData();
-  const [open, setOpen] = useState<number | null>(0);
 
   return (
     <SiteLayout>
