@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
-import { ArrowRight, Minus, Plus } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
+import { FaqSection } from "@/components/faq-section";
 import { useReveal } from "@/hooks/use-reveal";
 import manifestoImg from "@/assets/manifesto.jpg";
 import heroImg from "@/assets/hero.jpg";
