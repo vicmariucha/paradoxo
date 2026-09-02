@@ -185,75 +185,62 @@ export type HomePortfolioItem = {
 
 export const HOME_PORTFOLIO: HomePortfolioItem[] = [
   {
-    slug: "embalagens-de-assinatura",
-    title: "Embalagens de Assinatura",
-    category: "Embalagens",
-    image: portPackaging,
+    slug: "papelaria-de-escritorio",
+    title: "Papelaria de Escritório",
+    category: "Papelaria de Escritório",
+    image: homePapelaria.url,
     description:
-      "Embalagens premium que transformam o ato de abrir em uma experiência memorável de marca.",
+      "Timbrados, envelopes e cartões que dão presença institucional a cada documento que sai da sua empresa.",
     details: [
-      "Acabamentos em hot stamping e relevo seco",
       "Papéis e cartões nobres selecionados",
-      "Projeto estrutural sob medida",
+      "Acabamentos em hot stamping e relevo seco",
+      "Padronização completa da marca",
     ],
   },
   {
-    slug: "catalogo-institucional",
-    title: "Catálogo Institucional",
-    category: "Catálogos",
-    image: portCatalog,
+    slug: "material-para-evento",
+    title: "Material para Evento",
+    category: "Materiais para Eventos",
+    image: homeEvento.url,
     description:
-      "Catálogos corporativos que comunicam autoridade e cuidado em cada página.",
+      "Kits, credenciais e peças de apoio que colocam sua marca no centro das atenções em cada ativação.",
     details: [
-      "Editorial e diagramação de alto padrão",
-      "Encadernação premium",
-      "Tratamento de imagem profissional",
+      "Credenciais, cordões e sacolas personalizadas",
+      "Peças alinhadas ao conceito do evento",
+      "Produção e logística cuidadas",
     ],
   },
   {
-    slug: "kits-corporativos-premium",
-    title: "Kits Corporativos Premium",
-    category: "Kits",
-    image: portKits,
+    slug: "identidade-visual",
+    title: "Identidade Visual",
+    category: "Identidade Visual",
+    image: homeIdentidade.url,
     description:
-      "Kits que encantam clientes e colaboradores com curadoria e acabamento impecáveis.",
+      "Construção e refinamento de identidade visual com coerência absoluta em cada aplicação.",
     details: [
-      "Curadoria de itens exclusivos",
-      "Personalização completa da marca",
-      "Montagem e logística cuidadas",
+      "Manual de marca e aplicações",
+      "Curadoria de cores, papéis e texturas",
+      "Consistência em todos os pontos de contato",
     ],
   },
   {
-    slug: "comunicacao-visual",
-    title: "Comunicação Visual",
-    category: "Comunicação Visual",
-    image: portFacade,
+    slug: "impressos",
+    title: "Impressos",
+    category: "Todos",
+    image: homeImpressos.url,
     description:
-      "Sinalização e comunicação visual que dão presença e identidade ao seu espaço.",
+      "Pastas, catálogos, brindes e papelaria corporativa produzidos com padrão de acabamento impecável.",
     details: [
-      "Fachadas e sinalização interna",
-      "Materiais resistentes e duráveis",
-      "Instalação profissional",
-    ],
-  },
-  {
-    slug: "displays-e-eventos",
-    title: "Displays & Eventos",
-    category: "Comunicação Visual",
-    image: portDisplay,
-    description:
-      "Displays e estruturas para eventos que colocam sua marca no centro das atenções.",
-    details: [
-      "Estruturas modulares e portáteis",
-      "Impressão de grande formato",
-      "Projeto pensado para impacto",
+      "Controle rigoroso de cor e acabamento",
+      "Diversidade de substratos e formatos",
+      "Do protótipo à entrega final",
     ],
   },
   {
     slug: "portfolio-completo",
     title: "Portfólio Completo",
     category: "Todos",
-    image: portUniforms,
+    image: homePortfolioCompleto.url,
     description:
       "Explore a amplitude de tudo o que a PARADOXO pode criar para a sua marca.",
     details: [
@@ -262,7 +249,21 @@ export const HOME_PORTFOLIO: HomePortfolioItem[] = [
       "Um único parceiro de excelência",
     ],
   },
+  {
+    slug: "design",
+    title: "Design",
+    category: "Identidade Visual",
+    image: homeDesign.url,
+    description:
+      "Direção criativa e design aplicado a peças que precisam comunicar sofisticação antes da primeira palavra.",
+    details: [
+      "Direção de arte e criação",
+      "Layouts editoriais de alto padrão",
+      "Design pensado para produção real",
+    ],
+  },
 ];
+
 
 export const PORTFOLIO_GROUPS = ["Impressos", "Design"] as const;
 
