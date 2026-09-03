@@ -21,6 +21,16 @@ import prodGessoGM from "@/assets/embalagem-saco-gesso-gm.jpg.asset.json";
 import prodTintaWall from "@/assets/embalagem-balde-tinta-wall-collors.jpg.asset.json";
 import prodEzcopy from "@/assets/produto-ezcopy.jpeg.asset.json";
 import rotuloCriarte from "@/assets/rotulo-criarte.jpeg.asset.json";
+import ivAlessandra from "@/assets/identidade-visual-alessandra-nuzzo.jpg.asset.json";
+import ivAssembleia from "@/assets/identidade-visual-assembleia-de-deus.jpg.asset.json";
+import ivCasaBrocas from "@/assets/identidade-visual-casa-das-brocas.jpg.asset.json";
+import ivCmk from "@/assets/identidade-visual-cmk.jpg.asset.json";
+import ivFirmoSilva from "@/assets/identidade-visual-firmo-silva.jpg.asset.json";
+import ivKitchens from "@/assets/identidade-visual-kitchens-by-teresinha.jpg.asset.json";
+import ivLegajo from "@/assets/identidade-visual-legajo.jpg.asset.json";
+import ivMcm from "@/assets/identidade-visual-mcm.jpg.asset.json";
+import ivMpArruelas from "@/assets/identidade-visual-mp-arruelas.jpg.asset.json";
+import ivVrm from "@/assets/identidade-visual-vrm-construcao.jpg.asset.json";
 import folderCmk from "@/assets/folder-dobra-cmk.jpeg.asset.json";
 import folderHomeo from "@/assets/folder-multiplas-dobras-homeo-ervas.jpeg.asset.json";
 import pastaNuzzo from "@/assets/pasta-alessandra-nuzzo.jpg.asset.json";
@@ -178,6 +188,16 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Rótulo Criarte", category: "Rótulos", group: "Design", image: rotuloCriarte.url, tall: true },
   { title: "Caixa Modular Móveis", category: "Imagens de Produto", group: "Design", image: prodCaixaModular.url },
   { title: "Embalagem EZCOPY", category: "Imagens de Produto", group: "Design", image: prodEzcopy.url, tall: true },
+  { title: "Alessandra Nuzzo Advocacia", category: "Identidade Visual", group: "Design", image: ivAlessandra.url },
+  { title: "Assembleia de Deus Ministério Vila Verde", category: "Identidade Visual", group: "Design", image: ivAssembleia.url },
+  { title: "Casa das Brocas", category: "Identidade Visual", group: "Design", image: ivCasaBrocas.url },
+  { title: "CMK Arruelas", category: "Identidade Visual", group: "Design", image: ivCmk.url },
+  { title: "Firmo & Silva Assessoria Contábil", category: "Identidade Visual", group: "Design", image: ivFirmoSilva.url },
+  { title: "Kitchens by Teresinha", category: "Identidade Visual", group: "Design", image: ivKitchens.url },
+  { title: "Legajo Tools", category: "Identidade Visual", group: "Design", image: ivLegajo.url },
+  { title: "Moreira Cardoso Magno Advocacia", category: "Identidade Visual", group: "Design", image: ivMcm.url },
+  { title: "MP Arruelas", category: "Identidade Visual", group: "Design", image: ivMpArruelas.url },
+  { title: "VRM Construção", category: "Identidade Visual", group: "Design", image: ivVrm.url },
 ];
 
 export type HomePortfolioItem = {
@@ -307,6 +327,7 @@ export const PORTFOLIO_CATEGORIES: Record<PortfolioGroup, readonly string[]> = {
   ],
   Design: [
     "Todos",
+    "Identidade Visual",
     "Brindes",
     "Rótulos",
     "Imagens de Produto",
