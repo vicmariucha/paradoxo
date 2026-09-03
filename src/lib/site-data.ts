@@ -527,12 +527,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       { n: "03", t: "Implantação", d: "Colocamos a nova estrutura para funcionar com acompanhamento próximo." },
       { n: "04", t: "Acompanhamento", d: "Monitoramos indicadores e ajustamos para crescimento sustentável." },
     ],
-    showcase: [
-      { title: "Gestão Financeira", image: portCatalog },
-      { title: "Processos & Controles", image: portPackaging },
-      { title: "Consultoria Operacional", image: portKits },
-      { title: "Suporte Empresarial", image: portFacade },
-    ],
+    showcase: [],
     faq: [
       { q: "Atendem empresas de qualquer porte?", a: "Atendemos de pequenas operações em estruturação a empresas consolidadas que buscam eficiência." },
       { q: "Substituem meu contador?", a: "Não. Complementamos com gestão, processos e controle, trabalhando em conjunto com sua contabilidade." },
