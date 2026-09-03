@@ -87,6 +87,11 @@ import espFsContabil from "@/assets/impressoes-especiais-fs-contabil.jpeg.asset.
 import espRafit from "@/assets/impressoes-especiais-rafit.jpeg.asset.json";
 import espMayLui from "@/assets/impressoes-especiais-may-lui.jpeg.asset.json";
 import producoesProjetos from "@/assets/producoes-de-projetos.jpeg.asset.json";
+import showCampanhasPerformance from "@/assets/campanhas-de-performance-2.jpeg.asset.json";
+import showConteudoSeo from "@/assets/conteudo-seo-2.jpeg.asset.json";
+import showPresencaInstitucional from "@/assets/presenca-institucional-2.jpeg.asset.json";
+import showIdentidadeBranding from "@/assets/identidade-e-branding-2.jpeg.asset.json";
+
 
 export type PortfolioGroup = "Impressos" | "Design";
 
@@ -473,11 +478,12 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       { n: "04", t: "Otimização", d: "Medimos, ajustamos e escalamos o que traz resultado real." },
     ],
     showcase: [
-      { title: "Campanhas de Performance", image: portDisplay },
-      { title: "Identidade & Branding", image: portCards },
-      { title: "Presença Institucional", image: portFacade },
-      { title: "Conteúdo & SEO", image: portCatalog },
+      { title: "Campanhas de Performance", image: showCampanhasPerformance.url },
+      { title: "Conteúdo & SEO", image: showConteudoSeo.url },
+      { title: "Presença Institucional", image: showPresencaInstitucional.url },
+      { title: "Identidade & Branding", image: showIdentidadeBranding.url },
     ],
+
     faq: [
       { q: "Em quanto tempo vejo resultado?", a: "O tempo de retorno depende da estratégia escolhida. Campanhas de tráfego pago costumam gerar resultados a médio prazo. Não existem respostas imediatistas. Trabalhamos com inteligência, consistência e continuidade para que os resultados sejam sólidos e sustentáveis." },
       { q: "Vocês trabalham com qual investimento mínimo?", a: "Montamos a estratégia de acordo com o seu momento e orçamento, sempre priorizando eficiência." },
