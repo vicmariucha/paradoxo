@@ -31,23 +31,23 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "border-b border-border/70 bg-background/80 py-4 backdrop-blur-xl"
-          : "border-b border-transparent py-7"
+          ? "border-b border-border/70 bg-background/80 py-3 backdrop-blur-xl lg:py-4"
+          : "border-b border-transparent py-5 lg:py-7"
       }`}
     >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 lg:px-10">
-        <Link to="/" className="group flex items-baseline gap-[2px]" onClick={() => setOpen(false)}>
-          <span className="font-brand text-3xl tracking-[0.18em] text-foreground">PARADOXO</span>
+        <Link to="/" className="group flex shrink-0 items-baseline gap-[2px]" onClick={() => setOpen(false)}>
+          <span className="font-brand text-2xl tracking-[0.18em] text-foreground lg:text-[1.6rem] xl:text-3xl">PARADOXO</span>
           <span className="h-1 w-1 translate-y-[-2px] rounded-full bg-gold transition-transform duration-300 group-hover:scale-150" />
         </Link>
 
-        <nav className="hidden items-center gap-10 lg:flex">
+        <nav className="hidden items-center lg:flex lg:gap-6 xl:gap-10">
           {NAV.map((item) =>
             item.to === "/servicos" ? (
               <div key={item.to} className="group relative">
                 <Link
                   to={item.to}
-                  className="relative text-[0.82rem] font-light uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground group-hover:text-foreground"
+                  className="relative text-[0.75rem] font-light uppercase tracking-[0.14em] text-muted-foreground transition-colors hover:text-foreground group-hover:text-foreground xl:text-[0.82rem] xl:tracking-[0.18em]"
                   activeProps={{ className: "text-foreground" }}
                 >
                   {item.label}
@@ -72,7 +72,7 @@ export function Header() {
               <Link
                 key={item.to}
                 to={item.to}
-                className="group relative text-[0.82rem] font-light uppercase tracking-[0.18em] text-muted-foreground transition-colors hover:text-foreground"
+                className="group relative text-[0.75rem] font-light uppercase tracking-[0.14em] text-muted-foreground transition-colors hover:text-foreground xl:text-[0.82rem] xl:tracking-[0.18em]"
                 activeProps={{ className: "text-foreground" }}
               >
                 {item.label}
@@ -84,7 +84,7 @@ export function Header() {
 
         <Link
           to="/contato"
-          className="hidden rounded-full border border-gold/50 px-6 py-3 text-[0.72rem] uppercase tracking-[0.22em] text-gold transition-all duration-300 hover:bg-gold hover:text-primary-foreground lg:inline-block"
+          className="hidden rounded-full border border-gold/50 px-4 py-2.5 text-[0.68rem] uppercase tracking-[0.18em] text-gold transition-all duration-300 hover:bg-gold hover:text-primary-foreground lg:inline-block xl:px-6 xl:py-3 xl:text-[0.72rem] xl:tracking-[0.22em]"
         >
           Começar meu projeto
         </Link>
@@ -92,25 +92,25 @@ export function Header() {
         <button
           aria-label="Menu"
           onClick={() => setOpen((v) => !v)}
-          className="text-foreground lg:hidden"
+          className="shrink-0 text-foreground lg:hidden"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile overlay */}
+      {/* Mobile/tablet overlay */}
       <div
         className={`fixed inset-0 top-0 z-40 flex flex-col bg-background transition-all duration-500 lg:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
-        <div className="flex flex-1 flex-col justify-center gap-2 px-8">
+        <div className="flex flex-1 flex-col justify-center gap-2 px-8 md:px-16">
           {NAV.map((item, i) => (
             <Link
               key={item.to}
               to={item.to}
               onClick={() => setOpen(false)}
-              className="font-display text-4xl tracking-wide text-foreground"
+              className="font-display text-3xl tracking-wide text-foreground md:text-4xl"
               style={{ transitionDelay: `${i * 40}ms` }}
               activeProps={{ className: "text-gold" }}
             >
@@ -120,7 +120,7 @@ export function Header() {
           <Link
             to="/contato"
             onClick={() => setOpen(false)}
-            className="mt-10 inline-block w-fit rounded-full border border-gold/50 px-8 py-4 text-[0.72rem] uppercase tracking-[0.22em] text-gold"
+            className="mt-8 inline-block w-fit rounded-full border border-gold/50 px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.22em] text-gold md:mt-10 md:px-8 md:py-4"
           >
             Começar meu projeto
           </Link>
