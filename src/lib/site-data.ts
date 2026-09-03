@@ -2,7 +2,7 @@ import portCards from "@/assets/port-cards.jpg";
 import portCatalog from "@/assets/port-catalog.jpg";
 import portPackaging from "@/assets/port-packaging.jpg";
 import portUniforms from "@/assets/port-uniforms.jpg";
-import portKits from "@/assets/port-kits.jpg";
+
 import portFacade from "@/assets/port-facade.jpg";
 import portDisplay from "@/assets/port-display.jpg";
 import showCatalogoInstitucional from "@/assets/catalogo-institucional.jpeg.asset.json";
