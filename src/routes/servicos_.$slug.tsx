@@ -160,29 +160,32 @@ function ServiceDetail() {
       </section>
 
       {/* PORTFÓLIO / EXEMPLOS */}
-      <section className="border-t border-border/60 bg-card/30 px-6 py-24 lg:px-10 lg:py-32">
-        <div className="mx-auto max-w-[1400px]">
-          <p className="overline reveal">Portfólio & Exemplos</p>
-          <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {service.showcase.map((item: { title: string; image: string }, i: number) => (
-              <div
-                key={item.title}
-                data-delay={(i % 4) * 80}
-                className="reveal group relative aspect-[4/5] overflow-hidden rounded-2xl"
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
-                <h3 className="absolute inset-x-0 bottom-0 p-6 font-display text-xl text-foreground">{item.title}</h3>
-              </div>
-            ))}
+      {service.showcase.length > 0 && (
+        <section className="border-t border-border/60 bg-card/30 px-6 py-24 lg:px-10 lg:py-32">
+          <div className="mx-auto max-w-[1400px]">
+            <p className="overline reveal">Portfólio & Exemplos</p>
+            <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {service.showcase.map((item: { title: string; image: string }, i: number) => (
+                <div
+                  key={item.title}
+                  data-delay={(i % 4) * 80}
+                  className="reveal group relative aspect-[4/5] overflow-hidden rounded-2xl"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
+                  <h3 className="absolute inset-x-0 bottom-0 p-6 font-display text-xl text-foreground">{item.title}</h3>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
+
 
       {/* FAQ */}
       <FaqSection title="Perguntas frequentes" items={service.faq} />

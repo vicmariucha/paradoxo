@@ -2,9 +2,12 @@ import portCards from "@/assets/port-cards.jpg";
 import portCatalog from "@/assets/port-catalog.jpg";
 import portPackaging from "@/assets/port-packaging.jpg";
 import portUniforms from "@/assets/port-uniforms.jpg";
-import portKits from "@/assets/port-kits.jpg";
+
 import portFacade from "@/assets/port-facade.jpg";
 import portDisplay from "@/assets/port-display.jpg";
+import showCatalogoInstitucional from "@/assets/catalogo-institucional.jpeg.asset.json";
+import showEmbalagensAssinatura from "@/assets/embalagens-de-assinatura.jpeg.asset.json";
+import showKitCorporativo from "@/assets/kit-corporativo.jpeg.asset.json";
 import homePapelaria from "@/assets/home-papelaria-de-escritorio.jpeg.asset.json";
 import homeEvento from "@/assets/home-material-para-evento.jpeg.asset.json";
 import homeIdentidade from "@/assets/home-identidade-visual.jpeg.asset.json";
@@ -422,10 +425,10 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       { n: "04", t: "Entrega", d: "Resultado impecável, no prazo, com acompanhamento dedicado." },
     ],
     showcase: [
-      { title: "Embalagens de Assinatura", image: portPackaging },
+      { title: "Embalagens de Assinatura", image: showEmbalagensAssinatura.url },
       { title: "Cartões em Hot Stamping", image: portCards },
-      { title: "Kits Corporativos Premium", image: portKits },
-      { title: "Catálogo Institucional", image: portCatalog },
+      { title: "Kits Corporativos Premium", image: showKitCorporativo.url },
+      { title: "Catálogo Institucional", image: showCatalogoInstitucional.url },
     ],
     faq: [
       { q: "Qual a tiragem mínima?", a: "Cada produto possui sua própria quantidade mínima de produção. Por exemplo:\n\nPastas Comerciais Personalizadas: a partir de 25 unidades\n\nPapel Timbrado: a partir de 100 unidades\n\nNo orçamento padrão, já informamos a tiragem mínima de cada item. Não há limite máximo: você pode solicitar quantidades maiores conforme a sua necessidade." },
@@ -524,12 +527,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       { n: "03", t: "Implantação", d: "Colocamos a nova estrutura para funcionar com acompanhamento próximo." },
       { n: "04", t: "Acompanhamento", d: "Monitoramos indicadores e ajustamos para crescimento sustentável." },
     ],
-    showcase: [
-      { title: "Gestão Financeira", image: portCatalog },
-      { title: "Processos & Controles", image: portPackaging },
-      { title: "Consultoria Operacional", image: portKits },
-      { title: "Suporte Empresarial", image: portFacade },
-    ],
+    showcase: [],
     faq: [
       { q: "Atendem empresas de qualquer porte?", a: "Atendemos de pequenas operações em estruturação a empresas consolidadas que buscam eficiência." },
       { q: "Substituem meu contador?", a: "Não. Complementamos com gestão, processos e controle, trabalhando em conjunto com sua contabilidade." },
