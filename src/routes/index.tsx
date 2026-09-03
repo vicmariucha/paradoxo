@@ -224,6 +224,12 @@ function Home() {
                         {card}
                       </Link>
                     );
+                  if (item.slug === "identidade-visual")
+                    return (
+                      <Link key={item.slug} to="/portfolio" search={{ g: "Design", c: "Identidade Visual" }} data-delay={i * 90} className={cls}>
+                        {card}
+                      </Link>
+                    );
                   if (item.slug === "design")
                     return (
                       <Link key={item.slug} to="/portfolio" search={{ g: "Design" }} data-delay={i * 90} className={cls}>

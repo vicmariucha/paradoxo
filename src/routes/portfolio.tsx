@@ -16,8 +16,9 @@ type Group = "Todos" | PortfolioGroup;
 const GROUPS: Group[] = ["Todos", ...PORTFOLIO_GROUPS];
 
 export const Route = createFileRoute("/portfolio")({
-  validateSearch: (search: Record<string, unknown>): { g?: string; curadoria?: boolean } => ({
+  validateSearch: (search: Record<string, unknown>): { g?: string; c?: string; curadoria?: boolean } => ({
     g: typeof search.g === "string" ? search.g : undefined,
+    c: typeof search.c === "string" ? search.c : undefined,
     curadoria: search.curadoria === true ? true : undefined,
   }),
   head: () => ({
@@ -33,7 +34,7 @@ function Portfolio() {
       ? (search.g as Group)
       : "Impressos";
   const [group, setGroup] = useState<Group>(initialGroup);
-  const [active, setActive] = useState<string>("Todos");
+  const [active, setActive] = useState<string>(search.c ?? "Todos");
   useReveal([active, group]);
 
   const curadoria = search.curadoria === true && group === "Impressos";
