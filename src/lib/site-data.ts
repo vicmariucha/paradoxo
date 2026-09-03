@@ -198,6 +198,16 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Moreira Cardoso Magno Advocacia", category: "Identidade Visual", group: "Design", image: ivMcm.url },
   { title: "MP Arruelas", category: "Identidade Visual", group: "Design", image: ivMpArruelas.url },
   { title: "VRM Construção", category: "Identidade Visual", group: "Design", image: ivVrm.url },
+  { title: "Araruna Odontologia", category: "Identidade Visual", group: "Design", image: ivAraruna.url },
+  { title: "ARD", category: "Identidade Visual", group: "Design", image: ivArd.url },
+  { title: "Avance Ferramentas", category: "Identidade Visual", group: "Design", image: ivAvance.url },
+  { title: "Bike Mecânico", category: "Identidade Visual", group: "Design", image: ivBikeMecanico.url },
+  { title: "Cultura da Graça Igreja Cristã", category: "Identidade Visual", group: "Design", image: ivCulturaGraca.url },
+  { title: "Custom Body Stúdio e Nutrição", category: "Identidade Visual", group: "Design", image: ivCustomBody.url },
+  { title: "DIGCONT Contabilidade Estratégica", category: "Identidade Visual", group: "Design", image: ivDigcont.url },
+  { title: "Flori Sorvetes", category: "Identidade Visual", group: "Design", image: ivFloriSorvetes.url },
+  { title: "Pro Hound Equipamentos", category: "Identidade Visual", group: "Design", image: ivProHound.url },
+  { title: "YVA Jóias", category: "Identidade Visual", group: "Design", image: ivYvaJoias.url },
 ];
 
 export type HomePortfolioItem = {
