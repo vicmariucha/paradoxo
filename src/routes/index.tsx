@@ -54,6 +54,111 @@ const SHOWCASE = [
 
 
 
+function PortfolioSearch() {
+  const [query, setQuery] = useState("");
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate({ from: "/" });
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const normalized = query
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+
+  const results = useMemo<PortfolioItem[]>(() => {
+    if (!normalized) return [];
+    return PORTFOLIO.filter((item) => {
+      const hay = `${item.title} ${item.category} ${item.group}`
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+      return hay.includes(normalized);
+    }).slice(0, 6);
+  }, [normalized]);
+
+  const handleSelect = (item: PortfolioItem) => {
+    setQuery(item.title);
+    setOpen(false);
+    navigate({ to: "/portfolio", search: { g: item.group, c: item.category } });
+  };
+
+  return (
+    <div ref={wrapperRef} className="relative mt-10 max-w-md">
+      <div className="flex items-center gap-3 rounded-full border border-border bg-background px-5 py-4 transition-colors focus-within:border-gold">
+        <Search size={18} className="text-gold" />
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value);
+            setOpen(true);
+          }}
+          onFocus={() => setOpen(true)}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") setOpen(false);
+            if (e.key === "Enter" && results[0]) handleSelect(results[0]);
+          }}
+          placeholder="Descreva o seu projeto…"
+          className="w-full bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:outline-none"
+          aria-label="Buscar no portfólio"
+          aria-expanded={open}
+          aria-controls="portfolio-search-results"
+          autoComplete="off"
+        />
+      </div>
+
+      {open && query.trim() && (
+        <div
+          id="portfolio-search-results"
+          className="absolute z-20 mt-3 w-full overflow-hidden rounded-2xl border border-border bg-background shadow-xl"
+        >
+          {results.length > 0 ? (
+            <ul>
+              {results.map((item) => (
+                <li key={`${item.title}-${item.category}`}>
+                  <button
+                    type="button"
+                    onClick={() => handleSelect(item)}
+                    className="flex w-full items-center gap-3 px-5 py-4 text-left transition-colors hover:bg-muted"
+                  >
+                    <img
+                      src={item.image}
+                      alt=""
+                      loading="lazy"
+                      className="h-10 w-10 rounded-lg object-cover"
+                    />
+                    <div>
+                      <p className="text-sm font-medium text-foreground">{item.title}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {item.category} · {item.group}
+                      </p>
+                    </div>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="px-5 py-4 text-sm text-muted-foreground">
+              Nenhum resultado encontrado. Tente “cartão”, “pasta” ou “identidade”.
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function Home() {
   useReveal();
   // Porsche-style smooth background color transition driven by scroll.
