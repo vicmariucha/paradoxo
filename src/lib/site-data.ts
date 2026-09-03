@@ -439,7 +439,7 @@ export const SERVICES: Service[] = [
     items: [
       "Pastas e Envelopes Corporativos",
       "Papelaria de Escritório",
-      "Catálogo Corporativos",
+      "Catálogos Corporativos",
       "Materiais Informacionais",
       "Materiais para Eventos",
       "Impressões Especiais",
