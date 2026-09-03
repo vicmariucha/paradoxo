@@ -188,6 +188,16 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Rótulo Criarte", category: "Rótulos", group: "Design", image: rotuloCriarte.url, tall: true },
   { title: "Caixa Modular Móveis", category: "Imagens de Produto", group: "Design", image: prodCaixaModular.url },
   { title: "Embalagem EZCOPY", category: "Imagens de Produto", group: "Design", image: prodEzcopy.url, tall: true },
+  { title: "Alessandra Nuzzo Advocacia", category: "Identidade Visual", group: "Design", image: ivAlessandra.url },
+  { title: "Assembleia de Deus Ministério Vila Verde", category: "Identidade Visual", group: "Design", image: ivAssembleia.url },
+  { title: "Casa das Brocas", category: "Identidade Visual", group: "Design", image: ivCasaBrocas.url },
+  { title: "CMK Arruelas", category: "Identidade Visual", group: "Design", image: ivCmk.url },
+  { title: "Firmo & Silva Assessoria Contábil", category: "Identidade Visual", group: "Design", image: ivFirmoSilva.url },
+  { title: "Kitchens by Teresinha", category: "Identidade Visual", group: "Design", image: ivKitchens.url },
+  { title: "Legajo Tools", category: "Identidade Visual", group: "Design", image: ivLegajo.url },
+  { title: "Moreira Cardoso Magno Advocacia", category: "Identidade Visual", group: "Design", image: ivMcm.url },
+  { title: "MP Arruelas", category: "Identidade Visual", group: "Design", image: ivMpArruelas.url },
+  { title: "VRM Construção", category: "Identidade Visual", group: "Design", image: ivVrm.url },
 ];
 
 export type HomePortfolioItem = {
