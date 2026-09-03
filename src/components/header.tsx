@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { Menu, X } from "lucide-react";
 import { SERVICES } from "@/lib/site-data";
 
@@ -14,6 +15,11 @@ const NAV = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -47,6 +53,43 @@ export function Header() {
   }, [open]);
 
   const handleNavClick = () => setOpen(false);
+
+  const mobileOverlay = (
+    <div
+      id="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden={!open}
+      onClick={(e) => {
+        if (e.currentTarget === e.target) setOpen(false);
+      }}
+      className={`fixed inset-0 z-40 flex flex-col bg-background pt-24 transition-all duration-500 lg:hidden ${
+        open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+      }`}
+    >
+      <div className="flex flex-1 flex-col justify-center gap-2 px-8 pb-8 md:px-16">
+        {NAV.map((item, i) => (
+          <Link
+            key={item.to}
+            to={item.to}
+            onClick={handleNavClick}
+            className="font-display text-3xl tracking-wide text-foreground md:text-4xl"
+            style={{ transitionDelay: `${i * 40}ms` }}
+            activeProps={{ className: "text-gold" }}
+          >
+            {item.label}
+          </Link>
+        ))}
+        <Link
+          to="/contato"
+          onClick={handleNavClick}
+          className="mt-8 inline-block w-fit rounded-full border border-gold/50 px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.22em] text-gold md:mt-10 md:px-8 md:py-4"
+        >
+          Começar meu projeto
+        </Link>
+      </div>
+    </div>
+  );
 
   return (
     <header
@@ -123,38 +166,7 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile/tablet overlay: rendered behind the header bar so the close button/logo stay usable. */}
-      <div
-        id="mobile-menu"
-        role="dialog"
-        aria-modal="true"
-        aria-hidden={!open}
-        className={`fixed inset-0 z-40 flex flex-col bg-background pt-24 transition-all duration-500 lg:hidden ${
-          open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
-        }`}
-      >
-        <div className="flex flex-1 flex-col justify-center gap-2 px-8 pb-8 md:px-16">
-          {NAV.map((item, i) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              onClick={handleNavClick}
-              className="font-display text-3xl tracking-wide text-foreground md:text-4xl"
-              style={{ transitionDelay: `${i * 40}ms` }}
-              activeProps={{ className: "text-gold" }}
-            >
-              {item.label}
-            </Link>
-          ))}
-          <Link
-            to="/contato"
-            onClick={handleNavClick}
-            className="mt-8 inline-block w-fit rounded-full border border-gold/50 px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.22em] text-gold md:mt-10 md:px-8 md:py-4"
-          >
-            Começar meu projeto
-          </Link>
-        </div>
-      </div>
+      {mounted ? createPortal(mobileOverlay, document.body) : null}
     </header>
   );
 }
