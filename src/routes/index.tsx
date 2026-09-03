@@ -316,7 +316,7 @@ function Home() {
                     </>
                   );
                   const cls =
-                    "reveal group relative aspect-[4/3] grow basis-0 translate-y-0 overflow-hidden rounded-2xl opacity-100 transition-[flex-grow,opacity,transform] duration-500 ease-out md:aspect-[16/9] md:translate-y-9 md:opacity-0 md:hover:grow-[1.5] md:[&.reveal-in]:translate-y-0 md:[&.reveal-in]:opacity-100";
+                    "reveal group relative aspect-[4/3] basis-auto translate-y-0 overflow-hidden rounded-2xl opacity-100 transition-[flex-grow,opacity,transform] duration-500 ease-out md:aspect-[16/9] md:grow md:basis-0 md:translate-y-9 md:opacity-0 md:hover:grow-[1.5] md:[&.reveal-in]:translate-y-0 md:[&.reveal-in]:opacity-100";
 
                   if (item.slug === "impressos")
                     return (
