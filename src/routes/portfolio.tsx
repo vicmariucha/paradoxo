@@ -123,27 +123,30 @@ function Portfolio() {
       {/* GRID */}
       <section className="px-6 py-16 lg:px-10 lg:py-24">
         <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((p, i) => (
-            <div
-              key={p.title}
-              data-delay={(i % 3) * 90}
-              className={`reveal group relative overflow-hidden rounded-2xl ${p.tall ? "row-span-2" : ""}`}
-            >
-              <div className={p.tall ? "aspect-[3/4]" : "aspect-[4/3]"}>
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-[1.3s] ease-out group-hover:scale-110"
-                />
+          {items.map((p, i) => {
+            const isIdentidade = p.category === "Identidade Visual";
+            return (
+              <div
+                key={p.title}
+                data-delay={(i % 3) * 90}
+                className={`reveal group relative overflow-hidden rounded-2xl ${!isIdentidade && p.tall ? "row-span-2" : ""}`}
+              >
+                <div className={isIdentidade ? "bg-muted" : p.tall ? "aspect-[3/4]" : "aspect-[4/3]"}>
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    loading="lazy"
+                    className={`w-full ${isIdentidade ? "h-auto object-contain" : "h-full object-cover transition-transform duration-[1.3s] ease-out group-hover:scale-110"}`}
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute inset-x-0 bottom-0 translate-y-3 p-7 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                  <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gold">{p.category}</p>
+                  <h3 className="mt-2 font-display text-2xl">{p.title}</h3>
+                </div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-100" />
-              <div className="absolute inset-x-0 bottom-0 translate-y-3 p-7 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                <p className="text-[0.65rem] uppercase tracking-[0.25em] text-gold">{p.category}</p>
-                <h3 className="mt-2 font-display text-2xl">{p.title}</h3>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
