@@ -1,10 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { ArrowRight, ArrowDown, Pause, Play, Search } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { SiteLayout } from "@/components/site-layout";
 import { useReveal } from "@/hooks/use-reveal";
 import { useScrollBg } from "@/hooks/use-scroll-bg";
-import { HOME_PORTFOLIO } from "@/lib/site-data";
+import { HOME_PORTFOLIO, PORTFOLIO } from "@/lib/site-data";
+import type { PortfolioItem } from "@/lib/site-data";
 
 import heroImg from "@/assets/hero.jpg";
 import heroVideo from "@/assets/hero-section-background.mp4.asset.json";
