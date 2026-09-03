@@ -16,9 +16,9 @@ type Group = "Todos" | PortfolioGroup;
 const GROUPS: Group[] = ["Todos", ...PORTFOLIO_GROUPS];
 
 export const Route = createFileRoute("/portfolio")({
-  validateSearch: (search: Record<string, unknown>) => ({
+  validateSearch: (search: Record<string, unknown>): { g?: string; curadoria?: boolean } => ({
     g: typeof search.g === "string" ? search.g : undefined,
-    curadoria: search.curadoria === true,
+    curadoria: search.curadoria === true ? true : undefined,
   }),
   head: () => ({
     meta: [],
