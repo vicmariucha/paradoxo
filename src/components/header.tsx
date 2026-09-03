@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { SERVICES } from "@/lib/site-data";
 
 const NAV = [
@@ -15,6 +15,7 @@ const NAV = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -36,7 +37,10 @@ export function Header() {
   // Close the mobile menu when the viewport grows to desktop.
   useEffect(() => {
     const onResize = () => {
-      if (window.innerWidth >= 1024) setOpen(false);
+      if (window.innerWidth >= 1024) {
+        setOpen(false);
+        setServicesOpen(false);
+      }
     };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
@@ -52,7 +56,11 @@ export function Header() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
-  const handleNavClick = () => setOpen(false);
+  const handleNavClick = () => {
+    setOpen(false);
+    setServicesOpen(false);
+  };
+
 
   const mobileOverlay = (
     <div
