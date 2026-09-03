@@ -265,6 +265,22 @@ export const HOME_PORTFOLIO: HomePortfolioItem[] = [
 
 export const PORTFOLIO_GROUPS = ["Impressos", "Design"] as const;
 
+/** Itens de Impressos ocultados na visão "curadoria" (acesso via card Impressos da home). */
+export const IMPRESSOS_CURADORIA_EXCLUDE: readonly string[] = [
+  "Chaveiro YVA Joias",
+  "Stand de Feira Jopak",
+  "Backdrop Debate ACAERT",
+  "Camisetas Custom Body",
+  "Wind Banner Lion Assessoria",
+  "Wind Banner Homeo Ervas",
+  "Canetas Personalizadas G&G",
+  "Mouse Pad e Caneta R5 Negócios",
+  "Agenda Firmo & Silva",
+  "Tapete Personalizado Le Boutique",
+  "Pasta Sacola FS Contábil",
+  "Display de Folheteria Personalizado",
+];
+
 export const PORTFOLIO_CATEGORIES: Record<PortfolioGroup, readonly string[]> = {
   Impressos: [
     "Todos",
