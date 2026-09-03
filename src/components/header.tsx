@@ -27,16 +27,39 @@ export function Header() {
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
+  // Close the mobile menu when the viewport grows to desktop.
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 1024) setOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  // Close on Escape for keyboard users.
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
+  const handleNavClick = () => setOpen(false);
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "border-b border-border/70 bg-background/80 py-3 backdrop-blur-xl lg:py-4"
-          : "border-b border-transparent py-5 lg:py-7"
+        open
+          ? "border-b border-border/70 bg-background py-3 lg:py-4"
+          : scrolled
+            ? "border-b border-border/70 bg-background/80 py-3 backdrop-blur-xl lg:py-4"
+            : "border-b border-transparent py-5 lg:py-7"
       }`}
     >
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 lg:px-10">
-        <Link to="/" className="group flex shrink-0 items-baseline gap-[2px]" onClick={() => setOpen(false)}>
+      <div className="relative z-50 mx-auto flex max-w-[1400px] items-center justify-between px-6 lg:px-10">
+        <Link to="/" className="group flex shrink-0 items-baseline gap-[2px]" onClick={handleNavClick}>
           <span className="font-brand text-2xl tracking-[0.18em] text-foreground lg:text-[1.6rem] xl:text-3xl">PARADOXO</span>
           <span className="h-1 w-1 translate-y-[-2px] rounded-full bg-gold transition-transform duration-300 group-hover:scale-150" />
         </Link>
@@ -91,6 +114,8 @@ export function Header() {
 
         <button
           aria-label="Menu"
+          aria-expanded={open}
+          aria-controls="mobile-menu"
           onClick={() => setOpen((v) => !v)}
           className="shrink-0 text-foreground lg:hidden"
         >
@@ -98,18 +123,22 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile/tablet overlay */}
+      {/* Mobile/tablet overlay: rendered behind the header bar so the close button/logo stay usable. */}
       <div
-        className={`fixed inset-0 top-0 z-40 flex flex-col bg-background transition-all duration-500 lg:hidden ${
+        id="mobile-menu"
+        role="dialog"
+        aria-modal="true"
+        aria-hidden={!open}
+        className={`fixed inset-0 z-40 flex flex-col bg-background pt-24 transition-all duration-500 lg:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
-        <div className="flex flex-1 flex-col justify-center gap-2 px-8 md:px-16">
+        <div className="flex flex-1 flex-col justify-center gap-2 px-8 pb-8 md:px-16">
           {NAV.map((item, i) => (
             <Link
               key={item.to}
               to={item.to}
-              onClick={() => setOpen(false)}
+              onClick={handleNavClick}
               className="font-display text-3xl tracking-wide text-foreground md:text-4xl"
               style={{ transitionDelay: `${i * 40}ms` }}
               activeProps={{ className: "text-gold" }}
@@ -119,7 +148,7 @@ export function Header() {
           ))}
           <Link
             to="/contato"
-            onClick={() => setOpen(false)}
+            onClick={handleNavClick}
             className="mt-8 inline-block w-fit rounded-full border border-gold/50 px-7 py-3.5 text-[0.72rem] uppercase tracking-[0.22em] text-gold md:mt-10 md:px-8 md:py-4"
           >
             Começar meu projeto
