@@ -10,10 +10,10 @@ import portCatalog from "@/assets/port-catalog.jpg";
 import portFacade from "@/assets/port-facade.jpg";
 import portKits from "@/assets/port-kits.jpg";
 import portPackaging from "@/assets/port-packaging.jpg";
-import impressaoGraficaEstruturaImg from "@/assets/impressao-grafica-estrutura.jpg.asset.json";
-import marketingEstruturaImg from "@/assets/marketing-estrutura.jpg.asset.json";
-import suporteFinancasEstruturaImg from "@/assets/suporte-financas-estrutura.jpg.asset.json";
-import impressosParadoxoImg from "@/assets/impressos-paradoxo.jpg.asset.json";
+import impressaoGraficaEstruturaImg from "@/assets/impressao-grafica-estrutura.jpg";
+import marketingEstruturaImg from "@/assets/marketing-estrutura.jpg";
+import suporteFinancasEstruturaImg from "@/assets/suporte-financas-estrutura.jpg";
+import impressosParadoxoImg from "@/assets/impressos-paradoxo.jpg";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -27,19 +27,19 @@ const PILLARS = [
     rank: "01",
     title: "Impressão Gráfica",
     text: "O centro de tudo. Onde a marca se torna tangível, o valor ganha forma, textura e permanência. Criamos materiais de alta performance que posicionam, não apenas representam.",
-    image: impressaoGraficaEstruturaImg.url,
+    image: impressaoGraficaEstruturaImg,
   },
   {
     rank: "02",
     title: "Suporte e Finanças",
     text: "Presença, por si só, não sustenta crescimento. Planejamos e operamos a presença digital com inteligência, e organizamos a base financeira e administrativa com clareza, controle e segurança.",
-    image: suporteFinancasEstruturaImg.url,
+    image: suporteFinancasEstruturaImg,
   },
   {
     rank: "03",
     title: "Marketing",
     text: "Conectamos posicionamento a experiências digitais e físicas coerentes, sofisticadas e homologadas. Traduzimos marca em presença.",
-    image: marketingEstruturaImg.url,
+    image: marketingEstruturaImg,
   },
 ];
 
@@ -154,7 +154,7 @@ function Sobre() {
                 <img src={portCards} alt="Cartões em hot stamping" loading="lazy" className="h-full w-full object-cover" />
               </div>
               <div className="relative mt-8 aspect-[4/5] overflow-hidden rounded-2xl">
-                <img src={impressosParadoxoImg.url} alt="Papelaria corporativa premium da PARADOXO" loading="lazy" className="h-full w-full object-cover" />
+                <img src={impressosParadoxoImg} alt="Papelaria corporativa premium da PARADOXO" loading="lazy" className="h-full w-full object-cover" />
               </div>
             </div>
           </div>

@@ -5,124 +5,124 @@ import portUniforms from "@/assets/port-uniforms.jpg";
 
 import portFacade from "@/assets/port-facade.jpg";
 import portDisplay from "@/assets/port-display.jpg";
-import showCatalogoInstitucional from "@/assets/catalogo-institucional.jpeg.asset.json";
-import showEmbalagensAssinatura from "@/assets/embalagens-de-assinatura.jpeg.asset.json";
-import showKitCorporativo from "@/assets/kit-corporativo.jpeg.asset.json";
-import homePapelaria from "@/assets/home-papelaria-de-escritorio.jpeg.asset.json";
-import homeEvento from "@/assets/home-material-para-evento.jpeg.asset.json";
-import homeIdentidade from "@/assets/home-identidade-visual.jpeg.asset.json";
-import homeImpressos from "@/assets/home-impressos.jpeg.asset.json";
-import homePortfolioCompleto from "@/assets/home-portfolio-completo.jpeg.asset.json";
-import homeDesign from "@/assets/home-design.jpeg.asset.json";
-import prodCaixaModular from "@/assets/embalagem-caixa-projeto.jpg.asset.json";
-import prodPomadaMillion from "@/assets/embalagem-pomada-million.jpg.asset.json";
-import prodTintaWall2 from "@/assets/embalagem-balde-tinta-wall-collors-2.jpg.asset.json";
-import prodGessoGM from "@/assets/embalagem-saco-gesso-gm.jpg.asset.json";
-import prodTintaWall from "@/assets/embalagem-balde-tinta-wall-collors.jpg.asset.json";
-import prodEzcopy from "@/assets/produto-ezcopy.jpeg.asset.json";
-import rotuloCriarte from "@/assets/rotulo-criarte.jpeg.asset.json";
-import ivAlessandra from "@/assets/identidade-visual-alessandra-nuzzo.jpg.asset.json";
-import ivAssembleia from "@/assets/identidade-visual-assembleia-de-deus.jpg.asset.json";
-import ivCasaBrocas from "@/assets/identidade-visual-casa-das-brocas.jpg.asset.json";
-import ivCmk from "@/assets/identidade-visual-cmk.jpg.asset.json";
-import ivFirmoSilva from "@/assets/identidade-visual-firmo-silva.jpg.asset.json";
-import ivKitchens from "@/assets/identidade-visual-kitchens-by-teresinha.jpg.asset.json";
-import ivLegajo from "@/assets/identidade-visual-legajo.jpg.asset.json";
-import ivMcm from "@/assets/identidade-visual-mcm.jpg.asset.json";
-import ivMpArruelas from "@/assets/identidade-visual-mp-arruelas.jpg.asset.json";
-import ivVrm from "@/assets/identidade-visual-vrm-construcao.jpg.asset.json";
-import ivAraruna from "@/assets/identidade-visual-araruna-odontologia.jpg.asset.json";
-import ivArd from "@/assets/identidade-visual-ard.jpg.asset.json";
-import ivAvance from "@/assets/identidade-visual-avance-ferramentas.jpg.asset.json";
-import ivBikeMecanico from "@/assets/identidade-visual-bike-mecanico.jpg.asset.json";
-import ivCulturaGraca from "@/assets/identidade-visual-cultura-da-graca.jpg.asset.json";
-import ivCustomBody from "@/assets/identidade-visual-custom-body.jpg.asset.json";
-import ivDigcont from "@/assets/identidade-visual-digcont.jpg.asset.json";
-import ivFloriSorvetes from "@/assets/identidade-visual-flori-sorvetes.jpg.asset.json";
-import ivProHound from "@/assets/identidade-visual-pro-hound.jpg.asset.json";
-import ivYvaJoias from "@/assets/identidade-visual-yva-joias.jpg.asset.json";
-import ivBracustica from "@/assets/identidade-visual-bracustica.jpg.asset.json";
-import ivCpViagens from "@/assets/identidade-visual-cp-viagens.jpg.asset.json";
-import ivEitaTremBao from "@/assets/identidade-visual-eita-trem-bao.jpg.asset.json";
-import ivMarinho from "@/assets/identidade-visual-marinho-contabil.jpg.asset.json";
-import ivModular from "@/assets/identidade-visual-modular-moveis.jpg.asset.json";
-import ivNutreessencia from "@/assets/identidade-visual-nutreessencia.jpg.asset.json";
-import ivR5 from "@/assets/identidade-visual-r5.jpg.asset.json";
-import ivVaz from "@/assets/identidade-visual-vaz-odontologia.jpg.asset.json";
-import ivXavier from "@/assets/identidade-visual-xavier-advocacia.jpg.asset.json";
-import ivRenovaSun from "@/assets/identidade-visual-renova-sun.jpg.asset.json";
-import ivAllide from "@/assets/identidade-visual-allide.jpg.asset.json";
-import ivBelt from "@/assets/identidade-visual-belt.jpg.asset.json";
-import folderCmk from "@/assets/folder-dobra-cmk.jpeg.asset.json";
-import folderHomeo from "@/assets/folder-multiplas-dobras-homeo-ervas.jpeg.asset.json";
-import pastaNuzzo from "@/assets/pasta-alessandra-nuzzo.jpg.asset.json";
-import pastaAlide from "@/assets/pasata-alide.jpg.asset.json";
-import pastaJopak from "@/assets/pasta-jopak.jpg.asset.json";
-import pastaLins from "@/assets/pasta-linsborsatti.jpg.asset.json";
-import pastaMetta from "@/assets/pasta-metta.jpg.asset.json";
-import pastaRenova from "@/assets/pasta-renova.jpg.asset.json";
-import envJopak from "@/assets/envelope-jopak.jpg.asset.json";
-import envAlessandra from "@/assets/envelope-alessandra.jpg.asset.json";
-import envAllide from "@/assets/envelope-allide.jpg.asset.json";
-import envAna from "@/assets/envelope-ana.jpg.asset.json";
-import envOfSheila from "@/assets/envelope-oficio-sheila.jpg.asset.json";
-import envOfAllide from "@/assets/envelope-oficio-allide.jpg.asset.json";
-import envOfInova from "@/assets/envelope-oficio-inova.jpg.asset.json";
-import envOfJopak from "@/assets/envelope-oficio-jopak.jpg.asset.json";
-import envOfAlessandra from "@/assets/envelope-oficio-alessandra.jpg.asset.json";
-import envOfRenova from "@/assets/envelope-oficio-renova.jpg.asset.json";
-import timbradoDigcont from "@/assets/papel-timbrado-digcont.jpg.asset.json";
-import timbradoEcoga from "@/assets/papel-timbrado-ecoga.jpg.asset.json";
-import timbradoInova from "@/assets/papel-timbrado-inova.jpg.asset.json";
-import timbradoAlessandra from "@/assets/papel-timbrado-alessandra.jpg.asset.json";
-import timbradoConforma from "@/assets/papel-timbrado-conforma.jpg.asset.json";
-import timbradoCredvic from "@/assets/papel-timbrado-credivic.jpg.asset.json";
-import catElpak from "@/assets/catalogo-elpak.jpg.asset.json";
-import catInoxfer from "@/assets/catalogo-inoxfer.jpg.asset.json";
-import catJopak from "@/assets/catalogo-jopak.jpg.asset.json";
-import catMetta from "@/assets/catalogo-metta.jpg.asset.json";
-import catPro from "@/assets/catalogo-pro.jpg.asset.json";
-import evStandJopak from "@/assets/stand-feira-jopak.jpg.asset.json";
-import evCalendario from "@/assets/calendario-fs-contabil.jpg.asset.json";
-import evCamiseta from "@/assets/camiseta-custom-body.jpg.asset.json";
-import evBackdrop from "@/assets/backdrop-acaert-2018.jpg.asset.json";
-import evConvite from "@/assets/convite-caneta-iwm.jpg.asset.json";
-import evCaneta from "@/assets/caneta-personalizada-gg.jpg.asset.json";
-import evBannerLion from "@/assets/wind-banner-lion.jpg.asset.json";
-import evBannerHomeo from "@/assets/wind-banner-homeo.jpg.asset.json";
-import cartaoKaluna from "@/assets/cartao-corte-especial-kaluna-bulls.jpg.asset.json";
-import cartaoRenovaCard from "@/assets/cartao-corte-especial-renova.jpg.asset.json";
-import cartaoJessica from "@/assets/cartao-jessica-alencar.jpg.asset.json";
-import cartaoLadies from "@/assets/cartao-corte-especial-ladies.jpg.asset.json";
-import cartaoModular from "@/assets/cartao-modular.jpg.asset.json";
-import kitCaixaModular from "@/assets/caixa-papelao-modular.jpg.asset.json";
-import brindeFioAraruna from "@/assets/brinde-cartao-fio-dental-araruna.jpg.asset.json";
-import brindeFioCmk from "@/assets/brinde-cartao-fio-dental-cmk.jpg.asset.json";
-import brindeCapaCtps from "@/assets/capa-ctps-fs-contabil.jpg.asset.json";
-import brindeCaderno from "@/assets/caderno-empresarial-digcont.jpg.asset.json";
-import brindeCracha from "@/assets/cracha-eventos-citin.jpg.asset.json";
-import brindeGarrafa from "@/assets/garrafa-termica-cmk.jpg.asset.json";
-import sacolaLeBoutique from "@/assets/sacola-le-boutique.jpeg.asset.json";
-import sacolaLadies from "@/assets/sacola-ladies.jpeg.asset.json";
-import sacolaPlastica from "@/assets/sacola.jpeg.asset.json";
-import sacolaYva from "@/assets/sacola-yva.jpeg.asset.json";
-import infoFirmoSilva from "@/assets/material-informacional-firmo-silva.jpeg.asset.json";
-import infoLcma from "@/assets/material-informacional-lcma.jpeg.asset.json";
-import brindeR5 from "@/assets/brinde-r5.jpeg.asset.json";
-import brindeCalendarioFirmo from "@/assets/brinde-firma-silva-2.jpeg.asset.json";
-import brindeAgendaFirmo from "@/assets/brinde-firma-silva.jpeg.asset.json";
-import brindeYva from "@/assets/brinde-yva.jpeg.asset.json";
-import pastaBonaldi from "@/assets/pasta-banaldi.jpeg.asset.json";
-import espLeBoutique from "@/assets/impressoes-especiais-le-boutique.jpeg.asset.json";
-import espEzcopy from "@/assets/impressoes-especiais-ezcopy.jpeg.asset.json";
-import espFsContabil from "@/assets/impressoes-especiais-fs-contabil.jpeg.asset.json";
-import espRafit from "@/assets/impressoes-especiais-rafit.jpeg.asset.json";
-import espMayLui from "@/assets/impressoes-especiais-may-lui.jpeg.asset.json";
-import producoesProjetos from "@/assets/producoes-de-projetos.jpeg.asset.json";
-import showCampanhasPerformance from "@/assets/campanhas-de-performance-2.jpeg.asset.json";
-import showConteudoSeo from "@/assets/conteudo-seo-2.jpeg.asset.json";
-import showPresencaInstitucional from "@/assets/presenca-institucional-2.jpeg.asset.json";
-import showIdentidadeBranding from "@/assets/identidade-e-branding-2.jpeg.asset.json";
+import showCatalogoInstitucional from "@/assets/catalogo-institucional.jpeg";
+import showEmbalagensAssinatura from "@/assets/embalagens-de-assinatura.jpeg";
+import showKitCorporativo from "@/assets/kit-corporativo.jpeg";
+import homePapelaria from "@/assets/home-papelaria-de-escritorio.jpeg";
+import homeEvento from "@/assets/home-material-para-evento.jpeg";
+import homeIdentidade from "@/assets/home-identidade-visual.jpeg";
+import homeImpressos from "@/assets/home-impressos.jpeg";
+import homePortfolioCompleto from "@/assets/home-portfolio-completo.jpeg";
+import homeDesign from "@/assets/home-design.jpeg";
+import prodCaixaModular from "@/assets/embalagem-caixa-projeto.jpg";
+import prodPomadaMillion from "@/assets/embalagem-pomada-million.jpg";
+import prodTintaWall2 from "@/assets/embalagem-balde-tinta-wall-collors-2.jpg";
+import prodGessoGM from "@/assets/embalagem-saco-gesso-gm.jpg";
+import prodTintaWall from "@/assets/embalagem-balde-tinta-wall-collors.jpg";
+import prodEzcopy from "@/assets/produto-ezcopy.jpeg";
+import rotuloCriarte from "@/assets/rotulo-criarte.jpeg";
+import ivAlessandra from "@/assets/identidade-visual-alessandra-nuzzo.jpg";
+import ivAssembleia from "@/assets/identidade-visual-assembleia-de-deus.jpg";
+import ivCasaBrocas from "@/assets/identidade-visual-casa-das-brocas.jpg";
+import ivCmk from "@/assets/identidade-visual-cmk.jpg";
+import ivFirmoSilva from "@/assets/identidade-visual-firmo-silva.jpg";
+import ivKitchens from "@/assets/identidade-visual-kitchens-by-teresinha.jpg";
+import ivLegajo from "@/assets/identidade-visual-legajo.jpg";
+import ivMcm from "@/assets/identidade-visual-mcm.jpg";
+import ivMpArruelas from "@/assets/identidade-visual-mp-arruelas.jpg";
+import ivVrm from "@/assets/identidade-visual-vrm-construcao.jpg";
+import ivAraruna from "@/assets/identidade-visual-araruna-odontologia.jpg";
+import ivArd from "@/assets/identidade-visual-ard.jpg";
+import ivAvance from "@/assets/identidade-visual-avance-ferramentas.jpg";
+import ivBikeMecanico from "@/assets/identidade-visual-bike-mecanico.jpg";
+import ivCulturaGraca from "@/assets/identidade-visual-cultura-da-graca.jpg";
+import ivCustomBody from "@/assets/identidade-visual-custom-body.jpg";
+import ivDigcont from "@/assets/identidade-visual-digcont.jpg";
+import ivFloriSorvetes from "@/assets/identidade-visual-flori-sorvetes.jpg";
+import ivProHound from "@/assets/identidade-visual-pro-hound.jpg";
+import ivYvaJoias from "@/assets/identidade-visual-yva-joias.jpg";
+import ivBracustica from "@/assets/identidade-visual-bracustica.jpg";
+import ivCpViagens from "@/assets/identidade-visual-cp-viagens.jpg";
+import ivEitaTremBao from "@/assets/identidade-visual-eita-trem-bao.jpg";
+import ivMarinho from "@/assets/identidade-visual-marinho-contabil.jpg";
+import ivModular from "@/assets/identidade-visual-modular-moveis.jpg";
+import ivNutreessencia from "@/assets/identidade-visual-nutreessencia.jpg";
+import ivR5 from "@/assets/identidade-visual-r5.jpg";
+import ivVaz from "@/assets/identidade-visual-vaz-odontologia.jpg";
+import ivXavier from "@/assets/identidade-visual-xavier-advocacia.jpg";
+import ivRenovaSun from "@/assets/identidade-visual-renova-sun.jpg";
+import ivAllide from "@/assets/identidade-visual-allide.jpg";
+import ivBelt from "@/assets/identidade-visual-belt.jpg";
+import folderCmk from "@/assets/folder-dobra-cmk.jpeg";
+import folderHomeo from "@/assets/folder-multiplas-dobras-homeo-ervas.jpeg";
+import pastaNuzzo from "@/assets/pasta-alessandra-nuzzo.jpg";
+import pastaAlide from "@/assets/pasata-alide.jpg";
+import pastaJopak from "@/assets/pasta-jopak.jpg";
+import pastaLins from "@/assets/pasta-linsborsatti.jpg";
+import pastaMetta from "@/assets/pasta-metta.jpg";
+import pastaRenova from "@/assets/pasta-renova.jpg";
+import envJopak from "@/assets/envelope-jopak.jpg";
+import envAlessandra from "@/assets/envelope-alessandra.jpg";
+import envAllide from "@/assets/envelope-allide.jpg";
+import envAna from "@/assets/envelope-ana.jpg";
+import envOfSheila from "@/assets/envelope-oficio-sheila.jpg";
+import envOfAllide from "@/assets/envelope-oficio-allide.jpg";
+import envOfInova from "@/assets/envelope-oficio-inova.jpg";
+import envOfJopak from "@/assets/envelope-oficio-jopak.jpg";
+import envOfAlessandra from "@/assets/envelope-oficio-alessandra.jpg";
+import envOfRenova from "@/assets/envelope-oficio-renova.jpg";
+import timbradoDigcont from "@/assets/papel-timbrado-digcont.jpg";
+import timbradoEcoga from "@/assets/papel-timbrado-ecoga.jpg";
+import timbradoInova from "@/assets/papel-timbrado-inova.jpg";
+import timbradoAlessandra from "@/assets/papel-timbrado-alessandra.jpg";
+import timbradoConforma from "@/assets/papel-timbrado-conforma.jpg";
+import timbradoCredvic from "@/assets/papel-timbrado-credivic.jpg";
+import catElpak from "@/assets/catalogo-elpak.jpg";
+import catInoxfer from "@/assets/catalogo-inoxfer.jpg";
+import catJopak from "@/assets/catalogo-jopak.jpg";
+import catMetta from "@/assets/catalogo-metta.jpg";
+import catPro from "@/assets/catalogo-pro.jpg";
+import evStandJopak from "@/assets/stand-feira-jopak.jpg";
+import evCalendario from "@/assets/calendario-fs-contabil.jpg";
+import evCamiseta from "@/assets/camiseta-custom-body.jpg";
+import evBackdrop from "@/assets/backdrop-acaert-2018.jpg";
+import evConvite from "@/assets/convite-caneta-iwm.jpg";
+import evCaneta from "@/assets/caneta-personalizada-gg.jpg";
+import evBannerLion from "@/assets/wind-banner-lion.jpg";
+import evBannerHomeo from "@/assets/wind-banner-homeo.jpg";
+import cartaoKaluna from "@/assets/cartao-corte-especial-kaluna-bulls.jpg";
+import cartaoRenovaCard from "@/assets/cartao-corte-especial-renova.jpg";
+import cartaoJessica from "@/assets/cartao-jessica-alencar.jpg";
+import cartaoLadies from "@/assets/cartao-corte-especial-ladies.jpg";
+import cartaoModular from "@/assets/cartao-modular.jpg";
+import kitCaixaModular from "@/assets/caixa-papelao-modular.jpg";
+import brindeFioAraruna from "@/assets/brinde-cartao-fio-dental-araruna.jpg";
+import brindeFioCmk from "@/assets/brinde-cartao-fio-dental-cmk.jpg";
+import brindeCapaCtps from "@/assets/capa-ctps-fs-contabil.jpg";
+import brindeCaderno from "@/assets/caderno-empresarial-digcont.jpg";
+import brindeCracha from "@/assets/cracha-eventos-citin.jpg";
+import brindeGarrafa from "@/assets/garrafa-termica-cmk.jpg";
+import sacolaLeBoutique from "@/assets/sacola-le-boutique.jpeg";
+import sacolaLadies from "@/assets/sacola-ladies.jpeg";
+import sacolaPlastica from "@/assets/sacola.jpeg";
+import sacolaYva from "@/assets/sacola-yva.jpeg";
+import infoFirmoSilva from "@/assets/material-informacional-firmo-silva.jpeg";
+import infoLcma from "@/assets/material-informacional-lcma.jpeg";
+import brindeR5 from "@/assets/brinde-r5.jpeg";
+import brindeCalendarioFirmo from "@/assets/brinde-firma-silva-2.jpeg";
+import brindeAgendaFirmo from "@/assets/brinde-firma-silva.jpeg";
+import brindeYva from "@/assets/brinde-yva.jpeg";
+import pastaBonaldi from "@/assets/pasta-banaldi.jpeg";
+import espLeBoutique from "@/assets/impressoes-especiais-le-boutique.jpeg";
+import espEzcopy from "@/assets/impressoes-especiais-ezcopy.jpeg";
+import espFsContabil from "@/assets/impressoes-especiais-fs-contabil.jpeg";
+import espRafit from "@/assets/impressoes-especiais-rafit.jpeg";
+import espMayLui from "@/assets/impressoes-especiais-may-lui.jpeg";
+import producoesProjetos from "@/assets/producoes-de-projetos.jpeg";
+import showCampanhasPerformance from "@/assets/campanhas-de-performance-2.jpeg";
+import showConteudoSeo from "@/assets/conteudo-seo-2.jpeg";
+import showPresencaInstitucional from "@/assets/presenca-institucional-2.jpeg";
+import showIdentidadeBranding from "@/assets/identidade-e-branding-2.jpeg";
 
 
 export type PortfolioGroup = "Impressos" | "Design";
@@ -136,112 +136,112 @@ export type PortfolioItem = {
 };
 
 export const PORTFOLIO: PortfolioItem[] = [
-  { title: "Pasta Alessandra Nuzzo", category: "Pastas Personalizadas", group: "Impressos", image: pastaNuzzo.url, tall: true },
-  { title: "Pasta Allide", category: "Pastas Personalizadas", group: "Impressos", image: pastaAlide.url, tall: true },
-  { title: "Pasta Jopak", category: "Pastas Personalizadas", group: "Impressos", image: pastaJopak.url, tall: true },
-  { title: "Pasta Lins Borsatti", category: "Pastas Personalizadas", group: "Impressos", image: pastaLins.url, tall: true },
-  { title: "Pasta Metta Pisos", category: "Pastas Personalizadas", group: "Impressos", image: pastaMetta.url, tall: true },
-  { title: "Pasta Renova Sun", category: "Pastas Personalizadas", group: "Impressos", image: pastaRenova.url, tall: true },
-  { title: "Envelope Saco Jopak", category: "Envelopes Corporativos", group: "Impressos", image: envJopak.url },
-  { title: "Envelope Saco Alessandra Nuzzo", category: "Envelopes Corporativos", group: "Impressos", image: envAlessandra.url, tall: true },
-  { title: "Envelope Saco Allide", category: "Envelopes Corporativos", group: "Impressos", image: envAllide.url, tall: true },
-  { title: "Envelope Saco Ana Luiza", category: "Envelopes Corporativos", group: "Impressos", image: envAna.url, tall: true },
-  { title: "Envelope Ofício Dra. Sheila Lobo", category: "Envelopes Corporativos", group: "Impressos", image: envOfSheila.url, tall: true },
-  { title: "Envelope Ofício Allide", category: "Envelopes Corporativos", group: "Impressos", image: envOfAllide.url, tall: true },
-  { title: "Envelope Ofício Inova Cursos", category: "Envelopes Corporativos", group: "Impressos", image: envOfInova.url, tall: true },
-  { title: "Envelope Ofício Jopak", category: "Envelopes Corporativos", group: "Impressos", image: envOfJopak.url, tall: true },
-  { title: "Envelope Ofício Alessandra Nuzzo", category: "Envelopes Corporativos", group: "Impressos", image: envOfAlessandra.url, tall: true },
-  { title: "Envelope Ofício Renova Sun", category: "Envelopes Corporativos", group: "Impressos", image: envOfRenova.url, tall: true },
-  { title: "Papel Timbrado Digcont", category: "Papel Timbrado", group: "Impressos", image: timbradoDigcont.url, tall: true },
-  { title: "Papel Timbrado Eco G.A", category: "Papel Timbrado", group: "Impressos", image: timbradoEcoga.url, tall: true },
-  { title: "Papel Timbrado Inova Cursos", category: "Papel Timbrado", group: "Impressos", image: timbradoInova.url, tall: true },
-  { title: "Papel Timbrado Alessandra Nuzzo", category: "Papel Timbrado", group: "Impressos", image: timbradoAlessandra.url, tall: true },
-  { title: "Papel Timbrado Confarma", category: "Papel Timbrado", group: "Impressos", image: timbradoConforma.url, tall: true },
-  { title: "Papel Timbrado Credvic", category: "Papel Timbrado", group: "Impressos", image: timbradoCredvic.url, tall: true },
-  { title: "Catálogo Elpak Embalagens", category: "Catálogos e Manuais", group: "Impressos", image: catElpak.url, tall: true },
-  { title: "Catálogo Inoxfer Design", category: "Catálogos e Manuais", group: "Impressos", image: catInoxfer.url, tall: true },
-  { title: "Catálogo Jopak", category: "Catálogos e Manuais", group: "Impressos", image: catJopak.url, tall: true },
-  { title: "Catálogo Metta Pisos", category: "Catálogos e Manuais", group: "Impressos", image: catMetta.url, tall: true },
-  { title: "Catálogo Pró Eventos", category: "Catálogos e Manuais", group: "Impressos", image: catPro.url, tall: true },
-  { title: "Folder CMK Arruelas", category: "Materiais Informacionais", group: "Impressos", image: folderCmk.url, tall: true },
-  { title: "Folder Múltiplas Dobras Homeo Ervas", category: "Materiais Informacionais", group: "Impressos", image: folderHomeo.url, tall: true },
-  { title: "Material Informacional Firmo & Silva", category: "Materiais Informacionais", group: "Impressos", image: infoFirmoSilva.url, tall: true },
-  { title: "Material Informacional LCMCA", category: "Materiais Informacionais", group: "Impressos", image: infoLcma.url, tall: true },
-  { title: "Stand de Feira Jopak", category: "Materiais para Eventos", group: "Impressos", image: evStandJopak.url, tall: true },
-  { title: "Backdrop Debate ACAERT", category: "Materiais para Eventos", group: "Impressos", image: evBackdrop.url },
-  { title: "Wind Banner Lion Assessoria", category: "Materiais para Eventos", group: "Impressos", image: evBannerLion.url, tall: true },
-  { title: "Wind Banner Homeo Ervas", category: "Materiais para Eventos", group: "Impressos", image: evBannerHomeo.url, tall: true },
-  { title: "Camisetas Custom Body", category: "Materiais para Eventos", group: "Impressos", image: evCamiseta.url, tall: true },
-  { title: "Calendário FS Contábil", category: "Materiais para Eventos", group: "Impressos", image: evCalendario.url },
-  { title: "Convite e Caneta IMW", category: "Materiais para Eventos", group: "Impressos", image: evConvite.url },
-  { title: "Canetas Personalizadas G&G", category: "Materiais para Eventos", group: "Impressos", image: evCaneta.url, tall: true },
-  { title: "Cartão Corte Especial Kaluana Bulls", category: "Impressões Especiais", group: "Impressos", image: cartaoKaluna.url, tall: true },
-  { title: "Cartão Corte Especial Renova Sun", category: "Impressões Especiais", group: "Impressos", image: cartaoRenovaCard.url, tall: true },
-  { title: "Cartão Dra. Jéssica Alencar", category: "Convites e Cartões Comerciais", group: "Impressos", image: cartaoJessica.url, tall: true },
-  { title: "Cartão Corte Especial Ladies Alta Costura", category: "Impressões Especiais", group: "Impressos", image: cartaoLadies.url, tall: true },
-  { title: "Cartão Modular Móveis", category: "Convites e Cartões Comerciais", group: "Impressos", image: cartaoModular.url, tall: true },
-  { title: "Sacola Le Boutique Spa", category: "Sacolas Premium", group: "Impressos", image: sacolaLeBoutique.url, tall: true },
-  { title: "Sacolas Ladies Alta Costura", category: "Sacolas Premium", group: "Impressos", image: sacolaLadies.url, tall: true },
-  { title: "Sacola Plástica Personalizada", category: "Sacolas Premium", group: "Impressos", image: sacolaPlastica.url },
-  { title: "Sacolas YVA Joias", category: "Sacolas Premium", group: "Impressos", image: sacolaYva.url, tall: true },
-  { title: "Mouse Pad e Caneta R5 Negócios", category: "Brindes Corporativos", group: "Impressos", image: brindeR5.url },
-  { title: "Calendário de Mesa Firmo & Silva", category: "Brindes Corporativos", group: "Impressos", image: brindeCalendarioFirmo.url, tall: true },
-  { title: "Agenda Firmo & Silva", category: "Brindes Corporativos", group: "Impressos", image: brindeAgendaFirmo.url, tall: true },
-  { title: "Chaveiro YVA Joias", category: "Brindes Corporativos", group: "Impressos", image: brindeYva.url, tall: true },
-  { title: "Caixa Personalizada Modular Móveis", category: "Kits Corporativos", group: "Impressos", image: kitCaixaModular.url, tall: true },
-  { title: "Pasta Bonaldi & Mustafá Arquitetura", category: "Pastas Personalizadas", group: "Impressos", image: pastaBonaldi.url, tall: true },
-  { title: "Tapete Personalizado Le Boutique", category: "Impressões Especiais", group: "Impressos", image: espLeBoutique.url },
-  { title: "Embalagem EZCOPY", category: "Impressões Especiais", group: "Impressos", image: espEzcopy.url, tall: true },
-  { title: "Pasta Sacola FS Contábil", category: "Impressões Especiais", group: "Impressos", image: espFsContabil.url, tall: true },
-  { title: "Tag Corte Especial Rafit Kids", category: "Impressões Especiais", group: "Impressos", image: espRafit.url },
-  { title: "Tag Corte Especial May-Lui Kids", category: "Impressões Especiais", group: "Impressos", image: espMayLui.url, tall: true },
-  { title: "Display de Folheteria Personalizado", category: "Produções de Projetos", group: "Impressos", image: producoesProjetos.url, tall: true },
+  { title: "Pasta Alessandra Nuzzo", category: "Pastas Personalizadas", group: "Impressos", image: pastaNuzzo, tall: true },
+  { title: "Pasta Allide", category: "Pastas Personalizadas", group: "Impressos", image: pastaAlide, tall: true },
+  { title: "Pasta Jopak", category: "Pastas Personalizadas", group: "Impressos", image: pastaJopak, tall: true },
+  { title: "Pasta Lins Borsatti", category: "Pastas Personalizadas", group: "Impressos", image: pastaLins, tall: true },
+  { title: "Pasta Metta Pisos", category: "Pastas Personalizadas", group: "Impressos", image: pastaMetta, tall: true },
+  { title: "Pasta Renova Sun", category: "Pastas Personalizadas", group: "Impressos", image: pastaRenova, tall: true },
+  { title: "Envelope Saco Jopak", category: "Envelopes Corporativos", group: "Impressos", image: envJopak },
+  { title: "Envelope Saco Alessandra Nuzzo", category: "Envelopes Corporativos", group: "Impressos", image: envAlessandra, tall: true },
+  { title: "Envelope Saco Allide", category: "Envelopes Corporativos", group: "Impressos", image: envAllide, tall: true },
+  { title: "Envelope Saco Ana Luiza", category: "Envelopes Corporativos", group: "Impressos", image: envAna, tall: true },
+  { title: "Envelope Ofício Dra. Sheila Lobo", category: "Envelopes Corporativos", group: "Impressos", image: envOfSheila, tall: true },
+  { title: "Envelope Ofício Allide", category: "Envelopes Corporativos", group: "Impressos", image: envOfAllide, tall: true },
+  { title: "Envelope Ofício Inova Cursos", category: "Envelopes Corporativos", group: "Impressos", image: envOfInova, tall: true },
+  { title: "Envelope Ofício Jopak", category: "Envelopes Corporativos", group: "Impressos", image: envOfJopak, tall: true },
+  { title: "Envelope Ofício Alessandra Nuzzo", category: "Envelopes Corporativos", group: "Impressos", image: envOfAlessandra, tall: true },
+  { title: "Envelope Ofício Renova Sun", category: "Envelopes Corporativos", group: "Impressos", image: envOfRenova, tall: true },
+  { title: "Papel Timbrado Digcont", category: "Papel Timbrado", group: "Impressos", image: timbradoDigcont, tall: true },
+  { title: "Papel Timbrado Eco G.A", category: "Papel Timbrado", group: "Impressos", image: timbradoEcoga, tall: true },
+  { title: "Papel Timbrado Inova Cursos", category: "Papel Timbrado", group: "Impressos", image: timbradoInova, tall: true },
+  { title: "Papel Timbrado Alessandra Nuzzo", category: "Papel Timbrado", group: "Impressos", image: timbradoAlessandra, tall: true },
+  { title: "Papel Timbrado Confarma", category: "Papel Timbrado", group: "Impressos", image: timbradoConforma, tall: true },
+  { title: "Papel Timbrado Credvic", category: "Papel Timbrado", group: "Impressos", image: timbradoCredvic, tall: true },
+  { title: "Catálogo Elpak Embalagens", category: "Catálogos e Manuais", group: "Impressos", image: catElpak, tall: true },
+  { title: "Catálogo Inoxfer Design", category: "Catálogos e Manuais", group: "Impressos", image: catInoxfer, tall: true },
+  { title: "Catálogo Jopak", category: "Catálogos e Manuais", group: "Impressos", image: catJopak, tall: true },
+  { title: "Catálogo Metta Pisos", category: "Catálogos e Manuais", group: "Impressos", image: catMetta, tall: true },
+  { title: "Catálogo Pró Eventos", category: "Catálogos e Manuais", group: "Impressos", image: catPro, tall: true },
+  { title: "Folder CMK Arruelas", category: "Materiais Informacionais", group: "Impressos", image: folderCmk, tall: true },
+  { title: "Folder Múltiplas Dobras Homeo Ervas", category: "Materiais Informacionais", group: "Impressos", image: folderHomeo, tall: true },
+  { title: "Material Informacional Firmo & Silva", category: "Materiais Informacionais", group: "Impressos", image: infoFirmoSilva, tall: true },
+  { title: "Material Informacional LCMCA", category: "Materiais Informacionais", group: "Impressos", image: infoLcma, tall: true },
+  { title: "Stand de Feira Jopak", category: "Materiais para Eventos", group: "Impressos", image: evStandJopak, tall: true },
+  { title: "Backdrop Debate ACAERT", category: "Materiais para Eventos", group: "Impressos", image: evBackdrop },
+  { title: "Wind Banner Lion Assessoria", category: "Materiais para Eventos", group: "Impressos", image: evBannerLion, tall: true },
+  { title: "Wind Banner Homeo Ervas", category: "Materiais para Eventos", group: "Impressos", image: evBannerHomeo, tall: true },
+  { title: "Camisetas Custom Body", category: "Materiais para Eventos", group: "Impressos", image: evCamiseta, tall: true },
+  { title: "Calendário FS Contábil", category: "Materiais para Eventos", group: "Impressos", image: evCalendario },
+  { title: "Convite e Caneta IMW", category: "Materiais para Eventos", group: "Impressos", image: evConvite },
+  { title: "Canetas Personalizadas G&G", category: "Materiais para Eventos", group: "Impressos", image: evCaneta, tall: true },
+  { title: "Cartão Corte Especial Kaluana Bulls", category: "Impressões Especiais", group: "Impressos", image: cartaoKaluna, tall: true },
+  { title: "Cartão Corte Especial Renova Sun", category: "Impressões Especiais", group: "Impressos", image: cartaoRenovaCard, tall: true },
+  { title: "Cartão Dra. Jéssica Alencar", category: "Convites e Cartões Comerciais", group: "Impressos", image: cartaoJessica, tall: true },
+  { title: "Cartão Corte Especial Ladies Alta Costura", category: "Impressões Especiais", group: "Impressos", image: cartaoLadies, tall: true },
+  { title: "Cartão Modular Móveis", category: "Convites e Cartões Comerciais", group: "Impressos", image: cartaoModular, tall: true },
+  { title: "Sacola Le Boutique Spa", category: "Sacolas Premium", group: "Impressos", image: sacolaLeBoutique, tall: true },
+  { title: "Sacolas Ladies Alta Costura", category: "Sacolas Premium", group: "Impressos", image: sacolaLadies, tall: true },
+  { title: "Sacola Plástica Personalizada", category: "Sacolas Premium", group: "Impressos", image: sacolaPlastica },
+  { title: "Sacolas YVA Joias", category: "Sacolas Premium", group: "Impressos", image: sacolaYva, tall: true },
+  { title: "Mouse Pad e Caneta R5 Negócios", category: "Brindes Corporativos", group: "Impressos", image: brindeR5 },
+  { title: "Calendário de Mesa Firmo & Silva", category: "Brindes Corporativos", group: "Impressos", image: brindeCalendarioFirmo, tall: true },
+  { title: "Agenda Firmo & Silva", category: "Brindes Corporativos", group: "Impressos", image: brindeAgendaFirmo, tall: true },
+  { title: "Chaveiro YVA Joias", category: "Brindes Corporativos", group: "Impressos", image: brindeYva, tall: true },
+  { title: "Caixa Personalizada Modular Móveis", category: "Kits Corporativos", group: "Impressos", image: kitCaixaModular, tall: true },
+  { title: "Pasta Bonaldi & Mustafá Arquitetura", category: "Pastas Personalizadas", group: "Impressos", image: pastaBonaldi, tall: true },
+  { title: "Tapete Personalizado Le Boutique", category: "Impressões Especiais", group: "Impressos", image: espLeBoutique },
+  { title: "Embalagem EZCOPY", category: "Impressões Especiais", group: "Impressos", image: espEzcopy, tall: true },
+  { title: "Pasta Sacola FS Contábil", category: "Impressões Especiais", group: "Impressos", image: espFsContabil, tall: true },
+  { title: "Tag Corte Especial Rafit Kids", category: "Impressões Especiais", group: "Impressos", image: espRafit },
+  { title: "Tag Corte Especial May-Lui Kids", category: "Impressões Especiais", group: "Impressos", image: espMayLui, tall: true },
+  { title: "Display de Folheteria Personalizado", category: "Produções de Projetos", group: "Impressos", image: producoesProjetos, tall: true },
 
-  { title: "Cartão Fio Dental Araruna Odontologia", category: "Brindes", group: "Design", image: brindeFioAraruna.url, tall: true },
-  { title: "Cartão Fio Dental CMK Arruelas", category: "Brindes", group: "Design", image: brindeFioCmk.url, tall: true },
-  { title: "Capa de Carteira de Trabalho FS Contábil", category: "Brindes", group: "Design", image: brindeCapaCtps.url, tall: true },
-  { title: "Caderno Empresarial Digcont", category: "Brindes", group: "Design", image: brindeCaderno.url, tall: true },
-  { title: "Crachá de Evento CITIN", category: "Brindes", group: "Design", image: brindeCracha.url, tall: true },
-  { title: "Garrafa Térmica CMK Arruelas", category: "Brindes", group: "Design", image: brindeGarrafa.url, tall: true },
-  { title: "Pomada Million", category: "Rótulos", group: "Design", image: prodPomadaMillion.url, tall: true },
-  { title: "Tinta Acrílica Wall Collors 18L", category: "Rótulos", group: "Design", image: prodTintaWall2.url, tall: true },
-  { title: "Gesso Cola Matarazzo", category: "Rótulos", group: "Design", image: prodGessoGM.url, tall: true },
-  { title: "Linha Acrílica Wall Collors", category: "Rótulos", group: "Design", image: prodTintaWall.url, tall: true },
-  { title: "Rótulo Criarte", category: "Rótulos", group: "Design", image: rotuloCriarte.url, tall: true },
-  { title: "Caixa Modular Móveis", category: "Imagens de Produto", group: "Design", image: prodCaixaModular.url },
-  { title: "Embalagem EZCOPY", category: "Imagens de Produto", group: "Design", image: prodEzcopy.url, tall: true },
-  { title: "Alessandra Nuzzo Advocacia", category: "Identidade Visual", group: "Design", image: ivAlessandra.url },
-  { title: "Assembleia de Deus Ministério Vila Verde", category: "Identidade Visual", group: "Design", image: ivAssembleia.url },
-  { title: "Casa das Brocas", category: "Identidade Visual", group: "Design", image: ivCasaBrocas.url },
-  { title: "CMK Arruelas", category: "Identidade Visual", group: "Design", image: ivCmk.url },
-  { title: "Firmo & Silva Assessoria Contábil", category: "Identidade Visual", group: "Design", image: ivFirmoSilva.url },
-  { title: "Kitchens by Teresinha", category: "Identidade Visual", group: "Design", image: ivKitchens.url },
-  { title: "Legajo Tools", category: "Identidade Visual", group: "Design", image: ivLegajo.url },
-  { title: "Moreira Cardoso Magno Advocacia", category: "Identidade Visual", group: "Design", image: ivMcm.url },
-  { title: "MP Arruelas", category: "Identidade Visual", group: "Design", image: ivMpArruelas.url },
-  { title: "VRM Construção", category: "Identidade Visual", group: "Design", image: ivVrm.url },
-  { title: "Araruna Odontologia", category: "Identidade Visual", group: "Design", image: ivAraruna.url },
-  { title: "ARD", category: "Identidade Visual", group: "Design", image: ivArd.url },
-  { title: "Avance Ferramentas", category: "Identidade Visual", group: "Design", image: ivAvance.url },
-  { title: "Bike Mecânico", category: "Identidade Visual", group: "Design", image: ivBikeMecanico.url },
-  { title: "Cultura da Graça Igreja Cristã", category: "Identidade Visual", group: "Design", image: ivCulturaGraca.url },
-  { title: "Custom Body Stúdio e Nutrição", category: "Identidade Visual", group: "Design", image: ivCustomBody.url },
-  { title: "DIGCONT Contabilidade Estratégica", category: "Identidade Visual", group: "Design", image: ivDigcont.url },
-  { title: "Flori Sorvetes", category: "Identidade Visual", group: "Design", image: ivFloriSorvetes.url },
-  { title: "Pro Hound Equipamentos", category: "Identidade Visual", group: "Design", image: ivProHound.url },
-  { title: "YVA Jóias", category: "Identidade Visual", group: "Design", image: ivYvaJoias.url },
-  { title: "Bracústica", category: "Identidade Visual", group: "Design", image: ivBracustica.url },
-  { title: "Carla Prado Viagens", category: "Identidade Visual", group: "Design", image: ivCpViagens.url },
-  { title: "Eita Trem Bão Empório", category: "Identidade Visual", group: "Design", image: ivEitaTremBao.url },
-  { title: "Marinho Contábil", category: "Identidade Visual", group: "Design", image: ivMarinho.url },
-  { title: "Modular Móveis", category: "Identidade Visual", group: "Design", image: ivModular.url },
-  { title: "Nutreessência", category: "Identidade Visual", group: "Design", image: ivNutreessencia.url },
-  { title: "R5 Negócios", category: "Identidade Visual", group: "Design", image: ivR5.url },
-  { title: "VAZ Odontologia Especializada", category: "Identidade Visual", group: "Design", image: ivVaz.url },
-  { title: "Xavier Advocacia e Assessoria", category: "Identidade Visual", group: "Design", image: ivXavier.url },
-  { title: "Renova Sun Energia Solar", category: "Identidade Visual", group: "Design", image: ivRenovaSun.url },
-  { title: "Allide Soluções Empresariais", category: "Identidade Visual", group: "Design", image: ivAllide.url },
-  { title: "Belt Engenharia", category: "Identidade Visual", group: "Design", image: ivBelt.url },
+  { title: "Cartão Fio Dental Araruna Odontologia", category: "Brindes", group: "Design", image: brindeFioAraruna, tall: true },
+  { title: "Cartão Fio Dental CMK Arruelas", category: "Brindes", group: "Design", image: brindeFioCmk, tall: true },
+  { title: "Capa de Carteira de Trabalho FS Contábil", category: "Brindes", group: "Design", image: brindeCapaCtps, tall: true },
+  { title: "Caderno Empresarial Digcont", category: "Brindes", group: "Design", image: brindeCaderno, tall: true },
+  { title: "Crachá de Evento CITIN", category: "Brindes", group: "Design", image: brindeCracha, tall: true },
+  { title: "Garrafa Térmica CMK Arruelas", category: "Brindes", group: "Design", image: brindeGarrafa, tall: true },
+  { title: "Pomada Million", category: "Rótulos", group: "Design", image: prodPomadaMillion, tall: true },
+  { title: "Tinta Acrílica Wall Collors 18L", category: "Rótulos", group: "Design", image: prodTintaWall2, tall: true },
+  { title: "Gesso Cola Matarazzo", category: "Rótulos", group: "Design", image: prodGessoGM, tall: true },
+  { title: "Linha Acrílica Wall Collors", category: "Rótulos", group: "Design", image: prodTintaWall, tall: true },
+  { title: "Rótulo Criarte", category: "Rótulos", group: "Design", image: rotuloCriarte, tall: true },
+  { title: "Caixa Modular Móveis", category: "Imagens de Produto", group: "Design", image: prodCaixaModular },
+  { title: "Embalagem EZCOPY", category: "Imagens de Produto", group: "Design", image: prodEzcopy, tall: true },
+  { title: "Alessandra Nuzzo Advocacia", category: "Identidade Visual", group: "Design", image: ivAlessandra },
+  { title: "Assembleia de Deus Ministério Vila Verde", category: "Identidade Visual", group: "Design", image: ivAssembleia },
+  { title: "Casa das Brocas", category: "Identidade Visual", group: "Design", image: ivCasaBrocas },
+  { title: "CMK Arruelas", category: "Identidade Visual", group: "Design", image: ivCmk },
+  { title: "Firmo & Silva Assessoria Contábil", category: "Identidade Visual", group: "Design", image: ivFirmoSilva },
+  { title: "Kitchens by Teresinha", category: "Identidade Visual", group: "Design", image: ivKitchens },
+  { title: "Legajo Tools", category: "Identidade Visual", group: "Design", image: ivLegajo },
+  { title: "Moreira Cardoso Magno Advocacia", category: "Identidade Visual", group: "Design", image: ivMcm },
+  { title: "MP Arruelas", category: "Identidade Visual", group: "Design", image: ivMpArruelas },
+  { title: "VRM Construção", category: "Identidade Visual", group: "Design", image: ivVrm },
+  { title: "Araruna Odontologia", category: "Identidade Visual", group: "Design", image: ivAraruna },
+  { title: "ARD", category: "Identidade Visual", group: "Design", image: ivArd },
+  { title: "Avance Ferramentas", category: "Identidade Visual", group: "Design", image: ivAvance },
+  { title: "Bike Mecânico", category: "Identidade Visual", group: "Design", image: ivBikeMecanico },
+  { title: "Cultura da Graça Igreja Cristã", category: "Identidade Visual", group: "Design", image: ivCulturaGraca },
+  { title: "Custom Body Stúdio e Nutrição", category: "Identidade Visual", group: "Design", image: ivCustomBody },
+  { title: "DIGCONT Contabilidade Estratégica", category: "Identidade Visual", group: "Design", image: ivDigcont },
+  { title: "Flori Sorvetes", category: "Identidade Visual", group: "Design", image: ivFloriSorvetes },
+  { title: "Pro Hound Equipamentos", category: "Identidade Visual", group: "Design", image: ivProHound },
+  { title: "YVA Jóias", category: "Identidade Visual", group: "Design", image: ivYvaJoias },
+  { title: "Bracústica", category: "Identidade Visual", group: "Design", image: ivBracustica },
+  { title: "Carla Prado Viagens", category: "Identidade Visual", group: "Design", image: ivCpViagens },
+  { title: "Eita Trem Bão Empório", category: "Identidade Visual", group: "Design", image: ivEitaTremBao },
+  { title: "Marinho Contábil", category: "Identidade Visual", group: "Design", image: ivMarinho },
+  { title: "Modular Móveis", category: "Identidade Visual", group: "Design", image: ivModular },
+  { title: "Nutreessência", category: "Identidade Visual", group: "Design", image: ivNutreessencia },
+  { title: "R5 Negócios", category: "Identidade Visual", group: "Design", image: ivR5 },
+  { title: "VAZ Odontologia Especializada", category: "Identidade Visual", group: "Design", image: ivVaz },
+  { title: "Xavier Advocacia e Assessoria", category: "Identidade Visual", group: "Design", image: ivXavier },
+  { title: "Renova Sun Energia Solar", category: "Identidade Visual", group: "Design", image: ivRenovaSun },
+  { title: "Allide Soluções Empresariais", category: "Identidade Visual", group: "Design", image: ivAllide },
+  { title: "Belt Engenharia", category: "Identidade Visual", group: "Design", image: ivBelt },
 ];
 
 export type HomePortfolioItem = {
@@ -258,7 +258,7 @@ export const HOME_PORTFOLIO: HomePortfolioItem[] = [
     slug: "papelaria-de-escritorio",
     title: "Papelaria de Escritório",
     category: "Papelaria de Escritório",
-    image: homePapelaria.url,
+    image: homePapelaria,
     description:
       "Timbrados, envelopes e cartões que dão presença institucional a cada documento que sai da sua empresa.",
     details: [
@@ -271,7 +271,7 @@ export const HOME_PORTFOLIO: HomePortfolioItem[] = [
     slug: "material-para-evento",
     title: "Material para Evento",
     category: "Materiais para Eventos",
-    image: homeEvento.url,
+    image: homeEvento,
     description:
       "Kits, credenciais e peças de apoio que colocam sua marca no centro das atenções em cada ativação.",
     details: [
@@ -284,7 +284,7 @@ export const HOME_PORTFOLIO: HomePortfolioItem[] = [
     slug: "identidade-visual",
     title: "Identidade Visual",
     category: "Identidade Visual",
-    image: homeIdentidade.url,
+    image: homeIdentidade,
     description:
       "Construção e refinamento de identidade visual com coerência absoluta em cada aplicação.",
     details: [
@@ -297,7 +297,7 @@ export const HOME_PORTFOLIO: HomePortfolioItem[] = [
     slug: "impressos",
     title: "Impressos",
     category: "Todos",
-    image: homeImpressos.url,
+    image: homeImpressos,
     description:
       "Pastas, catálogos, brindes e papelaria corporativa produzidos com padrão de acabamento impecável.",
     details: [
@@ -310,7 +310,7 @@ export const HOME_PORTFOLIO: HomePortfolioItem[] = [
     slug: "portfolio-completo",
     title: "Portfólio Completo",
     category: "Todos",
-    image: homePortfolioCompleto.url,
+    image: homePortfolioCompleto,
     description:
       "Explore a amplitude de tudo o que a PARADOXO pode criar para a sua marca.",
     details: [
@@ -323,7 +323,7 @@ export const HOME_PORTFOLIO: HomePortfolioItem[] = [
     slug: "design",
     title: "Design",
     category: "Identidade Visual",
-    image: homeDesign.url,
+    image: homeDesign,
     description:
       "Direção criativa e design aplicado a peças que precisam comunicar sofisticação antes da primeira palavra.",
     details: [
@@ -532,10 +532,10 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       { n: "04", t: "Entrega", d: "Resultado impecável, no prazo, com acompanhamento dedicado." },
     ],
     showcase: [
-      { title: "Embalagens de Assinatura", image: showEmbalagensAssinatura.url },
+      { title: "Embalagens de Assinatura", image: showEmbalagensAssinatura },
       { title: "Cartões em Hot Stamping", image: portCards },
-      { title: "Kits Corporativos Premium", image: showKitCorporativo.url },
-      { title: "Catálogo Institucional", image: showCatalogoInstitucional.url },
+      { title: "Kits Corporativos Premium", image: showKitCorporativo },
+      { title: "Catálogo Institucional", image: showCatalogoInstitucional },
     ],
     faq: [
       { q: "Qual a tiragem mínima?", a: "Cada produto possui sua própria quantidade mínima de produção. Por exemplo:\n\nPastas Comerciais Personalizadas: a partir de 25 unidades\n\nPapel Timbrado: a partir de 100 unidades\n\nNo orçamento padrão, já informamos a tiragem mínima de cada item. Não há limite máximo: você pode solicitar quantidades maiores conforme a sua necessidade." },
@@ -580,10 +580,10 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       { n: "04", t: "Otimização", d: "Medimos, ajustamos e escalamos o que traz resultado real." },
     ],
     showcase: [
-      { title: "Campanhas de Performance", image: showCampanhasPerformance.url },
-      { title: "Conteúdo & SEO", image: showConteudoSeo.url },
-      { title: "Presença Institucional", image: showPresencaInstitucional.url },
-      { title: "Identidade & Branding", image: showIdentidadeBranding.url },
+      { title: "Campanhas de Performance", image: showCampanhasPerformance },
+      { title: "Conteúdo & SEO", image: showConteudoSeo },
+      { title: "Presença Institucional", image: showPresencaInstitucional },
+      { title: "Identidade & Branding", image: showIdentidadeBranding },
     ],
 
     faq: [

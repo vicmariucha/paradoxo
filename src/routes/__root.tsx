@@ -7,10 +7,9 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -37,9 +36,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -90,8 +86,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@paradoxo" },
       { name: "twitter:title", content: "Paradoxo - Suporte, Finanças e Branding | Impressos de Luxo" },
       { name: "twitter:description", content: "Pastas comerciais de luxo, envelopes executivos, catálogos e papelaria de autoridade sob medida para empresas que exigem sofisticação." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/078418e2-b6b8-40ca-b8da-39ee75dbb0cc/id-preview-77e7af35--987c8892-bed9-4854-8ed1-ba00f196ef53.lovable.app-1781413802099.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/078418e2-b6b8-40ca-b8da-39ee75dbb0cc/id-preview-77e7af35--987c8892-bed9-4854-8ed1-ba00f196ef53.lovable.app-1781413802099.png" },
     ],
     links: [
       { rel: "icon", type: "image/png", href: "/favicon.png" },

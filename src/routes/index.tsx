@@ -8,13 +8,13 @@ import { HOME_PORTFOLIO, PORTFOLIO } from "@/lib/site-data";
 import type { PortfolioItem } from "@/lib/site-data";
 
 import heroImg from "@/assets/hero.jpg";
-import heroVideo from "@/assets/hero-section-background.mp4.asset.json";
-import heroPoster from "@/assets/hero-poster.jpg.asset.json";
+import heroVideo from "@/assets/hero-section-background.mp4";
+import heroPoster from "@/assets/hero-poster.jpg";
 import portKits from "@/assets/port-kits.jpg";
-import ctaHomeImg from "@/assets/cta-home.jpg.asset.json";
-import showcaseImpressos from "@/assets/showcase-impressos-v2.png.asset.json";
-import showcaseMarketing from "@/assets/showcase-marketing-v2.png.asset.json";
-import showcaseFinancas from "@/assets/showcase-financas-v2.png.asset.json";
+import ctaHomeImg from "@/assets/cta-home.jpg";
+import showcaseImpressos from "@/assets/showcase-impressos-v2.png";
+import showcaseMarketing from "@/assets/showcase-marketing-v2.png";
+import showcaseFinancas from "@/assets/showcase-financas-v2.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
 const SHOWCASE = [
   {
     signature: "Impressos",
-    image: showcaseImpressos.url,
+    image: showcaseImpressos,
     tag: "Nosso métier",
     desc: "Pastas comerciais, envelopes, timbrados, cartões e demais papelarias corporativas de altíssimo padrão. Onde o papel encontra a percepção de valor.",
     slug: "impressos",
@@ -36,7 +36,7 @@ const SHOWCASE = [
   },
   {
     signature: "Marketing",
-    image: showcaseMarketing.url,
+    image: showcaseMarketing,
     tag: "Posicionamento",
     desc: "SEO, gestão de tráfego e campanhas que colocam sua marca onde o cliente certo a encontra.",
     slug: "marketing",
@@ -44,7 +44,7 @@ const SHOWCASE = [
   },
   {
     signature: "Finanças",
-    image: showcaseFinancas.url,
+    image: showcaseFinancas,
     tag: "Estrutura",
     desc: "Organização, processo e clareza financeira para que sua operação cresça com solidez.",
     slug: "financas",
@@ -198,8 +198,8 @@ function Home() {
       <section className="relative h-screen w-full overflow-hidden">
         <video
           ref={videoRef}
-          src={heroVideo.url}
-          poster={heroPoster.url}
+          src={heroVideo}
+          poster={heroPoster}
           autoPlay
           muted
           loop
@@ -377,7 +377,7 @@ function Home() {
             </Link>
           </div>
           <div className="reveal aspect-[4/3] overflow-hidden rounded-2xl" data-delay="120">
-            <img src={ctaHomeImg.url} alt="Toque premium PARADOXO" loading="lazy" className="h-full w-full object-cover" />
+            <img src={ctaHomeImg} alt="Toque premium PARADOXO" loading="lazy" className="h-full w-full object-cover" />
           </div>
         </div>
       </section>

@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Rosnoc";
-  src: url("/__l5e/assets-v1/b3e7d5bb-a6d4-4c4c-8b9b-edf211e265c4/Rosnoc.otf") format("opentype");
+  src: url("./assets/Rosnoc.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
