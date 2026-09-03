@@ -31,7 +31,7 @@ export function Footer() {
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
               Soluções empresariais de alto padrão. Transformamos impressão em
-              percepção de valor — para clientes que não negociam excelência.
+              percepção de valor para clientes que não negociam excelência.
             </p>
             <div className="mt-8 flex gap-4">
               {[

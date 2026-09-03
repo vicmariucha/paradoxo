@@ -3,9 +3,23 @@ import { useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
 import { useReveal } from "@/hooks/use-reveal";
-import { PORTFOLIO, PORTFOLIO_CATEGORIES, PORTFOLIO_GROUPS, type PortfolioGroup } from "@/lib/site-data";
+import {
+  PORTFOLIO,
+  PORTFOLIO_CATEGORIES,
+  PORTFOLIO_GROUPS,
+  IMPRESSOS_CURADORIA_EXCLUDE,
+  type PortfolioGroup,
+} from "@/lib/site-data";
+
+type Group = "Todos" | PortfolioGroup;
+
+const GROUPS: Group[] = ["Todos", ...PORTFOLIO_GROUPS];
 
 export const Route = createFileRoute("/portfolio")({
+  validateSearch: (search: Record<string, unknown>): { g?: string; curadoria?: boolean } => ({
+    g: typeof search.g === "string" ? search.g : undefined,
+    curadoria: search.curadoria === true ? true : undefined,
+  }),
   head: () => ({
     meta: [],
   }),
@@ -13,16 +27,42 @@ export const Route = createFileRoute("/portfolio")({
 });
 
 function Portfolio() {
-  const [group, setGroup] = useState<PortfolioGroup>("Impressos");
+  const search = Route.useSearch();
+  const initialGroup: Group =
+    search.g === "Todos" || PORTFOLIO_GROUPS.includes(search.g as PortfolioGroup)
+      ? (search.g as Group)
+      : "Impressos";
+  const [group, setGroup] = useState<Group>(initialGroup);
   const [active, setActive] = useState<string>("Todos");
   useReveal([active, group]);
+
+  const curadoria = search.curadoria === true && group === "Impressos";
+
+  const categories = useMemo(() => {
+    const base =
+      group === "Todos"
+        ? [...new Set(PORTFOLIO.map((p) => p.category))]
+        : PORTFOLIO_CATEGORIES[group].filter((c) => c !== "Todos");
+    const visible = base.filter((cat) =>
+      PORTFOLIO.some(
+        (p) =>
+          p.category === cat &&
+          (group === "Todos" || p.group === group) &&
+          !(curadoria && IMPRESSOS_CURADORIA_EXCLUDE.includes(p.title)),
+      ),
+    );
+    return ["Todos", ...visible];
+  }, [group, curadoria]);
 
   const items = useMemo(
     () =>
       PORTFOLIO.filter(
-        (p) => p.group === group && (active === "Todos" || p.category === active),
+        (p) =>
+          (group === "Todos" || p.group === group) &&
+          (active === "Todos" || p.category === active) &&
+          !(curadoria && IMPRESSOS_CURADORIA_EXCLUDE.includes(p.title)),
       ),
-    [active, group],
+    [active, group, curadoria],
   );
 
   return (
@@ -44,7 +84,7 @@ function Portfolio() {
       <section className="px-6 lg:px-10">
         <div className="mx-auto max-w-[1400px] border-y border-border/60 py-6">
           <div className="flex flex-wrap gap-3">
-            {PORTFOLIO_GROUPS.map((g) => (
+            {GROUPS.map((g) => (
               <button
                 key={g}
                 onClick={() => {
@@ -63,7 +103,7 @@ function Portfolio() {
           </div>
 
           <div className="mt-5 flex flex-wrap gap-3">
-            {PORTFOLIO_CATEGORIES[group].map((cat) => (
+            {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActive(cat)}

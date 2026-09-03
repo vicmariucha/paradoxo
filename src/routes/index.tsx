@@ -188,32 +188,54 @@ function Home() {
             const rowItems = HOME_PORTFOLIO.slice(row * 2, row * 2 + 2);
             return (
               <div key={row} className="flex flex-col gap-6 md:flex-row lg:gap-8">
-                {rowItems.map((item, i) => (
-                  <Link
-                    key={item.slug}
-                    to="/portfolio/$slug"
-                    params={{ slug: item.slug }}
-                    data-delay={i * 90}
-                    className="reveal group relative aspect-[4/3] grow basis-0 overflow-hidden rounded-2xl transition-[flex-grow] duration-500 ease-out md:aspect-[16/9] md:hover:grow-[1.5]"
-                  >
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-                    <h3 className="absolute bottom-6 left-6 font-display text-2xl text-foreground">{item.title}</h3>
+                {rowItems.map((item, i) => {
+                  const card = (
+                    <>
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                      <h3 className="absolute bottom-6 left-6 font-display text-2xl text-foreground">{item.title}</h3>
 
-                    {/* Expand-on-hover explore button (bottom-right) */}
-                    <span className="absolute bottom-6 right-6 inline-flex items-center justify-center gap-0 overflow-hidden rounded-full bg-gold px-3 py-3 text-[0.72rem] uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 group-hover:gap-2 group-hover:px-3.5">
-                      <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 group-hover:max-w-[12rem] group-hover:opacity-100">
-                        Ver este trabalho
+                      {/* Expand-on-hover explore button (bottom-right) */}
+                      <span className="absolute bottom-6 right-6 inline-flex items-center justify-center gap-0 overflow-hidden rounded-full bg-gold px-3 py-3 text-[0.72rem] uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 group-hover:gap-2 group-hover:px-3.5">
+                        <span className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 group-hover:max-w-[12rem] group-hover:opacity-100">
+                          Ver este trabalho
+                        </span>
+                        <ArrowRight size={16} className="shrink-0" />
                       </span>
-                      <ArrowRight size={16} className="shrink-0" />
-                    </span>
-                  </Link>
-                ))}
+                    </>
+                  );
+                  const cls =
+                    "reveal group relative aspect-[4/3] grow basis-0 overflow-hidden rounded-2xl transition-[flex-grow] duration-500 ease-out md:aspect-[16/9] md:hover:grow-[1.5]";
+
+                  if (item.slug === "impressos")
+                    return (
+                      <Link key={item.slug} to="/portfolio" search={{ g: "Impressos", curadoria: true }} data-delay={i * 90} className={cls}>
+                        {card}
+                      </Link>
+                    );
+                  if (item.slug === "portfolio-completo")
+                    return (
+                      <Link key={item.slug} to="/portfolio" search={{ g: "Todos" }} data-delay={i * 90} className={cls}>
+                        {card}
+                      </Link>
+                    );
+                  if (item.slug === "design")
+                    return (
+                      <Link key={item.slug} to="/portfolio" search={{ g: "Design" }} data-delay={i * 90} className={cls}>
+                        {card}
+                      </Link>
+                    );
+                  return (
+                    <Link key={item.slug} to="/portfolio/$slug" params={{ slug: item.slug }} data-delay={i * 90} className={cls}>
+                      {card}
+                    </Link>
+                  );
+                })}
               </div>
             );
           })}
@@ -227,11 +249,11 @@ function Home() {
         <div className="mx-auto grid max-w-[1600px] items-center gap-12 px-6 lg:grid-cols-2 lg:px-12">
           <div className="reveal">
             <h2 className="font-display text-4xl leading-tight lg:text-5xl">
-              Encontre a solução exata para a sua marca.
+              A solução exata para a sua marca está aqui.
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-              Ficou mais fácil iniciar um projeto de alto padrão. Conte o que você
-              precisa e nossa curadoria desenha a proposta ideal para você.
+              Agora ficou mais fácil iniciar um projeto de alto padrão. Conte-nos o
+              que precisa e nossa curadoria desenhará a proposta ideal para você.
             </p>
             <div className="mt-10 flex max-w-md items-center gap-3 rounded-full border border-border bg-background px-5 py-4">
               <Search size={18} className="text-gold" />
@@ -266,7 +288,7 @@ function Home() {
             data-delay="160"
             className="reveal group mt-12 inline-flex items-center gap-3 rounded-full bg-gold px-10 py-5 text-[0.75rem] uppercase tracking-[0.24em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
           >
-            Quero a PARADOXO no meu próximo projeto
+            Quero a PARADOXO no meu próximo projeto.
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
