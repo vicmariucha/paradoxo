@@ -41,6 +41,17 @@ import ivDigcont from "@/assets/identidade-visual-digcont.jpg.asset.json";
 import ivFloriSorvetes from "@/assets/identidade-visual-flori-sorvetes.jpg.asset.json";
 import ivProHound from "@/assets/identidade-visual-pro-hound.jpg.asset.json";
 import ivYvaJoias from "@/assets/identidade-visual-yva-joias.jpg.asset.json";
+import ivBracustica from "@/assets/identidade-visual-bracustica.jpg.asset.json";
+import ivCpViagens from "@/assets/identidade-visual-cp-viagens.jpg.asset.json";
+import ivEitaTremBao from "@/assets/identidade-visual-eita-trem-bao.jpg.asset.json";
+import ivMarinho from "@/assets/identidade-visual-marinho-contabil.jpg.asset.json";
+import ivModular from "@/assets/identidade-visual-modular-moveis.jpg.asset.json";
+import ivNutreessencia from "@/assets/identidade-visual-nutreessencia.jpg.asset.json";
+import ivR5 from "@/assets/identidade-visual-r5.jpg.asset.json";
+import ivVaz from "@/assets/identidade-visual-vaz-odontologia.jpg.asset.json";
+import ivXavier from "@/assets/identidade-visual-xavier-advocacia.jpg.asset.json";
+import ivRenovaSun from "@/assets/identidade-visual-renova-sun.jpg.asset.json";
+import ivAllide from "@/assets/identidade-visual-allide.jpg.asset.json";
 import folderCmk from "@/assets/folder-dobra-cmk.jpeg.asset.json";
 import folderHomeo from "@/assets/folder-multiplas-dobras-homeo-ervas.jpeg.asset.json";
 import pastaNuzzo from "@/assets/pasta-alessandra-nuzzo.jpg.asset.json";
@@ -218,6 +229,17 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Flori Sorvetes", category: "Identidade Visual", group: "Design", image: ivFloriSorvetes.url },
   { title: "Pro Hound Equipamentos", category: "Identidade Visual", group: "Design", image: ivProHound.url },
   { title: "YVA Jóias", category: "Identidade Visual", group: "Design", image: ivYvaJoias.url },
+  { title: "Bracústica", category: "Identidade Visual", group: "Design", image: ivBracustica.url },
+  { title: "Carla Prado Viagens", category: "Identidade Visual", group: "Design", image: ivCpViagens.url },
+  { title: "Eita Trem Bão Empório", category: "Identidade Visual", group: "Design", image: ivEitaTremBao.url },
+  { title: "Marinho Contábil", category: "Identidade Visual", group: "Design", image: ivMarinho.url },
+  { title: "Modular Móveis", category: "Identidade Visual", group: "Design", image: ivModular.url },
+  { title: "Nutreessência", category: "Identidade Visual", group: "Design", image: ivNutreessencia.url },
+  { title: "R5 Negócios", category: "Identidade Visual", group: "Design", image: ivR5.url },
+  { title: "VAZ Odontologia Especializada", category: "Identidade Visual", group: "Design", image: ivVaz.url },
+  { title: "Xavier Advocacia e Assessoria", category: "Identidade Visual", group: "Design", image: ivXavier.url },
+  { title: "Renova Sun Energia Solar", category: "Identidade Visual", group: "Design", image: ivRenovaSun.url },
+  { title: "Allide Soluções Empresariais", category: "Identidade Visual", group: "Design", image: ivAllide.url },
 ];
 
 export type HomePortfolioItem = {
