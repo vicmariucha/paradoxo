@@ -327,6 +327,7 @@ export const PORTFOLIO_CATEGORIES: Record<PortfolioGroup, readonly string[]> = {
   ],
   Design: [
     "Todos",
+    "Identidade Visual",
     "Brindes",
     "Rótulos",
     "Imagens de Produto",
