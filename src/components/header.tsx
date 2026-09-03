@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { SERVICES } from "@/lib/site-data";
 
 const NAV = [
@@ -15,6 +15,7 @@ const NAV = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -36,7 +37,10 @@ export function Header() {
   // Close the mobile menu when the viewport grows to desktop.
   useEffect(() => {
     const onResize = () => {
-      if (window.innerWidth >= 1024) setOpen(false);
+      if (window.innerWidth >= 1024) {
+        setOpen(false);
+        setServicesOpen(false);
+      }
     };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
@@ -52,7 +56,11 @@ export function Header() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
-  const handleNavClick = () => setOpen(false);
+  const handleNavClick = () => {
+    setOpen(false);
+    setServicesOpen(false);
+  };
+
 
   const mobileOverlay = (
     <div
@@ -71,16 +79,32 @@ export function Header() {
         {NAV.map((item, i) =>
           item.to === "/servicos" ? (
             <div key={item.to} className="flex flex-col gap-2">
-              <Link
-                to={item.to}
-                onClick={handleNavClick}
-                className="font-display text-3xl tracking-wide text-foreground md:text-4xl"
-                style={{ transitionDelay: `${i * 40}ms` }}
-                activeProps={{ className: "text-gold" }}
+              <div className="flex items-center justify-between gap-4">
+                <Link
+                  to={item.to}
+                  onClick={handleNavClick}
+                  className="font-display text-3xl tracking-wide text-foreground md:text-4xl"
+                  style={{ transitionDelay: `${i * 40}ms` }}
+                  activeProps={{ className: "text-gold" }}
+                >
+                  {item.label}
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => setServicesOpen((v) => !v)}
+                  aria-expanded={servicesOpen}
+                  aria-controls="mobile-services-subitems"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/40 text-gold transition-all duration-300 hover:border-gold hover:bg-gold/10 md:h-11 md:w-11"
+                >
+                  {servicesOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                </button>
+              </div>
+              <div
+                id="mobile-services-subitems"
+                className={`flex flex-col gap-1.5 overflow-hidden border-l border-border/60 pl-4 transition-all duration-300 md:pl-5 ${
+                  servicesOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                }`}
               >
-                {item.label}
-              </Link>
-              <div className="flex flex-col gap-1.5 border-l border-border/60 pl-4 md:pl-5">
                 {SERVICES.map((s) => (
                   <Link
                     key={s.slug}
@@ -108,6 +132,7 @@ export function Header() {
             </Link>
           ),
         )}
+
 
         <Link
           to="/contato"
