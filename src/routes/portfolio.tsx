@@ -7,7 +7,7 @@ import {
   PORTFOLIO,
   PORTFOLIO_CATEGORIES,
   PORTFOLIO_GROUPS,
-  IMPRESSOS_CURADORIA_EXCLUDE,
+  isImpressosCuradoriaExcluded,
   type PortfolioGroup,
 } from "@/lib/site-data";
 
@@ -49,7 +49,7 @@ function Portfolio() {
         (p) =>
           p.category === cat &&
           (group === "Todos" || p.group === group) &&
-          !(curadoria && IMPRESSOS_CURADORIA_EXCLUDE.includes(p.title)),
+          !(curadoria && isImpressosCuradoriaExcluded(p.title)),
       ),
     );
     return ["Todos", ...visible];
@@ -61,7 +61,7 @@ function Portfolio() {
         (p) =>
           (group === "Todos" || p.group === group) &&
           (active === "Todos" || p.category === active) &&
-          !(curadoria && IMPRESSOS_CURADORIA_EXCLUDE.includes(p.title)),
+          !(curadoria && isImpressosCuradoriaExcluded(p.title)),
       ),
     [active, group, curadoria],
   );
