@@ -252,7 +252,7 @@ function Home() {
                 to="/servicos/$slug"
                 params={{ slug: s.slug }}
                 data-delay={i * 100}
-                className="reveal group relative flex min-h-[30rem] flex-col justify-end overflow-hidden rounded-2xl md:min-h-0 md:aspect-[4/5]"
+                className="reveal group relative flex min-h-[30rem] translate-y-0 flex-col justify-end overflow-hidden rounded-2xl opacity-100 md:min-h-0 md:aspect-[4/5] md:translate-y-9 md:opacity-0 md:[&.reveal-in]:translate-y-0 md:[&.reveal-in]:opacity-100"
               >
                 <img
                   src={s.image}
