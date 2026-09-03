@@ -425,10 +425,10 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       { n: "04", t: "Entrega", d: "Resultado impecável, no prazo, com acompanhamento dedicado." },
     ],
     showcase: [
-      { title: "Embalagens de Assinatura", image: portPackaging },
+      { title: "Embalagens de Assinatura", image: showEmbalagensAssinatura.url },
       { title: "Cartões em Hot Stamping", image: portCards },
-      { title: "Kits Corporativos Premium", image: portKits },
-      { title: "Catálogo Institucional", image: portCatalog },
+      { title: "Kits Corporativos Premium", image: showKitCorporativo.url },
+      { title: "Catálogo Institucional", image: showCatalogoInstitucional.url },
     ],
     faq: [
       { q: "Qual a tiragem mínima?", a: "Cada produto possui sua própria quantidade mínima de produção. Por exemplo:\n\nPastas Comerciais Personalizadas: a partir de 25 unidades\n\nPapel Timbrado: a partir de 100 unidades\n\nNo orçamento padrão, já informamos a tiragem mínima de cada item. Não há limite máximo: você pode solicitar quantidades maiores conforme a sua necessidade." },
