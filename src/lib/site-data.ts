@@ -535,11 +535,14 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     ],
     showcase: [],
     faq: [
-      { q: "Atendem empresas de qualquer porte?", a: "Atendemos de pequenas operações em estruturação a empresas consolidadas que buscam eficiência." },
-      { q: "Substituem meu contador?", a: "Não. Complementamos com gestão, processos e controle, trabalhando em conjunto com sua contabilidade." },
-      { q: "Como é o acompanhamento?", a: "Definimos rotinas e indicadores, com reuniões periódicas de análise e ajuste." },
-      { q: "É um serviço pontual ou contínuo?", a: "Oferecemos tanto projetos de estruturação pontuais quanto suporte contínuo." },
+      { q: "A Paradoxo substitui o meu escritório de contabilidade?", a: "Não. A Paradoxo atua de forma complementar e parceira da sua contabilidade. Enquanto o contador cuida das obrigações fiscais, tributárias e legais e nós auxiliamos na gestão interna do negócio: organização de fluxo de caixa, controles diários, rotinas administrativas, estruturação de processos e apoio à tomada de decisão." },
+      { q: "Atendem empresas de quais portes e segmentos?", a: "Atendemos desde pequenos negócios e profissionais liberais em fase de estruturação até empresas consolidadas e PMEs que precisam eliminar gargalos operacionais, organizar controles financeiros e preparar a base para crescimento seguro." },
+      { q: "O serviço é pontual ou contínuo?", a: "Oferecemos ambos os modelos. Trabalhamos com projetos pontuais de estruturação (diagnóstico, implantação de controles, planilhas e fluxos de processo) e com assessoria e suporte contínuo, atuando como um braço estratégico remoto de controladoria e acompanhamento de indicadores." },
+      { q: "Vocês trabalham integrados ao meu ERP ou criam planilhas próprias?", a: "Atuamos das duas formas. Se a sua empresa já utiliza um software ERP, otimizamos o uso do sistema para extrair relatórios gerenciais confiáveis. Caso o sistema não atenda todas as necessidades ou a operação ainda não utilize ERP, desenvolvemos controles e ferramentas sob medida para o seu fluxo de trabalho." },
+      { q: "Como funciona a etapa de Raio-X inicial?", a: "No Raio-X mapeamos as rotinas financeiras, administrativas e operacionais atuais da empresa para identificar falhas de controle, retrabalho e gargalos de informação. A partir desse diagnóstico, desenhamos um plano de ação prático com prioridades de implantação. Essa análise inicial tem um custo único, mas o valor é definido a partir de uma primeira abordagem de sondagem/volume de ações necessárias." },
+      { q: "Como o suporte em finanças e processos se conecta ao trabalho de branding da Paradoxo?", a: "Uma marca forte precisa de uma operação sólida por trás. O trabalho de suporte empresarial e finanças garante previsibilidade de caixa, clareza de margens e processos eficientes para que a empresa possa sustentar investimentos em posicionamento, materiais premium e expansão comercial sem perder o controle financeiro." },
     ],
+
   },
 };
 
