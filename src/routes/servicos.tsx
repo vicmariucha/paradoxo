@@ -27,7 +27,7 @@ function Servicos() {
         <div className="mx-auto max-w-[1400px]">
           <p className="overline reveal">Serviços</p>
           <h1 className="reveal mt-6 max-w-4xl font-display text-5xl leading-[1.05] lg:text-7xl" data-delay="100">
-            Soluções completas com <span className="italic text-gold-gradient">obsessão pelo detalhes.</span>
+            Soluções completas com <span className="italic text-gold-gradient">obsessão pelos detalhes.</span>
           </h1>
           <p className="reveal mt-8 max-w-xl text-lg text-muted-foreground" data-delay="200">
             Do impresso de luxo à estratégia de marca — um único parceiro para

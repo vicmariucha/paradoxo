@@ -320,7 +320,7 @@ export const SERVICES: Service[] = [
   {
     id: "impressos",
     slug: "impressos",
-    rank: "Comunicação impressa",
+    rank: "Comunicação Impressa",
     title: "Impressos Premium",
     tagline: "Nosso métier",
     description:
@@ -329,11 +329,11 @@ export const SERVICES: Service[] = [
     items: [
       "Pastas e Envelopes Corporativos",
       "Papelaria de Escritório",
-      "Catálogo de Corporativos",
+      "Catálogo Corporativos",
       "Materiais Informacionais",
       "Materiais para Eventos",
       "Impressões Especiais",
-      "Convites e Cartões de Visita linha luxo",
+      "Convites e Cartões de Visita Linha Luxo",
       "Sacolas Premium",
       "Brindes Corporativos",
       "Kits Corporativos",
