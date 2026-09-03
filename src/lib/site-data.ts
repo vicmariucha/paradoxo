@@ -218,6 +218,17 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Flori Sorvetes", category: "Identidade Visual", group: "Design", image: ivFloriSorvetes.url },
   { title: "Pro Hound Equipamentos", category: "Identidade Visual", group: "Design", image: ivProHound.url },
   { title: "YVA Jóias", category: "Identidade Visual", group: "Design", image: ivYvaJoias.url },
+  { title: "Bracústica", category: "Identidade Visual", group: "Design", image: ivBracustica.url },
+  { title: "Carla Prado Viagens", category: "Identidade Visual", group: "Design", image: ivCpViagens.url },
+  { title: "Eita Trem Bão Empório", category: "Identidade Visual", group: "Design", image: ivEitaTremBao.url },
+  { title: "Marinho Contábil", category: "Identidade Visual", group: "Design", image: ivMarinho.url },
+  { title: "Modular Móveis", category: "Identidade Visual", group: "Design", image: ivModular.url },
+  { title: "Nutreessência", category: "Identidade Visual", group: "Design", image: ivNutreessencia.url },
+  { title: "R5 Negócios", category: "Identidade Visual", group: "Design", image: ivR5.url },
+  { title: "VAZ Odontologia Especializada", category: "Identidade Visual", group: "Design", image: ivVaz.url },
+  { title: "Xavier Advocacia e Assessoria", category: "Identidade Visual", group: "Design", image: ivXavier.url },
+  { title: "Renova Sun Energia Solar", category: "Identidade Visual", group: "Design", image: ivRenovaSun.url },
+  { title: "Allide Soluções Empresariais", category: "Identidade Visual", group: "Design", image: ivAllide.url },
 ];
 
 export type HomePortfolioItem = {
