@@ -367,10 +367,7 @@ function Home() {
               Agora ficou mais fácil iniciar um projeto de alto padrão. Conte-nos o
               que precisa e nossa curadoria desenhará a proposta ideal para você.
             </p>
-            <div className="mt-10 flex max-w-md items-center gap-3 rounded-full border border-border bg-background px-5 py-4">
-              <Search size={18} className="text-gold" />
-              <span className="text-sm text-muted-foreground">Descreva o seu projeto…</span>
-            </div>
+            <PortfolioSearch />
             <Link
               to="/contato"
               className="mt-8 inline-flex items-center gap-3 rounded-full bg-gold px-9 py-4 text-[0.78rem] uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
