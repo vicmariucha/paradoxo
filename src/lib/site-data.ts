@@ -31,6 +31,16 @@ import ivLegajo from "@/assets/identidade-visual-legajo.jpg.asset.json";
 import ivMcm from "@/assets/identidade-visual-mcm.jpg.asset.json";
 import ivMpArruelas from "@/assets/identidade-visual-mp-arruelas.jpg.asset.json";
 import ivVrm from "@/assets/identidade-visual-vrm-construcao.jpg.asset.json";
+import ivAraruna from "@/assets/identidade-visual-araruna-odontologia.jpg.asset.json";
+import ivArd from "@/assets/identidade-visual-ard.jpg.asset.json";
+import ivAvance from "@/assets/identidade-visual-avance-ferramentas.jpg.asset.json";
+import ivBikeMecanico from "@/assets/identidade-visual-bike-mecanico.jpg.asset.json";
+import ivCulturaGraca from "@/assets/identidade-visual-cultura-da-graca.jpg.asset.json";
+import ivCustomBody from "@/assets/identidade-visual-custom-body.jpg.asset.json";
+import ivDigcont from "@/assets/identidade-visual-digcont.jpg.asset.json";
+import ivFloriSorvetes from "@/assets/identidade-visual-flori-sorvetes.jpg.asset.json";
+import ivProHound from "@/assets/identidade-visual-pro-hound.jpg.asset.json";
+import ivYvaJoias from "@/assets/identidade-visual-yva-joias.jpg.asset.json";
 import folderCmk from "@/assets/folder-dobra-cmk.jpeg.asset.json";
 import folderHomeo from "@/assets/folder-multiplas-dobras-homeo-ervas.jpeg.asset.json";
 import pastaNuzzo from "@/assets/pasta-alessandra-nuzzo.jpg.asset.json";
@@ -198,6 +208,16 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Moreira Cardoso Magno Advocacia", category: "Identidade Visual", group: "Design", image: ivMcm.url },
   { title: "MP Arruelas", category: "Identidade Visual", group: "Design", image: ivMpArruelas.url },
   { title: "VRM Construção", category: "Identidade Visual", group: "Design", image: ivVrm.url },
+  { title: "Araruna Odontologia", category: "Identidade Visual", group: "Design", image: ivAraruna.url },
+  { title: "ARD", category: "Identidade Visual", group: "Design", image: ivArd.url },
+  { title: "Avance Ferramentas", category: "Identidade Visual", group: "Design", image: ivAvance.url },
+  { title: "Bike Mecânico", category: "Identidade Visual", group: "Design", image: ivBikeMecanico.url },
+  { title: "Cultura da Graça Igreja Cristã", category: "Identidade Visual", group: "Design", image: ivCulturaGraca.url },
+  { title: "Custom Body Stúdio e Nutrição", category: "Identidade Visual", group: "Design", image: ivCustomBody.url },
+  { title: "DIGCONT Contabilidade Estratégica", category: "Identidade Visual", group: "Design", image: ivDigcont.url },
+  { title: "Flori Sorvetes", category: "Identidade Visual", group: "Design", image: ivFloriSorvetes.url },
+  { title: "Pro Hound Equipamentos", category: "Identidade Visual", group: "Design", image: ivProHound.url },
+  { title: "YVA Jóias", category: "Identidade Visual", group: "Design", image: ivYvaJoias.url },
 ];
 
 export type HomePortfolioItem = {
