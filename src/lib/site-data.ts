@@ -351,6 +351,9 @@ export const IMPRESSOS_CURADORIA_EXCLUDE_KEYWORDS: readonly string[] = [
   "tapete",
   "pasta sacola",
   "display em acrílico",
+  "tag corte especial",
+  "sacola",
+  "convite e caneta",
 ];
 
 /** Títulos exatos de itens excluídos da visão curadoria. */
@@ -367,6 +370,13 @@ export const IMPRESSOS_CURADORIA_EXCLUDE_TITLES: readonly string[] = [
   "Tapete Personalizado Le Boutique",
   "Pasta Sacola FS Contábil",
   "Display de Folheteria Personalizado",
+  "Tag Corte Especial Rafit Kids",
+  "Tag Corte Especial May-Lui Kids",
+  "Sacolas YVA Joias",
+  "Sacolas Ladies Alta Costura",
+  "Sacola Plástica Personalizada",
+  "Sacola Le Boutique Spa",
+  "Convite e Caneta IMW",
 ];
 
 export function isImpressosCuradoriaExcluded(title: string): boolean {
