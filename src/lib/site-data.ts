@@ -337,8 +337,24 @@ export const HOME_PORTFOLIO: HomePortfolioItem[] = [
 
 export const PORTFOLIO_GROUPS = ["Impressos", "Design"] as const;
 
-/** Itens de Impressos ocultados na visão "curadoria" (acesso via card Impressos da home). */
-export const IMPRESSOS_CURADORIA_EXCLUDE: readonly string[] = [
+/** Palavras-chave que identificam itens de Impressos excluídos da visão curadoria (acesso via card Impressos da home). */
+export const IMPRESSOS_CURADORIA_EXCLUDE_KEYWORDS: readonly string[] = [
+  "chaveiro",
+  "estande",
+  "backdrop",
+  "camiseta",
+  "wind banner",
+  "caneta",
+  "mouse pad",
+  "agenda",
+  "capacho",
+  "tapete",
+  "pasta sacola",
+  "display em acrílico",
+];
+
+/** Títulos exatos de itens excluídos da visão curadoria. */
+export const IMPRESSOS_CURADORIA_EXCLUDE_TITLES: readonly string[] = [
   "Chaveiro YVA Joias",
   "Stand de Feira Jopak",
   "Backdrop Debate ACAERT",
@@ -352,6 +368,17 @@ export const IMPRESSOS_CURADORIA_EXCLUDE: readonly string[] = [
   "Pasta Sacola FS Contábil",
   "Display de Folheteria Personalizado",
 ];
+
+export function isImpressosCuradoriaExcluded(title: string): boolean {
+  const normalized = title
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+  return (
+    IMPRESSOS_CURADORIA_EXCLUDE_TITLES.includes(title) ||
+    IMPRESSOS_CURADORIA_EXCLUDE_KEYWORDS.some((k) => normalized.includes(k))
+  );
+}
 
 export const PORTFOLIO_CATEGORIES: Record<PortfolioGroup, readonly string[]> = {
   Impressos: [
