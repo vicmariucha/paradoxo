@@ -67,19 +67,48 @@ export function Header() {
         open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
       }`}
     >
-      <div className="flex flex-1 flex-col justify-center gap-2 px-8 pb-8 md:px-16">
-        {NAV.map((item, i) => (
-          <Link
-            key={item.to}
-            to={item.to}
-            onClick={handleNavClick}
-            className="font-display text-3xl tracking-wide text-foreground md:text-4xl"
-            style={{ transitionDelay: `${i * 40}ms` }}
-            activeProps={{ className: "text-gold" }}
-          >
-            {item.label}
-          </Link>
-        ))}
+      <div className="flex flex-1 flex-col justify-center gap-2 overflow-y-auto px-8 pb-8 md:px-16">
+        {NAV.map((item, i) =>
+          item.to === "/servicos" ? (
+            <div key={item.to} className="flex flex-col gap-2">
+              <Link
+                to={item.to}
+                onClick={handleNavClick}
+                className="font-display text-3xl tracking-wide text-foreground md:text-4xl"
+                style={{ transitionDelay: `${i * 40}ms` }}
+                activeProps={{ className: "text-gold" }}
+              >
+                {item.label}
+              </Link>
+              <div className="flex flex-col gap-1.5 border-l border-border/60 pl-4 md:pl-5">
+                {SERVICES.map((s) => (
+                  <Link
+                    key={s.slug}
+                    to="/servicos/$slug"
+                    params={{ slug: s.slug }}
+                    onClick={handleNavClick}
+                    className="text-[0.82rem] font-light uppercase tracking-[0.14em] text-muted-foreground transition-colors hover:text-gold md:text-[0.9rem]"
+                    activeProps={{ className: "text-gold" }}
+                  >
+                    {s.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <Link
+              key={item.to}
+              to={item.to}
+              onClick={handleNavClick}
+              className="font-display text-3xl tracking-wide text-foreground md:text-4xl"
+              style={{ transitionDelay: `${i * 40}ms` }}
+              activeProps={{ className: "text-gold" }}
+            >
+              {item.label}
+            </Link>
+          ),
+        )}
+
         <Link
           to="/contato"
           onClick={handleNavClick}
