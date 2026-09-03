@@ -34,7 +34,7 @@ function Portfolio() {
       ? (search.g as Group)
       : "Impressos";
   const [group, setGroup] = useState<Group>(initialGroup);
-  const [active, setActive] = useState<string>("Todos");
+  const [active, setActive] = useState<string>(search.c ?? "Todos");
   useReveal([active, group]);
 
   const curadoria = search.curadoria === true && group === "Impressos";
