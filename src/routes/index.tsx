@@ -289,14 +289,16 @@ function Home() {
             <br />
             <span className="italic text-gold-gradient">Merece parceiros.</span>
           </h2>
-          <Link
-            to="/contato"
+          <a
+            href="https://wa.me/5511984431907?text=Ol%C3%A1%2C%20Paradoxo.%20Vim%20pelo%20site%20e%20quero%20a%20Paradoxo%20no%20meu%20pr%C3%B3ximo%20projeto.%20Estou%20buscando%20ajuda%20com%3A%20%5Bimpressos%20premium%20%2F%20marketing%20%2F%20finan%C3%A7as%20%2F%20ainda%20n%C3%A3o%20tenho%20certeza%5D.%20Podemos%20conversar%3F"
+            target="_blank"
+            rel="noopener noreferrer"
             data-delay="160"
             className="reveal group mt-12 inline-flex items-center gap-3 rounded-full bg-gold px-10 py-5 text-[0.75rem] uppercase tracking-[0.24em] text-primary-foreground transition-all duration-300 hover:bg-gold-soft"
           >
             Quero a PARADOXO no meu próximo projeto.
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-          </Link>
+          </a>
         </div>
       </section>
     </SiteLayout>
