@@ -26,6 +26,14 @@ export default defineConfig(({ command }) => {
 
   return {
     css: { transformer: "lightningcss" },
+    ...(isBuild
+      ? {
+          // Emit a Vite build manifest (input -> real hashed output file) for
+          // the client build. This is read by scripts/fix-static-client-entry.mjs
+          // after the build — see that file for why it's needed.
+          environments: { client: { build: { manifest: true } } },
+        }
+      : {}),
     resolve: {
       // Matches the "@/*" -> "./src/*" alias used throughout the app (see
       // tsconfig.json "paths" and components.json "aliases").

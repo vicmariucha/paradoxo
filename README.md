@@ -37,13 +37,6 @@ npm install
 npm run dev
 ```
 
-Antes de rodar o build de produção pela primeira vez, recupere as imagens e
-a fonte reais do projeto (ver [`DEPLOY.md`](./DEPLOY.md) para detalhes):
-
-```sh
-node scripts/download-lovable-assets.mjs
-```
-
 ## Build de produção
 
 ```sh
@@ -70,4 +63,4 @@ cujo conteúdo deve ser enviado para a hospedagem (veja
 - `src/components/` — componentes de UI e seções de página
 - `src/lib/site-data.ts` — todo o conteúdo textual/estrutural do site (serviços, portfólio, etc.)
 - `src/assets/` — imagens e fontes
-- `scripts/download-lovable-assets.mjs` — script único de migração (ver `DEPLOY.md`)
+- `scripts/fix-static-client-entry.mjs` — corrige um bug do build estático do TanStack Start/Nitro (roda automaticamente como parte de `npm run build`, ver comentários no arquivo)
