@@ -52,6 +52,7 @@ import ivVaz from "@/assets/identidade-visual-vaz-odontologia.jpg.asset.json";
 import ivXavier from "@/assets/identidade-visual-xavier-advocacia.jpg.asset.json";
 import ivRenovaSun from "@/assets/identidade-visual-renova-sun.jpg.asset.json";
 import ivAllide from "@/assets/identidade-visual-allide.jpg.asset.json";
+import ivBelt from "@/assets/identidade-visual-belt.jpg.asset.json";
 import folderCmk from "@/assets/folder-dobra-cmk.jpeg.asset.json";
 import folderHomeo from "@/assets/folder-multiplas-dobras-homeo-ervas.jpeg.asset.json";
 import pastaNuzzo from "@/assets/pasta-alessandra-nuzzo.jpg.asset.json";
