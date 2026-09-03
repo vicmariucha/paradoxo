@@ -241,6 +241,7 @@ export const PORTFOLIO: PortfolioItem[] = [
   { title: "Xavier Advocacia e Assessoria", category: "Identidade Visual", group: "Design", image: ivXavier.url },
   { title: "Renova Sun Energia Solar", category: "Identidade Visual", group: "Design", image: ivRenovaSun.url },
   { title: "Allide Soluções Empresariais", category: "Identidade Visual", group: "Design", image: ivAllide.url },
+  { title: "Belt Engenharia", category: "Identidade Visual", group: "Design", image: ivBelt.url },
 ];
 
 export type HomePortfolioItem = {
