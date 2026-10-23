@@ -1,0 +1,53 @@
+# Prevent raw directory listings from ever being shown for a route
+# folder that doesn't have its own prerendered index.html (see rules below).
+Options -Indexes
+DirectoryIndex disabled
+
+# Don't let Apache auto-redirect "/about" -> "/about/" before our rewrite
+# rules run — our canonical URLs (sitemap, meta tags) have no trailing
+# slash, so we want the no-slash form served directly, with no extra hop.
+DirectorySlash Off
+
+RewriteEngine On
+RewriteBase /
+
+# 1) Real, existing files (assets, favicon, robots.txt, sitemap.xml, the
+#    prerendered per-route index.html files themselves, etc.) are served as-is.
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# 2) If this route was statically prerendered, its content lives at
+#    <path>/index.html — serve that directly (with or without a trailing
+#    slash, and for the homepage too).
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+RewriteRule ^(.*?)/?$ /$1/index.html [L]
+RewriteCond %{DOCUMENT_ROOT}/index.html -f
+RewriteRule ^$ /index.html [L]
+
+# 3) Anything else (client-only routes: /admin and every /blog/* URL — see
+#    vite.config.ts's prerender filter — or any other path with no
+#    prerendered snapshot) falls back to the generic SPA shell, which
+#    hydrates and takes over client-side routing/data fetching. This is
+#    what lets /admin and the blog work on plain static hosting with no
+#    Node.js server, and lets a new blog post (a Supabase write, not a
+#    file) go live without a rebuild.
+RewriteRule ^ /_shell.html [L]
+
+# Long-lived caching for the build's hashed static assets. Every file in
+# /assets/ has a content hash in its filename (e.g. styles-s6GI85hy.css),
+# so a rebuild that changes the content always produces a new URL — it's
+# always safe to tell browsers/CDNs to cache these for a year without
+# revalidating. Without this, PageSpeed flags every repeat visit as
+# re-downloading JS/CSS/font files it already has. Wrapped in <IfModule>
+# so this is a silent no-op if mod_expires/mod_headers aren't enabled.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>

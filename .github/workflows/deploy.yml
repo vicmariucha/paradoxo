@@ -1,0 +1,54 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build
+        env:
+          # The blog (and its editor at /admin) talk to Supabase directly
+          # from the browser using these — see BLOG-ADMIN.md. VITE_-prefixed
+          # vars are baked into the built JS bundle by Vite at this build
+          # step, so they must be set here, not just in a local .env. The
+          # anon key is safe to expose this way (see the comment in
+          # src/integrations/supabase/client.ts).
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+
+      - name: Deploy to HostGator via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./.output/public/
+          # Typical HostGator document root for the primary domain on an
+          # account is /public_html/. Adjust this if the site is served
+          # from a subfolder or an addon/subdomain instead.
+          server-dir: /public_html/
+          # Deliberately NOT using a clean slate: this is a live production
+          # site, and dangerous-clean-slate: true would delete every file in
+          # server-dir before uploading — a misconfigured secret or server-dir
+          # could wipe the wrong directory. The tradeoff of leaving this off:
+          # .output/public's JS/CSS filenames are content-hashed and change on
+          # every build, so old hashed assets nothing references anymore will
+          # keep accumulating on the server over time (harmless to the live
+          # site, just server clutter — worth an occasional manual cleanup).
+          dangerous-clean-slate: false
