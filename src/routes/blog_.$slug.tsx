@@ -20,15 +20,15 @@ export const Route = createFileRoute("/blog_/$slug")({
 });
 
 function BlogDetail() {
-  useReveal();
   const { slug } = Route.useParams();
   const { data: post, isError } = useQuery(postQuery(slug));
   const { data: allPosts } = useQuery(postsQuery);
+  const isLoading = post === undefined && !isError;
+  useReveal([isLoading, slug]);
   // See the comment in src/routes/blog.tsx: checking `=== undefined` instead
   // of react-query's `isLoading` is what makes this correctly show "Carregando…"
   // instead of jumping straight to "not found" while the first fetch is
   // still in flight but not (by v5's isLoading definition) "isFetching" yet.
-  const isLoading = post === undefined && !isError;
   const related = (allPosts ?? []).filter((p) => p.slug !== slug).slice(0, 3);
 
   if (isLoading) {

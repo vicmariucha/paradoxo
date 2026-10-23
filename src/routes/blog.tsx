@@ -27,8 +27,9 @@ export const Route = createFileRoute("/blog")({
 });
 
 function Blog() {
-  useReveal();
   const { data: posts, isError } = useQuery(postsQuery);
+  const isLoading = posts === undefined && !isError;
+  useReveal([isLoading]);
   // Deliberately NOT using react-query's `isLoading` here: in v5, `isLoading`
   // is `isPending && isFetching`, which can be `false` even while `posts` is
   // still `undefined` (no data has arrived yet) — that combination fell
@@ -39,7 +40,6 @@ function Blog() {
   // undefined until the first fetch actually resolves (success or error),
   // and is always a real (possibly empty) array after that, including
   // during background refetches.
-  const isLoading = posts === undefined && !isError;
 
   return (
     <SiteLayout>
