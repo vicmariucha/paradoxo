@@ -42,7 +42,7 @@ jobs:
           # Typical HostGator document root for the primary domain on an
           # account is /public_html/. Adjust this if the site is served
           # from a subfolder or an addon/subdomain instead.
-          server-dir: /public_html/
+          server-dir: /
           # Deliberately NOT using a clean slate: this is a live production
           # site, and dangerous-clean-slate: true would delete every file in
           # server-dir before uploading — a misconfigured secret or server-dir
