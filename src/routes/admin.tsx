@@ -7,6 +7,7 @@ import { RichTextEditor } from "@/components/rich-text-editor";
 import { supabase } from "@/integrations/supabase/client";
 import { adminPostsQuery, formatDate, slugify, type Post } from "@/lib/blog";
 import { createPost, deletePost, updatePost, uploadImage, type PostInput } from "@/lib/blog-admin";
+import { ConfirmDialog } from "@/components/confirm-dialog";
 
 /**
  * Visual admin panel for the blog: create/edit/publish/delete posts with a
@@ -224,6 +225,7 @@ function Dashboard() {
   const [tagsText, setTagsText] = useState("");
   const [coverBusy, setCoverBusy] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
+  const [pendingDelete, setPendingDelete] = useState<Post | null>(null);
 
   function openNew() {
     setInput(emptyInput());
@@ -503,11 +505,7 @@ function Dashboard() {
                     </button>
                     <button
                       type="button"
-                      onClick={() => {
-                        if (confirm(`Excluir "${post.title}"? Isso não pode ser desfeito.`)) {
-                          deleteMutation.mutate(post.id);
-                        }
-                      }}
+                      onClick={() => setPendingDelete(post)}
                       title="Excluir"
                       aria-label="Excluir"
                       className="rounded-sm border border-border p-2 text-muted-foreground transition-colors hover:border-destructive hover:text-destructive"
@@ -521,6 +519,21 @@ function Dashboard() {
           </div>
         )}
       </div>
+      <ConfirmDialog
+        open={pendingDelete !== null}
+        title="Excluir este post?"
+        description={
+          pendingDelete
+            ? `"${pendingDelete.title}" será removido permanentemente. Isso não pode ser desfeito.`
+            : ""
+        }
+        confirmLabel="Excluir post"
+        onCancel={() => setPendingDelete(null)}
+        onConfirm={() => {
+          if (pendingDelete) deleteMutation.mutate(pendingDelete.id);
+          setPendingDelete(null);
+        }}
+      />
     </div>
   );
 }
