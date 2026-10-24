@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import type { Session } from "@supabase/supabase-js";
 import { ExternalLink, LogOut, Pencil, Plus, Trash2 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { RichTextEditor } from "@/components/rich-text-editor";
 import { supabase } from "@/integrations/supabase/client";
 import { adminPostsQuery, formatDate, slugify, type Post } from "@/lib/blog";
@@ -48,14 +48,21 @@ function AdminPage() {
     }
   }, []);
 
+  const checkedUserId = useRef<string | null>(null);
+
   useEffect(() => {
     if (!session) {
+      checkedUserId.current = null;
       setIsAdmin(false);
       setAdminChecked(true);
       return;
     }
+    if (checkedUserId.current === session.user.id) {
+      return;
+    }
     setAdminChecked(false);
     supabase.rpc("is_admin").then(({ data }) => {
+      checkedUserId.current = session.user.id;
       setIsAdmin(Boolean(data));
       setAdminChecked(true);
     });
