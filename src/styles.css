@@ -200,7 +200,7 @@
 }
 
 .article-prose p {
-  max-width: 68ch;
+  max-width: 100%;;
 }
 
 .article-prose strong {
@@ -242,7 +242,7 @@
 .article-prose ul,
 .article-prose ol {
   padding-left: 1.4rem;
-  max-width: 68ch;
+  max-width: 100%;;
 }
 
 .article-prose ul {
@@ -288,6 +288,7 @@
 .article-prose img {
   border-radius: 1.5rem;
   width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
